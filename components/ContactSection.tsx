@@ -7,7 +7,7 @@ export default function ContactSection() {
   // 1. Go to https://formspree.io/
   // 2. Create a new form
   // 3. Copy the form ID (e.g., "xzyqjklm") and paste it below
-  const [state, handleSubmit] = useForm("xzznggkw");
+  const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORMSPREE_ID || "");
 
   if (state.succeeded) {
     return (
