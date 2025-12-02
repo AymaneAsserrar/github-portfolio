@@ -2,7 +2,6 @@
 
 import { useLanguage } from "@/context/LanguageContext";
 import { motion } from "framer-motion";
-import { SkillsBackground } from "./Illustrations";
 
 const container = {
   hidden: { opacity: 0 },
@@ -22,9 +21,8 @@ const item = {
 export default function SkillsSection() {
   const { t } = useLanguage();
   return (
-    <section id="skills" className="py-20 scroll-mt-20 relative">
-      <SkillsBackground />
-      <div className="container mx-auto px-4 md:px-6 relative z-10">
+    <section id="skills" className="py-20 scroll-mt-20">
+      <div className="container mx-auto px-4 md:px-6">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

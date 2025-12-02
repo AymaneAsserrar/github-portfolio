@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { content } from "@/lib/data";
 import { LanguageProvider } from "@/context/LanguageContext";
+import { PageBackground } from "@/components/Illustrations";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,6 +34,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
+        <PageBackground />
         <LanguageProvider>
           <ThemeProvider
             attribute="class"

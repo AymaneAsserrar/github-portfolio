@@ -184,16 +184,16 @@ export const ContactIllustration = () => {
   );
 };
 
-export const SkillsBackground = () => {
+export const PageBackground = () => {
   return (
-    <div className="absolute inset-0 -z-10 overflow-hidden opacity-20 pointer-events-none">
+    <div className="fixed inset-0 -z-50 overflow-hidden opacity-20 pointer-events-none">
       <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <pattern id="skill-pattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+          <pattern id="page-pattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
             <circle cx="2" cy="2" r="1" className="fill-primary" />
           </pattern>
         </defs>
-        <rect width="100%" height="100%" fill="url(#skill-pattern)" />
+        <rect width="100%" height="100%" fill="url(#page-pattern)" />
       </svg>
     </div>
   );
