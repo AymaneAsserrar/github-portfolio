@@ -1,16 +1,7 @@
 "use client";
 
-import { skills } from "@/lib/data";
+import { useLanguage } from "@/context/LanguageContext";
 import { motion } from "framer-motion";
-
-const categoryTitles: Record<string, string> = {
-  languages: "Languages",
-  frontend: "Frontend Development",
-  backend: "Backend Development",
-  dataCloud: "Data & Cloud",
-  devopsTools: "DevOps & Tools",
-  aiOther: "AI & Other Skills",
-};
 
 const container = {
   hidden: { opacity: 0 },
@@ -28,6 +19,7 @@ const item = {
 };
 
 export default function SkillsSection() {
+  const { t } = useLanguage();
   return (
     <section id="skills" className="py-20 scroll-mt-20">
       <div className="container mx-auto px-4 md:px-6">
@@ -38,7 +30,7 @@ export default function SkillsSection() {
           transition={{ duration: 0.5 }}
           className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center"
         >
-          My Technical Skills
+          {t.skills.title}
         </motion.h2>
         
         <motion.div 
@@ -48,14 +40,14 @@ export default function SkillsSection() {
           viewport={{ once: true }}
           className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto"
         >
-          {Object.entries(skills).map(([category, items]) => (
+          {Object.entries(t.skills.list).map(([category, items]) => (
             <motion.div 
               key={category} 
               variants={item}
               className="bg-card text-card-foreground rounded-xl border shadow-sm p-6 hover:shadow-md transition-shadow duration-300"
             >
               <h3 className="text-xl font-semibold mb-4 text-primary">
-                {categoryTitles[category] || category}
+                {t.skills.categories[category as keyof typeof t.skills.categories]}
               </h3>
               <div className="flex flex-wrap gap-2">
                 {items.map((skill) => (

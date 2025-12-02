@@ -1,6 +1,6 @@
 "use client";
 
-import { projects } from "@/lib/data";
+import { useLanguage } from "@/context/LanguageContext";
 import ProjectCard from "./ProjectCard";
 import { motion } from "framer-motion";
 
@@ -20,6 +20,8 @@ const item = {
 };
 
 export default function ProjectsSection() {
+  const { t } = useLanguage();
+
   return (
     <section id="projects" className="py-20 scroll-mt-20">
       <div className="container mx-auto px-4 md:px-6">
@@ -30,7 +32,7 @@ export default function ProjectsSection() {
           transition={{ duration: 0.5 }}
           className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center"
         >
-          My Projects
+          {t.projects.title}
         </motion.h2>
         
         <motion.div 
@@ -40,9 +42,9 @@ export default function ProjectsSection() {
           viewport={{ once: true }}
           className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto"
         >
-          {projects.map((project, index) => (
+          {t.projects.list.map((project, index) => (
             <motion.div key={index} variants={item} className="h-full">
-              <ProjectCard {...project} />
+              <ProjectCard {...project} viewOnGithubLabel={t.projects.viewOnGithub} />
             </motion.div>
           ))}
         </motion.div>

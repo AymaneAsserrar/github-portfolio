@@ -1,8 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function AboutSection() {
+  const { t } = useLanguage();
+
   return (
     <section id="about" className="py-20 bg-secondary/10 scroll-mt-20">
       <div className="container mx-auto px-4 md:px-6">
@@ -13,7 +16,7 @@ export default function AboutSection() {
           transition={{ duration: 0.5 }}
           className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center"
         >
-          About Me
+          {t.about.title}
         </motion.h2>
         <div className="max-w-3xl mx-auto space-y-8 text-lg text-muted-foreground">
           <motion.p
@@ -22,10 +25,9 @@ export default function AboutSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            I am a passionate developer with a strong foundation in both front-end
-            and back-end technologies. Currently pursuing my engineering degree at
-            <span className="font-semibold text-foreground"> Télécom Saint-Étienne</span>, 
-            I am eager to apply my skills in a challenging environment.
+            {t.about.description}
+            <span className="font-semibold text-foreground"> {t.about.school}</span>
+            {t.about.descriptionEnd}
           </motion.p>
           
           <div className="grid md:grid-cols-2 gap-8 mt-8">
@@ -36,12 +38,11 @@ export default function AboutSection() {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="bg-background p-6 rounded-lg shadow-sm border"
             >
-              <h3 className="text-xl font-semibold mb-4 text-foreground">Soft Skills</h3>
+              <h3 className="text-xl font-semibold mb-4 text-foreground">{t.about.softSkillsTitle}</h3>
               <ul className="list-disc list-inside space-y-2">
-                <li>Rigor</li>
-                <li>Curiosity</li>
-                <li>Team Spirit</li>
-                <li>Adaptability</li>
+                {t.about.softSkills.map((skill, index) => (
+                  <li key={index}>{skill}</li>
+                ))}
               </ul>
             </motion.div>
             
@@ -52,16 +53,14 @@ export default function AboutSection() {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="bg-background p-6 rounded-lg shadow-sm border"
             >
-              <h3 className="text-xl font-semibold mb-4 text-foreground">Education</h3>
+              <h3 className="text-xl font-semibold mb-4 text-foreground">{t.about.educationTitle}</h3>
               <ul className="space-y-4">
-                <li>
-                  <div className="font-medium text-foreground">Télécom Saint-Étienne</div>
-                  <div className="text-sm">Engineering Degree</div>
-                </li>
-                <li>
-                  <div className="font-medium text-foreground">ENSA Tanger</div>
-                  <div className="text-sm">Double Degree Program</div>
-                </li>
+                {t.about.education.map((edu, index) => (
+                  <li key={index}>
+                    <div className="font-medium text-foreground">{edu.school}</div>
+                    <div className="text-sm">{edu.degree}</div>
+                  </li>
+                ))}
               </ul>
             </motion.div>
           </div>

@@ -1,9 +1,11 @@
 "use client";
 
+import { useLanguage } from "@/context/LanguageContext";
 import { useForm, ValidationError } from "@formspree/react";
 import { motion } from "framer-motion";
 
 export default function ContactSection() {
+  const { t } = useLanguage();
   // Replace "YOUR_FORMSPREE_ID" with your actual Formspree form ID
   // 1. Go to https://formspree.io/
   // 2. Create a new form
@@ -19,7 +21,7 @@ export default function ContactSection() {
             animate={{ opacity: 1, y: 0 }}
             className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-6"
           >
-            Get In Touch
+            {t.contact.title}
           </motion.h2>
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
@@ -27,10 +29,10 @@ export default function ContactSection() {
             className="max-w-md mx-auto p-6 bg-background rounded-lg border shadow-sm"
           >
             <p className="text-xl text-green-600 font-semibold mb-2">
-              Message Sent!
+              {t.contact.successTitle}
             </p>
             <p className="text-muted-foreground">
-              Thanks for reaching out. I'll get back to you as soon as possible.
+              {t.contact.successMessage}
             </p>
           </motion.div>
         </div>
@@ -48,7 +50,7 @@ export default function ContactSection() {
           transition={{ duration: 0.5 }}
           className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center"
         >
-          Get In Touch
+          {t.contact.title}
         </motion.h2>
 
         <motion.div 
@@ -64,13 +66,13 @@ export default function ContactSection() {
                 htmlFor="name"
                 className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
               >
-                Name
+                {t.contact.nameLabel}
               </label>
               <input
                 id="name"
                 name="name"
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                placeholder="Your name"
+                placeholder={t.contact.namePlaceholder}
                 required
               />
               <ValidationError
@@ -86,14 +88,14 @@ export default function ContactSection() {
                 htmlFor="email"
                 className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
               >
-                Email
+                {t.contact.emailLabel}
               </label>
               <input
                 id="email"
                 type="email"
                 name="email"
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                placeholder="your.email@example.com"
+                placeholder={t.contact.emailPlaceholder}
                 required
               />
               <ValidationError
@@ -109,13 +111,13 @@ export default function ContactSection() {
                 htmlFor="message"
                 className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
               >
-                Message
+                {t.contact.messageLabel}
               </label>
               <textarea
                 id="message"
                 name="message"
                 className="flex min-h-[120px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                placeholder="How can I help you?"
+                placeholder={t.contact.messagePlaceholder}
                 required
               />
               <ValidationError
@@ -131,7 +133,7 @@ export default function ContactSection() {
               disabled={state.submitting}
               className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full"
             >
-              {state.submitting ? "Sending..." : "Send Message"}
+              {state.submitting ? t.contact.sendingButton : t.contact.sendButton}
             </button>
           </form>
         </motion.div>

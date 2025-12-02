@@ -6,9 +6,10 @@ interface ProjectCardProps {
   description: string;
   tech: string[];
   github: string;
+  viewOnGithubLabel?: string;
 }
 
-export default function ProjectCard({ title, description, tech, github }: ProjectCardProps) {
+export default function ProjectCard({ title, description, tech, github, viewOnGithubLabel = "View on GitHub" }: ProjectCardProps) {
   return (
     <div className="group flex flex-col justify-between rounded-lg border bg-card text-card-foreground shadow-sm transition-all hover:shadow-md">
       <div className="p-6 space-y-4">
@@ -23,7 +24,7 @@ export default function ProjectCard({ title, description, tech, github }: Projec
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
             <Github className="h-5 w-5" />
-            <span className="sr-only">View on GitHub</span>
+            <span className="sr-only">{viewOnGithubLabel}</span>
           </Link>
         </div>
         <p className="text-muted-foreground">{description}</p>

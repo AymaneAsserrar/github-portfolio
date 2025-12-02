@@ -4,18 +4,20 @@ import Link from "next/link";
 import { Github, Linkedin, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { ThemeToggle } from "./ThemeToggle";
-import { personalInfo } from "@/lib/data";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
   const navLinks = [
-    { name: "Home", href: "#hero" },
-    { name: "About", href: "#about" },
-    { name: "Skills", href: "#skills" },
-    { name: "Experience", href: "#experience" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
+    { name: t.nav.home, href: "#hero" },
+    { name: t.nav.about, href: "#about" },
+    { name: t.nav.skills, href: "#skills" },
+    { name: t.experience.title, href: "#experience" },
+    { name: t.nav.projects, href: "#projects" },
+    { name: t.nav.contact, href: "#contact" },
   ];
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, href: string) => {
@@ -34,7 +36,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 dark:border-gray-800">
       <div className="container mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
         <Link href="/" className="font-bold text-xl tracking-tight">
-          {personalInfo.name}
+          {t.personalInfo.name}
         </Link>
 
         {/* Desktop Navigation */}
@@ -52,8 +54,9 @@ export default function Header() {
         </nav>
 
         <div className="hidden md:flex items-center gap-4">
+          <LanguageSwitcher />
           <Link
-            href={personalInfo.github}
+            href={t.personalInfo.github}
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-foreground transition-colors"
@@ -62,7 +65,7 @@ export default function Header() {
             <span className="sr-only">GitHub</span>
           </Link>
           <Link
-            href={personalInfo.linkedin}
+            href={t.personalInfo.linkedin}
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-foreground transition-colors"
@@ -75,6 +78,7 @@ export default function Header() {
 
         {/* Mobile Menu Button */}
         <div className="flex md:hidden items-center gap-4">
+          <LanguageSwitcher />
           <ThemeToggle />
           <button
             className="p-2"
@@ -106,7 +110,7 @@ export default function Header() {
             ))}
             <div className="flex gap-4 mt-2">
               <Link
-                href={personalInfo.github}
+                href={t.personalInfo.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground"
@@ -114,7 +118,7 @@ export default function Header() {
                 <Github className="h-5 w-5" />
               </Link>
               <Link
-                href={personalInfo.linkedin}
+                href={t.personalInfo.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground"
