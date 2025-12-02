@@ -8,11 +8,56 @@ export const personalInfo = {
 };
 
 export const skills = {
-  backend: ["PHP (Laravel)", "Python (Flask)", "Java", "REST API", "Unit Tests"],
-  frontend: ["Vue.js", "HTML/CSS", "Blade"],
-  database: ["MySQL", "MongoDB", "SQL", "Google Cloud Platform (GCP)", "BigQuery"],
-  devops: ["Git", "GitLab CI/CD", "Docker", "Artisan", "Queues"],
-  other: ["C/C++", "JavaScript", "Machine Learning"],
+  languages: [
+    "Java",
+    "Python",
+    "PHP",
+    "TypeScript",
+    "JavaScript",
+    "C/C++",
+    "SQL",
+    "Bash",
+  ],
+  frontend: [
+    "React",
+    "Next.js",
+    "Vue.js",
+    "Tailwind CSS",
+    "HTML5",
+    "CSS3",
+    "Blade",
+  ],
+  backend: [
+    "Laravel",
+    "Flask",
+    "Spring Boot",
+    "Node.js",
+    "REST APIs",
+    "Microservices",
+  ],
+  dataCloud: [
+    "MySQL",
+    "PostgreSQL",
+    "MongoDB",
+    "GCP (BigQuery)",
+    "Azure (IoT Hub)",
+    "Redis",
+  ],
+  devopsTools: [
+    "Docker",
+    "Git/GitHub",
+    "GitLab CI/CD",
+    "Linux",
+    "Postman",
+    "Jira",
+  ],
+  aiOther: [
+    "Machine Learning (LSTM)",
+    "Unit Testing",
+    "Agile/Scrum",
+    "System Design",
+    "Project Management",
+  ],
 };
 
 export const experience = [
@@ -32,7 +77,7 @@ export const experience = [
   },
   {
     company: "Perenco (Project)",
-    role: "AI/ML Engineer",
+    role: "AI/ML Intern",
     dates: "Mar 2025 - June 2025",
     description:
       "Designed an AI model (LSTM Autoencoder) for analyzing sensor stream data via Azure IoT Hub.",
