@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowRight, Download } from "lucide-react";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
+import { HeroIllustration } from "./Illustrations";
 
 export default function HeroSection() {
   const { t } = useLanguage();
@@ -11,9 +12,9 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="min-h-[calc(100vh-4rem)] flex flex-col justify-center items-center text-center px-4 py-20 bg-gradient-to-b from-background to-secondary/20 scroll-mt-20"
+      className="min-h-[calc(100vh-4rem)] flex flex-col md:flex-row justify-center items-center px-4 py-20 bg-gradient-to-b from-background to-secondary/20 scroll-mt-20 gap-8 md:gap-12 overflow-hidden"
     >
-      <div className="max-w-3xl space-y-8">
+      <div className="max-w-2xl space-y-8 text-center md:text-left flex-1 z-10">
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -26,7 +27,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-xl md:text-2xl text-muted-foreground max-w-[700px] mx-auto"
+          className="text-xl md:text-2xl text-muted-foreground max-w-[700px] mx-auto md:mx-0"
         >
           {t.personalInfo.profileSummary}
         </motion.p>
@@ -34,7 +35,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center"
+          className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
         >
           <Link
             href="#contact"
@@ -53,6 +54,15 @@ export default function HeroSection() {
           </a>
         </motion.div>
       </div>
+      
+      <motion.div 
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8 }}
+        className="flex-1 w-full max-w-[500px] relative z-0"
+      >
+        <HeroIllustration />
+      </motion.div>
     </section>
   );
 }
