@@ -6,7 +6,7 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="min-h-[calc(100vh-4rem)] flex flex-col justify-center items-center text-center px-4 py-20 bg-gradient-to-b from-background to-secondary/20"
+      className="min-h-[calc(100vh-4rem)] flex flex-col justify-center items-center text-center px-4 py-20 bg-gradient-to-b from-background to-secondary/20 scroll-mt-20"
     >
       <div className="max-w-3xl space-y-8">
         <h1 className="text-4xl md:text-6xl font-bold tracking-tighter sm:text-5xl xl:text-7xl/none bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300 pb-2">

@@ -3,7 +3,7 @@ import { Briefcase } from "lucide-react";
 
 export default function ExperienceSection() {
   return (
-    <section id="experience" className="py-20 bg-secondary/10">
+    <section id="experience" className="py-20 bg-secondary/10 scroll-mt-20">
       <div className="container mx-auto px-4 md:px-6">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center">
           Professional Experience
