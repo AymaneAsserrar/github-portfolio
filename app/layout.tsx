@@ -16,6 +16,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// Metadata for the application
 export const metadata: Metadata = {
   title: `${personalInfo.name} - Portfolio`,
   description: personalInfo.profileSummary,
