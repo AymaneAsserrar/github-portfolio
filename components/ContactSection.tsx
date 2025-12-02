@@ -1,6 +1,7 @@
 "use client";
 
 import { useForm, ValidationError } from "@formspree/react";
+import { motion } from "framer-motion";
 
 export default function ContactSection() {
   // Replace "YOUR_FORMSPREE_ID" with your actual Formspree form ID
@@ -13,17 +14,25 @@ export default function ContactSection() {
     return (
       <section id="contact" className="py-20 bg-secondary/10 scroll-mt-20">
         <div className="container mx-auto px-4 md:px-6 text-center">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-6">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-6"
+          >
             Get In Touch
-          </h2>
-          <div className="max-w-md mx-auto p-6 bg-background rounded-lg border shadow-sm">
+          </motion.h2>
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="max-w-md mx-auto p-6 bg-background rounded-lg border shadow-sm"
+          >
             <p className="text-xl text-green-600 font-semibold mb-2">
               Message Sent!
             </p>
             <p className="text-muted-foreground">
               Thanks for reaching out. I'll get back to you as soon as possible.
             </p>
-          </div>
+          </motion.div>
         </div>
       </section>
     );
@@ -32,11 +41,23 @@ export default function ContactSection() {
   return (
     <section id="contact" className="py-20 bg-secondary/10 scroll-mt-20">
       <div className="container mx-auto px-4 md:px-6">
-        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center">
+        <motion.h2 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center"
+        >
           Get In Touch
-        </h2>
+        </motion.h2>
 
-        <div className="max-w-md mx-auto">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="max-w-md mx-auto"
+        >
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="space-y-2">
               <label
@@ -113,7 +134,7 @@ export default function ContactSection() {
               {state.submitting ? "Sending..." : "Send Message"}
             </button>
           </form>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
