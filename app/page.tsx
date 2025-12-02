@@ -5,6 +5,7 @@ import ExperienceSection from "@/components/ExperienceSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import ContactSection from "@/components/ContactSection";
 
+// Home Page Component
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
