@@ -129,7 +129,7 @@ export const content = {
         },
         {
           company: "Perenco",
-          role: "AI/ML Project in collaboration with Télécom Saint-Etienne school",
+          role: "AI/ML Project",
           dates: "Mar 2025 - June 2025",
           description:
             "Designed an AI model (LSTM Autoencoder) for analyzing sensor stream data via Azure IoT Hub.",
@@ -268,7 +268,7 @@ export const content = {
         },
         {
           company: "Perenco",
-          role: "Projet IA/ML en collaboration avec l’école Télécom Saint-Etienne",
+          role: "Projet IA/ML",
           dates: "Mars 2025 - Juin 2025",
           description:
             "Conception d'un modèle IA (LSTM Autoencoder) pour l'analyse des flux de données de capteurs via Azure IoT Hub.",
