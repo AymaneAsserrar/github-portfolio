@@ -114,14 +114,14 @@ export const content = {
       title: "Experience",
       list: [
         {
-          company: "Easydis by Groupe Casino",
+          company: "Groupe Casino (Easydis)",
           role: "Apprentice Developer & Project Manager",
           dates: "Sept 2025 - Present",
           description:
             "Project management, continuous improvement/maintenance of tools, process automation, and development of a new intranet.",
         },
         {
-          company: "Easydis by Groupe Casino",
+          company: "Groupe Casino (Easydis)",
           role: "PHP/Laravel Developer Intern",
           dates: "June 2025 - Aug 2025",
           description:
@@ -146,25 +146,29 @@ export const content = {
     projects: {
       title: "My Projects",
       viewOnGithub: "View on GitHub",
-      list: [
-        {
-          title: "Dynamic Contact Form",
-          description:
-            "Server-side validation, database insertion, and automated email sending.",
-          tech: ["PHP", "HTML/CSS", "MySQL", "PHPMailer"],
-          github: "https://github.com/AymaneAsserrar",
-        },
-        {
-          title: "MyChatApp",
-          description: "Real-time chat application with private rooms.",
-          tech: ["Vue.js", "WebSockets", "SQL"],
-          github: "https://github.com/AymaneAsserrar",
+        list: [
+          {
+            title: "NETWORKING AI: LLM, RAG and configuration validation",
+            description: "The project objective was to build a Retrieval-Augmented Generation (RAG) Large Language Model (LLM) platform for configuring network components, addressing issues like extensive documentation, vendor differences, confusing errors, and LLM hallucinations[cite: 4, 16, 17, 18, 19, 23, 24, 288]. The platform uses documentation and verified commands to generate verified network configurations based on a user query[cite: 31, 32, 33]. The architecture includes three main teams: Team 1 for Data Engineering and Knowledge Base (PostgreSQL with pgVector), Team 2 for LLM Inference (RAG, Prompt Builder, Filtering, using Zephyr/Gemini), and Team 3 for Validation and Orchestration (Batfish Integration and Langchain orchestrator)[cite: 7, 10, 14, 119, 144, 173].",
+            tech: [
+                "LLM (Gemini/Zephyr)",
+                "RAG (Retrieval-Augmented Generation)",
+                "Batfish (Validation)",
+                "Langchain (Orchestration)"
+            ],
+            github: "https://github.com/AymaneAsserrar/NetworkingAI"
         },
         {
           title: "MyComicApp",
           description:
             "Java desktop application for managing collections, with a recommendation engine.",
           tech: ["Java", "Swing", "JDBC", "SQLite", "REST API"],
+          github: "https://github.com/AymaneAsserrar",
+        },
+        {
+          title: "MyChatApp",
+          description: "Real-time chat application with private rooms.",
+          tech: ["Vue.js", "WebSockets", "SQL"],
           github: "https://github.com/AymaneAsserrar",
         },
         {
@@ -287,17 +291,15 @@ export const content = {
       viewOnGithub: "Voir sur GitHub",
       list: [
         {
-          title: "Formulaire de Contact Dynamique",
-          description:
-            "Validation côté serveur, insertion en base de données et envoi automatique d'emails.",
-          tech: ["PHP", "HTML/CSS", "MySQL", "PHPMailer"],
-          github: "https://github.com/AymaneAsserrar",
-        },
-        {
-          title: "MyChatApp",
-          description: "Application de chat en temps réel avec salons privés.",
-          tech: ["Vue.js", "WebSockets", "SQL"],
-          github: "https://github.com/AymaneAsserrar",
+            title: "NETWORKING AI : LLM, RAG et validation de configuration [cite: 2, 4]",
+            description: "L'objectif du projet était de construire une plateforme de Grand Modèle de Langage (LLM) avec Augmentation par Récupération (RAG) pour configurer des composants réseau[cite: 288]. Le système vise à résoudre les problèmes liés à la documentation abondante, à la diversité des composants/fournisseurs, aux erreurs syntaxiques confuses, et aux hallucinations des LLM standards[cite: 17, 18, 19, 23, 24]. Le système génère des commandes de configuration réseau vérifiées à partir d'une requête utilisateur[cite: 28, 33].",
+            tech: [
+                "LLM (Gemini/Zephyr) [cite: 141]",
+                "RAG (Retrieval-Augmented Generation) [cite: 4, 132]",
+                "Batfish (Validation) [cite: 14, 92, 166]",
+                "Langchain (Orchestration) [cite: 170]"
+            ],
+            github: "https://github.com/AymaneAsserrar/NetworkingAI"
         },
         {
           title: "MyComicApp",
@@ -306,6 +308,13 @@ export const content = {
           tech: ["Java", "Swing", "JDBC", "SQLite", "REST API"],
           github: "https://github.com/AymaneAsserrar",
         },
+        {
+          title: "MyChatApp",
+          description: "Application de chat en temps réel avec salons privés.",
+          tech: ["Vue.js", "WebSockets", "SQL"],
+          github: "https://github.com/AymaneAsserrar",
+        },
+        
         {
           title: "Interface Admin",
           description: "Tableau de bord de surveillance système en temps réel.",
