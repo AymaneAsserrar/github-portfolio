@@ -149,7 +149,7 @@ export const content = {
         list: [
           {
             title: "NETWORKING AI: LLM, RAG and configuration validation",
-            description: "The project objective was to build a Retrieval-Augmented Generation (RAG) Large Language Model (LLM) platform for configuring network components, addressing issues like extensive documentation, vendor differences, confusing errors, and LLM hallucinations[cite: 4, 16, 17, 18, 19, 23, 24, 288]. The platform uses documentation and verified commands to generate verified network configurations based on a user query[cite: 31, 32, 33]. The architecture includes three main teams: Team 1 for Data Engineering and Knowledge Base (PostgreSQL with pgVector), Team 2 for LLM Inference (RAG, Prompt Builder, Filtering, using Zephyr/Gemini), and Team 3 for Validation and Orchestration (Batfish Integration and Langchain orchestrator)[cite: 7, 10, 14, 119, 144, 173].",
+            description: "The project aimed to create an LLM platform utilizing RAG to generate verified configuration commands via Batfish for networking devices, mitigating issues like excessive documentation and model hallucinations.",
             tech: [
                 "LLM (Gemini/Zephyr)",
                 "RAG (Retrieval-Augmented Generation)",
@@ -291,13 +291,13 @@ export const content = {
       viewOnGithub: "Voir sur GitHub",
       list: [
         {
-            title: "NETWORKING AI : LLM, RAG et validation de configuration [cite: 2, 4]",
-            description: "L'objectif du projet était de construire une plateforme de Grand Modèle de Langage (LLM) avec Augmentation par Récupération (RAG) pour configurer des composants réseau[cite: 288]. Le système vise à résoudre les problèmes liés à la documentation abondante, à la diversité des composants/fournisseurs, aux erreurs syntaxiques confuses, et aux hallucinations des LLM standards[cite: 17, 18, 19, 23, 24]. Le système génère des commandes de configuration réseau vérifiées à partir d'une requête utilisateur[cite: 28, 33].",
+            title: "NETWORKING AI : LLM, RAG et validation de configuration",
+            description: "Pour configurer des réseaux, ce projet a créé une plateforme de LLM utilisant le RAG pour produire des commandes de configuration vérifiées par Batfish, contrant ainsi les problèmes de documentation excessive et d'hallucinations des modèles.",
             tech: [
-                "LLM (Gemini/Zephyr) [cite: 141]",
-                "RAG (Retrieval-Augmented Generation) [cite: 4, 132]",
-                "Batfish (Validation) [cite: 14, 92, 166]",
-                "Langchain (Orchestration) [cite: 170]"
+                "LLM (Gemini/Zephyr)",
+                "RAG (Retrieval-Augmented Generation)",
+                "Batfish (Validation)",
+                "Langchain (Orchestration)"
             ],
             github: "https://github.com/AymaneAsserrar/NetworkingAI"
         },
