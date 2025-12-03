@@ -151,10 +151,10 @@ export const content = {
             title: "NETWORKING AI: LLM, RAG and configuration validation",
             description: "The project aimed to create an LLM platform utilizing RAG to generate verified configuration commands via Batfish for networking devices, mitigating issues like excessive documentation and model hallucinations.",
             tech: [
-                "LLM (Gemini/Zephyr)",
-                "RAG (Retrieval-Augmented Generation)",
-                "Batfish (Validation)",
-                "Langchain (Orchestration)"
+                "LLM",
+                "RAG",
+                "Batfish",
+                "Langchain"
             ],
             github: "https://github.com/AymaneAsserrar/NetworkingAI"
         },
@@ -294,10 +294,10 @@ export const content = {
             title: "NETWORKING AI : LLM, RAG et validation de configuration",
             description: "Pour configurer des réseaux, ce projet a créé une plateforme de LLM utilisant le RAG pour produire des commandes de configuration vérifiées par Batfish, contrant ainsi les problèmes de documentation excessive et d'hallucinations des modèles.",
             tech: [
-                "LLM (Gemini/Zephyr)",
-                "RAG (Retrieval-Augmented Generation)",
-                "Batfish (Validation)",
-                "Langchain (Orchestration)"
+                "LLM",
+                "RAG",
+                "Batfish",
+                "Langchain"
             ],
             github: "https://github.com/AymaneAsserrar/NetworkingAI"
         },
