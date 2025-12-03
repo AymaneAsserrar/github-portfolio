@@ -83,7 +83,8 @@ export const content = {
       description:
         "I am a passionate developer with a strong foundation in both front-end and back-end technologies. Currently pursuing my engineering degree at",
       school: "Télécom Saint-Étienne",
-      descriptionEnd: ", I am eager to apply my skills in a challenging environment.",
+      descriptionEnd:
+        ", I am eager to apply my skills in a challenging environment.",
       softSkillsTitle: "Soft Skills",
       softSkills: ["Rigor", "Curiosity", "Team Spirit", "Adaptability"],
       educationTitle: "Education",
@@ -115,7 +116,7 @@ export const content = {
       list: [
         {
           company: "Groupe Casino (Easydis)",
-          role: "Apprentice Developer & Project Manager",
+          role: "Apprentice PHP/Laravel Developer & Project Manager",
           dates: "Sept 2025 - Present",
           description:
             "Project management, continuous improvement/maintenance of tools, process automation, and development of a new intranet.",
@@ -146,17 +147,13 @@ export const content = {
     projects: {
       title: "My Projects",
       viewOnGithub: "View on GitHub",
-        list: [
-          {
-            title: "NETWORKING AI: LLM, RAG and configuration validation",
-            description: "The project aimed to create an LLM platform utilizing RAG to generate verified configuration commands via Batfish for networking devices, mitigating issues like excessive documentation and model hallucinations.",
-            tech: [
-                "LLM",
-                "RAG",
-                "Batfish",
-                "Langchain"
-            ],
-            github: "https://github.com/AymaneAsserrar/NetworkingAI"
+      list: [
+        {
+          title: "Networking AI",
+          description:
+            "The project aimed to create an LLM platform utilizing RAG to generate verified configuration commands via Batfish for networking devices, mitigating issues like excessive documentation and model hallucinations.",
+          tech: ["LLM", "RAG", "Batfish", "Langchain"],
+          github: "https://github.com/AymaneAsserrar/NetworkingAI",
         },
         {
           title: "MyComicApp",
@@ -226,7 +223,8 @@ export const content = {
       description:
         "Je suis un développeur passionné avec une solide base en technologies front-end et back-end. Actuellement en cursus d'ingénieur à",
       school: "Télécom Saint-Étienne",
-      descriptionEnd: ", je suis impatient d'appliquer mes compétences dans un environnement stimulant.",
+      descriptionEnd:
+        ", je suis impatient d'appliquer mes compétences dans un environnement stimulant.",
       softSkillsTitle: "Soft Skills",
       softSkills: ["Rigueur", "Curiosité", "Esprit d'équipe", "Adaptabilité"],
       educationTitle: "Formation",
@@ -258,7 +256,7 @@ export const content = {
       list: [
         {
           company: "Easydis by Groupe Casino",
-          role: "Apprenti Développeur & Chef de Projet",
+          role: "Apprenti Développeur PHP/Laravel & Chef de Projet",
           dates: "Sept 2025 - Présent",
           description:
             "Gestion de projet, amélioration continue/maintenance des outils, automatisation des processus et développement d'un nouvel intranet.",
@@ -291,15 +289,11 @@ export const content = {
       viewOnGithub: "Voir sur GitHub",
       list: [
         {
-            title: "NETWORKING AI : LLM, RAG et validation de configuration",
-            description: "Pour configurer des réseaux, ce projet a créé une plateforme de LLM utilisant le RAG pour produire des commandes de configuration vérifiées par Batfish, contrant ainsi les problèmes de documentation excessive et d'hallucinations des modèles.",
-            tech: [
-                "LLM",
-                "RAG",
-                "Batfish",
-                "Langchain"
-            ],
-            github: "https://github.com/AymaneAsserrar/NetworkingAI"
+          title: "Networking AI",
+          description:
+            "Pour configurer des réseaux, ce projet a créé une plateforme de LLM utilisant le RAG pour produire des commandes de configuration vérifiées par Batfish, contrant ainsi les problèmes de documentation excessive et d'hallucinations des modèles.",
+          tech: ["LLM", "RAG", "Batfish", "Langchain"],
+          github: "https://github.com/AymaneAsserrar/NetworkingAI",
         },
         {
           title: "MyComicApp",
@@ -314,7 +308,7 @@ export const content = {
           tech: ["Vue.js", "WebSockets", "SQL"],
           github: "https://github.com/AymaneAsserrar/MyChatApp",
         },
-        
+
         {
           title: "Interface Admin",
           description: "Tableau de bord de surveillance système en temps réel.",
@@ -323,7 +317,8 @@ export const content = {
         },
         {
           title: "Slice Defender",
-          description: "Jeu 3D interactif avec mécanique de découpe de projectiles.",
+          description:
+            "Jeu 3D interactif avec mécanique de découpe de projectiles.",
           tech: ["C++", "OpenGL", "Qt"],
           github: "https://github.com/AymaneAsserrar/SliceDefender3D",
         },
@@ -354,4 +349,3 @@ export const personalInfo = content.en.personalInfo;
 export const skills = content.en.skills.list;
 export const experience = content.en.experience.list;
 export const projects = content.en.projects.list;
-

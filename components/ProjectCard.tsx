@@ -9,9 +9,15 @@ interface ProjectCardProps {
   viewOnGithubLabel?: string;
 }
 
-export default function ProjectCard({ title, description, tech, github, viewOnGithubLabel = "View on GitHub" }: ProjectCardProps) {
+export default function ProjectCard({
+  title,
+  description,
+  tech,
+  github,
+  viewOnGithubLabel = "View on GitHub",
+}: ProjectCardProps) {
   return (
-    <div className="group flex flex-col justify-between rounded-lg border bg-card text-card-foreground shadow-sm transition-all hover:shadow-md">
+    <div className="group flex flex-col justify-between rounded-lg border bg-card text-card-foreground shadow-sm transition-all hover:shadow-md h-full">
       <div className="p-6 space-y-4">
         <div className="flex items-start justify-between">
           <h3 className="text-2xl font-semibold leading-none tracking-tight group-hover:text-primary transition-colors">
@@ -27,9 +33,9 @@ export default function ProjectCard({ title, description, tech, github, viewOnGi
             <span className="sr-only">{viewOnGithubLabel}</span>
           </Link>
         </div>
-        <p className="text-muted-foreground">{description}</p>
+        <p className="text-foreground">{description}</p>
       </div>
-      
+
       <div className="p-6 pt-0 mt-auto">
         <div className="flex flex-wrap gap-2">
           {tech.map((t) => (
