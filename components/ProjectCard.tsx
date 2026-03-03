@@ -1,12 +1,14 @@
 import Link from "next/link";
-import { Github } from "lucide-react";
+import { Github, ExternalLink } from "lucide-react";
 
 interface ProjectCardProps {
   title: string;
   description: string;
   tech: string[];
   github: string;
+  slug: string;
   viewOnGithubLabel?: string;
+  viewDetailsLabel?: string;
 }
 
 export default function ProjectCard({
@@ -14,7 +16,9 @@ export default function ProjectCard({
   description,
   tech,
   github,
+  slug,
   viewOnGithubLabel = "View on GitHub",
+  viewDetailsLabel = "View Details",
 }: ProjectCardProps) {
   return (
     <div className="group flex flex-col justify-between rounded-lg border bg-card text-card-foreground shadow-sm transition-all hover:shadow-md h-full">
@@ -23,15 +27,26 @@ export default function ProjectCard({
           <h3 className="text-2xl font-semibold leading-none tracking-tight group-hover:text-primary transition-colors">
             {title}
           </h3>
-          <Link
-            href={github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-foreground transition-colors"
-          >
-            <Github className="h-5 w-5" />
-            <span className="sr-only">{viewOnGithubLabel}</span>
-          </Link>
+          <div className="flex items-center gap-2">
+            <Link
+              href={`/projects/${slug}`}
+              className="text-muted-foreground hover:text-primary transition-colors"
+              title={viewDetailsLabel}
+            >
+              <ExternalLink className="h-5 w-5" />
+              <span className="sr-only">{viewDetailsLabel}</span>
+            </Link>
+            <Link
+              href={github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <Github className="h-5 w-5" />
+              <span className="sr-only">{viewOnGithubLabel}</span>
+            </Link>
+          </div>
         </div>
         <p className="text-foreground">{description}</p>
       </div>

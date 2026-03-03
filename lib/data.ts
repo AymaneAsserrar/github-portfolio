@@ -1,5 +1,24 @@
 export type Language = "en" | "fr";
 
+export interface GalleryImage {
+  src: string;
+  alt?: string;
+  caption?: string;
+}
+
+export interface Project {
+  slug: string;
+  title: string;
+  description: string;
+  tech: string[];
+  github: string;
+  fullDescription?: string;
+  liveUrl?: string;
+  demoUrl?: string;
+  features?: string[];
+  gallery?: GalleryImage[];
+}
+
 const commonInfo = {
   email: "aymane.asserrar@outlook.fr",
   linkedin: "https://linkedin.com/in/aymane-asserrar",
@@ -144,11 +163,31 @@ export const content = {
         },
       ],
     },
+    projectPage: {
+      backToProjects: "Back to Projects",
+      viewLive: "View Live",
+      aboutProject: "About this Project",
+      keyFeatures: "Key Features",
+      gallery: "Gallery",
+      viewDetails: "View Details",
+      overview: "Overview",
+      demo: "Demo",
+      tech: "Tech",
+      details: "Details",
+      links: "Links",
+      tryLiveDemo: "Try the live demo",
+      noDemo: "No demo available yet",
+      checkGithub: "Check the GitHub repository",
+      noGallery: "No screenshots available yet",
+      noDetails: "More details coming soon",
+    },
     projects: {
       title: "My Projects",
       viewOnGithub: "View on GitHub",
+      viewDetails: "View Details",
       list: [
         {
+          slug: "networking-ai",
           title: "Networking AI (International Project)",
           description:
             "End-to-end RAG solution for reliable network configuration generation & validation, developed by a 10-person multicultural team. Used a 3-sub-team approach: Data Engineering, LLM Inference (RAG, Prompt Builder), and Batfish Validation with Orchestration Agent. Achieved 100% pipeline success rate with Gemini and 0.155 semantic distance. Workflow: Search → Generate → Validate → Rewrite.",
@@ -162,31 +201,82 @@ export const content = {
             "Jira",
           ],
           github: "https://github.com/AymaneAsserrar/NetworkingAI",
+          fullDescription: `The project is a complete end-to-end Retrieval-Augmented Generation (RAG) solution for reliably generating and validating network configurations.
+
+Key Project Points
+
+• Sub-team Approach: We worked with a structured approach, divided into three dedicated teams.
+  - Team 1: Data Engineering and Knowledge Base.
+  - Team 2: LLM Inference (RAG, Prompt Builder, Filtering).
+  - Team 3: Batfish Validation and Orchestration Agent.
+
+• Validation is Crucial: Our system uses Batfish integration to validate syntax and command functionality. The complete improvement cycle is: Search → Generate → Validate → Rewrite
+
+• Performance Results:
+  - Gemini achieved an Overall Pipeline Success Rate of 100% with RAG disabled and 83% with RAG enabled.
+  - Gemini showed a lower (better) Semantic Distance of 0.155 (RAG ON) compared to 0.275 for Zephyr.
+  - Gemini was approximately 3.5 times faster than the fine-tuned Zephyr model (82 seconds vs ~300 seconds).
+
+• Project Management: We used Agile methodology with 2 Sprints, regular meetings and work management on Jira and GitHub.
+
+It was a fantastic experience working in a team of 10, both on-site and remotely, in a multicultural environment. We learned the importance of clarifying scope and success criteria upfront to reduce rework.
+
+Looking ahead, our next steps include adding synthetic and adversarial tests for agent and validator robustness, and implementing CI/CD for services and models.`,
+          features: [
+            "Sub-team approach with 3 dedicated teams: Data Engineering, LLM Inference, and Batfish Validation",
+            "Batfish integration for syntax and command functionality validation",
+            "100% Pipeline Success Rate with Gemini (RAG disabled)",
+            "0.155 Semantic Distance - better than Zephyr's 0.275",
+            "3.5x faster than fine-tuned Zephyr model",
+            "Agile methodology with 2 Sprints and Jira/GitHub management",
+            "Multicultural team of 10 working on-site and remotely",
+          ],
+          gallery: [
+            { src: "/projects/networking-ai/1.jpg", alt: "Screenshot 1" },
+            { src: "/projects/networking-ai/2.jpg", alt: "Screenshot 2" },
+            { src: "/projects/networking-ai/3.jpg", alt: "Screenshot 3" },
+          ],
         },
         {
+          slug: "my-comic-app",
           title: "MyComicApp",
           description:
             "Java desktop application for managing collections, with a recommendation engine.",
           tech: ["Java", "Swing", "JDBC", "SQLite", "REST API"],
           github: "https://github.com/AymaneAsserrar/MyComicApp",
+          // fullDescription: "",
+          // features: [],
+          // gallery: [],
         },
         {
+          slug: "my-chat-app",
           title: "MyChatApp",
           description: "Real-time chat application with private rooms.",
           tech: ["Vue.js", "WebSockets", "SQL"],
           github: "https://github.com/AymaneAsserrar/MyChatApp",
+          // fullDescription: "",
+          // features: [],
+          // gallery: [],
         },
         {
+          slug: "admin-interface",
           title: "Admin Interface",
           description: "Real-time system monitoring dashboard.",
           tech: ["Python", "Flask", "Dash", "Docker"],
           github: "https://github.com/AymaneAsserrar/PrInterfaceAdmin-UI",
+          // fullDescription: "",
+          // features: [],
+          // gallery: [],
         },
         {
+          slug: "slice-defender",
           title: "Slice Defender",
           description: "Interactive 3D game with projectile slicing mechanics.",
           tech: ["C++", "OpenGL", "Qt"],
           github: "https://github.com/AymaneAsserrar/SliceDefender3D",
+          // fullDescription: "",
+          // features: [],
+          // gallery: [],
         },
       ],
     },
@@ -292,14 +382,34 @@ export const content = {
         },
       ],
     },
+    projectPage: {
+      backToProjects: "Retour aux Projets",
+      viewLive: "Voir en Ligne",
+      aboutProject: "À propos de ce Projet",
+      keyFeatures: "Fonctionnalités Clés",
+      gallery: "Galerie",
+      viewDetails: "Voir Détails",
+      overview: "Aperçu",
+      demo: "Démo",
+      tech: "Technologies",
+      details: "Détails",
+      links: "Liens",
+      tryLiveDemo: "Essayer la démo en ligne",
+      noDemo: "Pas de démo disponible pour le moment",
+      checkGithub: "Voir le dépôt GitHub",
+      noGallery: "Pas de captures d'écran disponibles",
+      noDetails: "Plus de détails à venir",
+    },
     projects: {
       title: "Mes Projets",
       viewOnGithub: "Voir sur GitHub",
+      viewDetails: "Voir Détails",
       list: [
         {
+          slug: "networking-ai",
           title: "Networking AI (Projet International)",
           description:
-            "Solution RAG de bout en bout pour la génération et validation fiable de configurations réseau, développée par une équipe multiculturelle de 10 personnes. Approche en 3 sous-équipes : Ingénierie des Données, Inférence LLM (RAG, Prompt Builder), et Validation Batfish avec Agent d'Orchestration. Taux de réussite de 100% avec Gemini et distance sémantique de 0.155. Workflow : Recherche → Génération → Validation → Réécriture.",
+            "Solution complète de Génération Augmentée par la Récupération (RAG) de bout en bout pour générer et valider de manière fiable les configurations réseau, développée par une équipe multiculturelle de 10 personnes.",
           tech: [
             "LLM",
             "RAG",
@@ -310,33 +420,94 @@ export const content = {
             "Jira",
           ],
           github: "https://github.com/AymaneAsserrar/NetworkingAI",
+          fullDescription: `Le projet est une solution complète de Génération Augmentée par la Récupération (RAG) de bout en bout pour générer et valider de manière fiable les configurations réseau.
+
+Points Clés du Projet
+
+• Approche en Sous-équipes : Nous avons travaillé avec une approche structurée, répartie en trois équipes dédiées.
+  - Équipe 1 : Ingénierie des Données et Base de Connaissances.
+  - Équipe 2 : Inférence LLM (RAG, Prompt Builder, Filtrage).
+  - Équipe 3 : Validation Batfish et Agent d'Orchestration.
+
+• La Validation est Cruciale : Notre système utilise l'intégration Batfish pour valider la syntaxe et la fonctionnalité des commandes. Le cycle complet d'amélioration est : Recherche → Génération → Validation → Réécriture
+
+• Résultats de Performance :
+  - Gemini a atteint un Taux de Réussite Global du Pipeline de 100% avec RAG désactivé et 83% avec RAG activé.
+  - Gemini a montré une Distance Sémantique inférieure (meilleure) de 0.155 (RAG ON) comparé à 0.275 pour Zephyr.
+  - Gemini était environ 3,5 fois plus rapide que le modèle Zephyr affiné (82 secondes contre ~300 secondes).
+
+• Gestion de Projet : Nous avons utilisé la méthodologie Agile avec 2 Sprints, des réunions régulières et la gestion du travail sur Jira et GitHub.
+
+Ce fut une expérience fantastique de travailler en équipe de 10, à la fois sur site et à distance, dans un environnement multiculturel. Nous avons retenu l'importance de clarifier la portée et les critères de succès en amont pour réduire la reprise du travail.
+
+Pour l'avenir, nos prochaines étapes incluent l'ajout de tests synthétiques et adversariaux pour la robustesse de l'agent et du validateur, et l'implémentation de CI/CD pour les services et les modèles.`,
+          features: [
+            "Approche en sous-équipes avec 3 équipes dédiées : Ingénierie des Données, Inférence LLM, et Validation Batfish",
+            "Intégration Batfish pour la validation de la syntaxe et de la fonctionnalité des commandes",
+            "Taux de Réussite du Pipeline de 100% avec Gemini (RAG désactivé)",
+            "Distance Sémantique de 0.155 - meilleure que les 0.275 de Zephyr",
+            "3,5x plus rapide que le modèle Zephyr affiné",
+            "Méthodologie Agile avec 2 Sprints et gestion sur Jira/GitHub",
+            "Équipe multiculturelle de 10 personnes travaillant sur site et à distance",
+          ],
+          gallery: [
+            { src: "/projects/networking-ai/1.jpg", alt: "Screenshot 1" },
+            { src: "/projects/networking-ai/2.jpg", alt: "Screenshot 2" },
+            { src: "/projects/networking-ai/3.jpg", alt: "Screenshot 3" },
+          ],
         },
         {
+          slug: "my-comic-app",
           title: "MyComicApp",
           description:
             "Application de bureau Java pour gérer des collections, avec un moteur de recommandation.",
           tech: ["Java", "Swing", "JDBC", "SQLite", "REST API"],
           github: "https://github.com/AymaneAsserrar/MyComicApp",
+          // fullDescription: "",
+          // features: [],
+          gallery: [
+            {
+              src: "/projects/networking-ai/screenshot1.png",
+              alt: "Screenshot 1",
+              caption: "Description",
+            },
+            {
+              src: "/projects/networking-ai/screenshot2.png",
+              alt: "Screenshot 2",
+              caption: "Description",
+            },
+          ],
         },
         {
+          slug: "my-chat-app",
           title: "MyChatApp",
           description: "Application de chat en temps réel avec salons privés.",
           tech: ["Vue.js", "WebSockets", "SQL"],
           github: "https://github.com/AymaneAsserrar/MyChatApp",
+          // fullDescription: "",
+          // features: [],
+          // gallery: [],
         },
-
         {
+          slug: "admin-interface",
           title: "Interface Admin",
           description: "Tableau de bord de surveillance système en temps réel.",
           tech: ["Python", "Flask", "Dash", "Docker"],
           github: "https://github.com/AymaneAsserrar/PrInterfaceAdmin-UI",
+          // fullDescription: "",
+          // features: [],
+          // gallery: [],
         },
         {
+          slug: "slice-defender",
           title: "Slice Defender",
           description:
             "Jeu 3D interactif avec mécanique de découpe de projectiles.",
           tech: ["C++", "OpenGL", "Qt"],
           github: "https://github.com/AymaneAsserrar/SliceDefender3D",
+          // fullDescription: "",
+          // features: [],
+          // gallery: [],
         },
       ],
     },
