@@ -246,9 +246,39 @@ Looking ahead, our next steps include adding synthetic and adversarial tests for
             "Java desktop application for managing collections, with a recommendation engine.",
           tech: ["Java", "Swing", "JDBC", "SQLite", "REST API"],
           github: "https://github.com/AymaneAsserrar/MyComicApp",
-          // fullDescription: "",
-          // features: [],
-          // gallery: [],
+          fullDescription: `The comic application is designed for comic book fans to search, view, and manage their comics. Users can even receive recommendations based on their personal library.
+
+The application, built in Java, uses Swing for its user interface and FlatLaf for a modern look. It also includes a database for table creation and management.
+
+**Note:** There is an admin email that is created automatically to test:
+- Email: admin@admin.com
+- Password: admin`,
+          features: [
+            "Search for comics by title and view information about the title (authors, characters, etc.)",
+            "Search for characters, view details about them, and see the list of titles they appear in",
+            "Get general recommendations for comics",
+            "Create a personal account",
+            "Manage a personal comic library (comics I own, am currently reading, and have finished reading)",
+            "Get personalized reading recommendations based on your own library",
+          ],
+          gallery: [
+            {
+              src: "/projects/my-comic-app/1.png",
+              alt: "Main Interface - The application's main interface with navigation and recommendations",
+            },
+            {
+              src: "/projects/my-comic-app/2.png",
+              alt: "Comic Details - Detailed view of comic information including description, characters, and publication details",
+            },
+            {
+              src: "/projects/my-comic-app/3.png",
+              alt: "Personal Library - Personal library management with reading status tracking",
+            },
+            {
+              src: "/projects/my-comic-app/4.png",
+              alt: "Login Panel - Login panel with sign-up options and forget password options",
+            },
+          ],
         },
         {
           slug: "my-chat-app",
@@ -467,9 +497,39 @@ Pour l'avenir, nos prochaines étapes incluent l'ajout de tests synthétiques et
             "Application de bureau Java pour gérer des collections, avec un moteur de recommandation.",
           tech: ["Java", "Swing", "JDBC", "SQLite", "REST API"],
           github: "https://github.com/AymaneAsserrar/MyComicApp",
-          // fullDescription: "",
-          // features: [],
-          // gallery: [],
+          fullDescription: `L'application de comics est conçue pour les fans de bandes dessinées afin de rechercher, consulter et gérer leurs comics. Les utilisateurs peuvent même recevoir des recommandations basées sur leur bibliothèque personnelle.
+
+L'application, développée en Java, utilise Swing pour son interface utilisateur et FlatLaf pour un look moderne. Elle inclut également une base de données pour la création et la gestion des tables.
+
+**Note:** Un email admin est créé automatiquement pour tester :
+- Email : admin@admin.com
+- Mot de passe : admin`,
+          features: [
+            "Rechercher des comics par titre et consulter les informations (auteurs, personnages, etc.)",
+            "Rechercher des personnages, voir leurs détails et la liste des titres dans lesquels ils apparaissent",
+            "Obtenir des recommandations générales de comics",
+            "Créer un compte personnel",
+            "Gérer une bibliothèque personnelle de comics (comics possédés, en cours de lecture, et terminés)",
+            "Obtenir des recommandations de lecture personnalisées basées sur votre bibliothèque",
+          ],
+          gallery: [
+            {
+              src: "/projects/my-comic-app/1.png",
+              alt: "Interface principale - L'interface principale de l'application avec navigation et recommandations",
+            },
+            {
+              src: "/projects/my-comic-app/2.png",
+              alt: "Détails du comic - Vue détaillée des informations du comic incluant description, personnages et détails de publication",
+            },
+            {
+              src: "/projects/my-comic-app/3.png",
+              alt: "Bibliothèque personnelle - Gestion de la bibliothèque personnelle avec suivi du statut de lecture",
+            },
+            {
+              src: "/projects/my-comic-app/4.png",
+              alt: "Panneau de connexion - Panneau de connexion avec options d'inscription et mot de passe oublié",
+            },
+          ],
         },
         {
           slug: "my-chat-app",

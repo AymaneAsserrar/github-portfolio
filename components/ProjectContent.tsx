@@ -9,10 +9,11 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 
 // Get basePath for production (GitHub Pages)
-const basePath = process.env.NODE_ENV === 'production' ? '/github-portfolio' : '';
+const basePath =
+  process.env.NODE_ENV === "production" ? "/github-portfolio" : "";
 
 const getImagePath = (src: string) => {
-  if (src.startsWith('http')) return src;
+  if (src.startsWith("http")) return src;
   return `${basePath}${src}`;
 };
 
