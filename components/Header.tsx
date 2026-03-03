@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter, usePathname } from "next/navigation";
 import { Github, Linkedin, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { ThemeToggle } from "./ThemeToggle";
@@ -10,6 +11,8 @@ import { useLanguage } from "@/context/LanguageContext";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t } = useLanguage();
+  const router = useRouter();
+  const pathname = usePathname();
 
   const navLinks = [
     { name: t.nav.home, href: "#hero" },
@@ -24,11 +27,17 @@ export default function Header() {
     e.preventDefault();
     const targetId = href.replace("#", "");
     const elem = document.getElementById(targetId);
-    elem?.scrollIntoView({
-      behavior: "smooth",
-    });
-    // Update URL hash without jumping
-    window.history.pushState(null, "", href);
+    
+    // If element exists on current page, scroll to it
+    if (elem) {
+      elem.scrollIntoView({
+        behavior: "smooth",
+      });
+      window.history.pushState(null, "", href);
+    } else {
+      // If not on home page, navigate to home with the hash
+      router.push("/" + href);
+    }
     setIsMenuOpen(false);
   };
 
