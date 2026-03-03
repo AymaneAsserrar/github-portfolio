@@ -149,10 +149,18 @@ export const content = {
       viewOnGithub: "View on GitHub",
       list: [
         {
-          title: "Networking AI",
+          title: "Networking AI (International Project)",
           description:
-            "The project aimed to create an LLM platform utilizing RAG to generate verified configuration commands via Batfish for networking devices, mitigating issues like excessive documentation and model hallucinations.",
-          tech: ["LLM", "RAG", "Batfish", "Langchain"],
+            "End-to-end RAG solution for reliable network configuration generation & validation, developed by a 10-person multicultural team. Used a 3-sub-team approach: Data Engineering, LLM Inference (RAG, Prompt Builder), and Batfish Validation with Orchestration Agent. Achieved 100% pipeline success rate with Gemini and 0.155 semantic distance. Workflow: Search → Generate → Validate → Rewrite.",
+          tech: [
+            "LLM",
+            "RAG",
+            "Batfish",
+            "Langchain",
+            "Python",
+            "Agile",
+            "Jira",
+          ],
           github: "https://github.com/AymaneAsserrar/NetworkingAI",
         },
         {
@@ -289,10 +297,18 @@ export const content = {
       viewOnGithub: "Voir sur GitHub",
       list: [
         {
-          title: "Networking AI",
+          title: "Networking AI (Projet International)",
           description:
-            "Pour configurer des réseaux, ce projet a créé une plateforme de LLM utilisant le RAG pour produire des commandes de configuration vérifiées par Batfish, contrant ainsi les problèmes de documentation excessive et d'hallucinations des modèles.",
-          tech: ["LLM", "RAG", "Batfish", "Langchain"],
+            "Solution RAG de bout en bout pour la génération et validation fiable de configurations réseau, développée par une équipe multiculturelle de 10 personnes. Approche en 3 sous-équipes : Ingénierie des Données, Inférence LLM (RAG, Prompt Builder), et Validation Batfish avec Agent d'Orchestration. Taux de réussite de 100% avec Gemini et distance sémantique de 0.155. Workflow : Recherche → Génération → Validation → Réécriture.",
+          tech: [
+            "LLM",
+            "RAG",
+            "Batfish",
+            "Langchain",
+            "Python",
+            "Agile",
+            "Jira",
+          ],
           github: "https://github.com/AymaneAsserrar/NetworkingAI",
         },
         {
