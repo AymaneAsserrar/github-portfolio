@@ -8,6 +8,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
+// Get basePath for production (GitHub Pages)
+const basePath = process.env.NODE_ENV === 'production' ? '/github-portfolio' : '';
+
+const getImagePath = (src: string) => {
+  if (src.startsWith('http')) return src;
+  return `${basePath}${src}`;
+};
+
 interface ProjectContentProps {
   slug: string;
 }
@@ -172,14 +180,14 @@ export default function ProjectContent({ slug }: ProjectContentProps) {
                   className="relative aspect-video rounded-lg overflow-hidden border bg-muted group cursor-pointer"
                   onClick={() =>
                     setSelectedImage({
-                      src: image.src,
+                      src: getImagePath(image.src),
                       alt:
                         image.alt || `${project.title} screenshot ${index + 1}`,
                     })
                   }
                 >
                   <Image
-                    src={image.src}
+                    src={getImagePath(image.src)}
                     alt={
                       image.alt || `${project.title} screenshot ${index + 1}`
                     }
