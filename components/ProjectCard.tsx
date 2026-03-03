@@ -30,10 +30,13 @@ export default function ProjectCard({
           <div className="flex items-center gap-2">
             <Link
               href={`/projects/${slug}`}
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className="hover:text-primary transition-colors"
               title={viewDetailsLabel}
             >
-              <ExternalLink className="h-5 w-5" />
+              <span className="relative flex h-5 w-5">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-400 opacity-75"></span>
+                <ExternalLink className="relative h-5 w-5 text-blue-500" />
+              </span>
               <span className="sr-only">{viewDetailsLabel}</span>
             </Link>
             <Link
