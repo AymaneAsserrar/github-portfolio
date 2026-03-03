@@ -180,6 +180,8 @@ export const content = {
       checkGithub: "Check the GitHub repository",
       noGallery: "No screenshots available yet",
       noDetails: "More details coming soon",
+      clickToExpand: "Click to expand",
+      pressEscOrClick: "Press ESC or click anywhere to close",
     },
     projects: {
       title: "My Projects",
@@ -399,6 +401,8 @@ Looking ahead, our next steps include adding synthetic and adversarial tests for
       checkGithub: "Voir le dépôt GitHub",
       noGallery: "Pas de captures d'écran disponibles",
       noDetails: "Plus de détails à venir",
+      clickToExpand: "Cliquez pour agrandir",
+      pressEscOrClick: "Appuyez sur Échap ou cliquez n'importe où pour fermer",
     },
     projects: {
       title: "Mes Projets",
@@ -465,18 +469,7 @@ Pour l'avenir, nos prochaines étapes incluent l'ajout de tests synthétiques et
           github: "https://github.com/AymaneAsserrar/MyComicApp",
           // fullDescription: "",
           // features: [],
-          gallery: [
-            {
-              src: "/projects/networking-ai/screenshot1.png",
-              alt: "Screenshot 1",
-              caption: "Description",
-            },
-            {
-              src: "/projects/networking-ai/screenshot2.png",
-              alt: "Screenshot 2",
-              caption: "Description",
-            },
-          ],
+          // gallery: [],
         },
         {
           slug: "my-chat-app",
