@@ -137,49 +137,98 @@ export const ContactIllustration = () => {
       xmlns="http://www.w3.org/2000/svg"
       className="w-full h-full max-w-[300px] mx-auto"
     >
+      {/* Paper plane */}
+      <motion.g
+        initial={{ x: -40, y: 40, opacity: 0 }}
+        animate={{ x: 0, y: 0, opacity: 1 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+      >
+        <motion.path
+          d="M30 170 L175 70 L90 120 Z"
+          className="fill-blue-500/20 stroke-blue-500"
+          strokeWidth="3"
+          strokeLinejoin="round"
+        />
+        <motion.path
+          d="M90 120 L110 165 L175 70"
+          className="fill-blue-400/10 stroke-blue-500"
+          strokeWidth="3"
+          strokeLinejoin="round"
+        />
+        <motion.path
+          d="M90 120 L110 165"
+          className="stroke-blue-500"
+          strokeWidth="3"
+          strokeLinecap="round"
+        />
+      </motion.g>
+
+      {/* Trail lines */}
       <motion.path
         initial={{ pathLength: 0, opacity: 0 }}
-        animate={{ pathLength: 1, opacity: 1 }}
-        transition={{ duration: 1.5, ease: "easeInOut" }}
-        d="M20 60 L100 130 L180 60"
-        stroke="currentColor"
-        strokeWidth="4"
+        animate={{ pathLength: 1, opacity: 0.5 }}
+        transition={{ duration: 1.2, delay: 0.8, ease: "easeOut" }}
+        d="M20 140 Q50 130 70 135"
+        className="stroke-blue-400"
+        strokeWidth="2"
         strokeLinecap="round"
-        strokeLinejoin="round"
-        className="text-primary"
+        strokeDasharray="4 4"
+        fill="none"
       />
-      <motion.rect
+      <motion.path
         initial={{ pathLength: 0, opacity: 0 }}
-        animate={{ pathLength: 1, opacity: 1 }}
-        transition={{ duration: 1.5, ease: "easeInOut" }}
-        x="20"
-        y="60"
-        width="160"
-        height="100"
-        rx="8"
-        stroke="currentColor"
-        strokeWidth="4"
-        className="text-primary"
+        animate={{ pathLength: 1, opacity: 0.4 }}
+        transition={{ duration: 1, delay: 1, ease: "easeOut" }}
+        d="M10 160 Q40 155 55 158"
+        className="stroke-blue-300"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeDasharray="4 4"
+        fill="none"
+      />
+
+      {/* Floating dots */}
+      <motion.circle
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        transition={{ delay: 1.2, type: "spring" }}
+        cx="165"
+        cy="50"
+        r="6"
+        className="fill-cyan-400/60"
       />
       <motion.circle
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
-        transition={{ delay: 1.5, type: "spring" }}
-        cx="160"
-        cy="50"
-        r="12"
-        className="fill-green-500"
+        transition={{ delay: 1.4, type: "spring" }}
+        cx="145"
+        cy="38"
+        r="4"
+        className="fill-blue-400/50"
       />
-      <motion.path
+      <motion.circle
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
-        transition={{ delay: 1.7 }}
-        d="M156 50 L160 54 L166 46"
-        stroke="white"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
+        transition={{ delay: 1.6, type: "spring" }}
+        cx="180"
+        cy="60"
+        r="3"
+        className="fill-blue-300/40"
       />
+
+      {/* @ symbol */}
+      <motion.text
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 0.6, scale: 1 }}
+        transition={{ delay: 1.3, type: "spring" }}
+        x="150"
+        y="100"
+        className="fill-blue-500"
+        fontSize="20"
+        fontWeight="bold"
+      >
+        @
+      </motion.text>
     </svg>
   );
 };
