@@ -21,7 +21,7 @@ export default function ProjectCard({
   viewDetailsLabel = "View Details",
 }: ProjectCardProps) {
   return (
-    <div className="group flex flex-col justify-between rounded-lg border bg-card text-card-foreground shadow-[0_4px_20px_rgba(37,99,235,0.15)] dark:shadow-[0_4px_20px_rgba(96,165,250,0.15)] transition-all hover:shadow-[0_8px_30px_rgba(37,99,235,0.25)] dark:hover:shadow-[0_8px_30px_rgba(96,165,250,0.25)] hover:border-blue-300 dark:hover:border-blue-700 h-full">
+    <div className="group flex flex-col justify-between rounded-lg border border-blue-600 dark:border-blue-400 bg-card text-card-foreground shadow-[0_4px_20px_rgba(37,99,235,0.15)] dark:shadow-[0_4px_20px_rgba(96,165,250,0.15)] transition-all hover:shadow-[0_8px_30px_rgba(37,99,235,0.25)] dark:hover:shadow-[0_8px_30px_rgba(96,165,250,0.25)] hover:border-blue-300 dark:hover:border-blue-700 h-full">
       <div className="p-6 space-y-4">
         <div className="flex items-start justify-between">
           <h3 className="text-2xl font-semibold leading-none tracking-tight group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">

@@ -44,9 +44,9 @@ export default function SkillsSection() {
             <motion.div 
               key={category} 
               variants={item}
-              className="bg-card text-card-foreground rounded-xl border border-blue-600 dark:border-blue-400 shadow-[0_4px_20px_rgba(37,99,235,0.2)] dark:shadow-[0_4px_20px_rgba(96,165,250,0.2)] p-6 hover:shadow-[0_8px_30px_rgba(37,99,235,0.3)] dark:hover:shadow-[0_8px_30px_rgba(96,165,250,0.3)] transition-shadow duration-300"
+              className="group bg-card text-card-foreground rounded-lg border border-blue-600 dark:border-blue-400 shadow-[0_4px_20px_rgba(37,99,235,0.15)] dark:shadow-[0_4px_20px_rgba(96,165,250,0.15)] p-6 transition-all hover:shadow-[0_8px_30px_rgba(37,99,235,0.25)] dark:hover:shadow-[0_8px_30px_rgba(96,165,250,0.25)] hover:border-blue-300 dark:hover:border-blue-700"
             >
-              <h3 className="text-xl font-semibold mb-4 text-primary">
+              <h3 className="text-xl font-semibold mb-4 text-primary group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                 {t.skills.categories[category as keyof typeof t.skills.categories]}
               </h3>
               <div className="flex flex-wrap gap-2">

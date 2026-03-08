@@ -45,7 +45,7 @@ export default function ExperienceSection() {
           {t.experience.list.map((exp, index) => (
             <motion.div key={index} variants={item} className="relative pl-8 md:pl-12">
               {/* Timeline Dot */}
-              <span className="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full bg-primary ring-4 ring-background" />
+              <span className="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full bg-blue-600 dark:bg-blue-400 ring-4 ring-background" />
               
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
                 <h3 className="text-xl font-bold text-foreground">{exp.role}</h3>

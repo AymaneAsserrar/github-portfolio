@@ -36,9 +36,9 @@ export default function AboutSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="bg-background p-6 rounded-lg border border-blue-600 dark:border-blue-400 shadow-[0_4px_20px_rgba(37,99,235,0.2)] dark:shadow-[0_4px_20px_rgba(96,165,250,0.2)]"
+              className="group bg-card text-card-foreground p-6 rounded-lg border border-blue-600 dark:border-blue-400 shadow-[0_4px_20px_rgba(37,99,235,0.15)] dark:shadow-[0_4px_20px_rgba(96,165,250,0.15)] transition-all hover:shadow-[0_8px_30px_rgba(37,99,235,0.25)] dark:hover:shadow-[0_8px_30px_rgba(96,165,250,0.25)] hover:border-blue-300 dark:hover:border-blue-700"
             >
-              <h3 className="text-xl font-semibold mb-4 text-foreground">{t.about.softSkillsTitle}</h3>
+              <h3 className="text-xl font-semibold mb-4 text-foreground group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">{t.about.softSkillsTitle}</h3>
               <ul className="list-disc list-inside space-y-2">
                 {t.about.softSkills.map((skill, index) => (
                   <li key={index}>{skill}</li>
@@ -51,9 +51,9 @@ export default function AboutSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="bg-background p-6 rounded-lg border border-blue-600 dark:border-blue-400 shadow-[0_4px_20px_rgba(37,99,235,0.2)] dark:shadow-[0_4px_20px_rgba(96,165,250,0.2)]"
+              className="group bg-card text-card-foreground p-6 rounded-lg border border-blue-600 dark:border-blue-400 shadow-[0_4px_20px_rgba(37,99,235,0.15)] dark:shadow-[0_4px_20px_rgba(96,165,250,0.15)] transition-all hover:shadow-[0_8px_30px_rgba(37,99,235,0.25)] dark:hover:shadow-[0_8px_30px_rgba(96,165,250,0.25)] hover:border-blue-300 dark:hover:border-blue-700"
             >
-              <h3 className="text-xl font-semibold mb-4 text-foreground">{t.about.educationTitle}</h3>
+              <h3 className="text-xl font-semibold mb-4 text-foreground group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">{t.about.educationTitle}</h3>
               <ul className="space-y-4">
                 {t.about.education.map((edu, index) => (
                   <li key={index}>

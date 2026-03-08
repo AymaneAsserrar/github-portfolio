@@ -28,7 +28,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-xl md:text-2xl text-muted-foreground max-w-[700px] mx-auto md:mx-0"
+          className="text-xl md:text-xl text-muted-foreground max-w-[700px] mx-auto md:mx-0"
         >
           {t.personalInfo.profileSummary}
         </motion.p>
