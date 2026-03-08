@@ -13,7 +13,7 @@ export default function LanguageSwitcher() {
         className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
           language === "fr"
             ? "bg-primary text-primary-foreground"
-            : "text-muted-foreground hover:text-foreground"
+            : "text-muted-foreground hover:text-blue-600 dark:hover:text-blue-400"
         }`}
       >
         FR
@@ -23,7 +23,7 @@ export default function LanguageSwitcher() {
         className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
           language === "en"
             ? "bg-primary text-primary-foreground"
-            : "text-muted-foreground hover:text-foreground"
+            : "text-muted-foreground hover:text-blue-600 dark:hover:text-blue-400"
         }`}
       >
         EN

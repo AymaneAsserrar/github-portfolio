@@ -18,7 +18,7 @@ export default function Footer() {
             href={t.personalInfo.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-foreground transition-colors"
+            className="text-muted-foreground hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
           >
             <Github className="h-5 w-5" />
             <span className="sr-only">GitHub</span>
@@ -27,7 +27,7 @@ export default function Footer() {
             href={t.personalInfo.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-foreground transition-colors"
+            className="text-muted-foreground hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
           >
             <Linkedin className="h-5 w-5" />
             <span className="sr-only">LinkedIn</span>

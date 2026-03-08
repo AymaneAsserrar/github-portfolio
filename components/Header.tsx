@@ -55,7 +55,7 @@ export default function Header() {
               key={link.name}
               href={link.href}
               onClick={(e) => handleScroll(e, link.href)}
-              className="text-sm font-medium hover:text-primary transition-colors cursor-pointer"
+              className="text-sm font-medium text-foreground hover:text-blue-600 dark:hover:text-blue-400 transition-colors cursor-pointer"
             >
               {link.name}
             </a>
@@ -68,7 +68,7 @@ export default function Header() {
             href={t.personalInfo.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-foreground transition-colors"
+            className="text-muted-foreground hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
           >
             <Github className="h-5 w-5" />
             <span className="sr-only">GitHub</span>
@@ -77,7 +77,7 @@ export default function Header() {
             href={t.personalInfo.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-foreground transition-colors"
+            className="text-muted-foreground hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
           >
             <Linkedin className="h-5 w-5" />
             <span className="sr-only">LinkedIn</span>
@@ -112,7 +112,7 @@ export default function Header() {
                 key={link.name}
                 href={link.href}
                 onClick={(e) => handleScroll(e, link.href)}
-                className="text-sm font-medium hover:text-primary transition-colors cursor-pointer"
+                className="text-sm font-medium text-foreground hover:text-blue-600 dark:hover:text-blue-400 transition-colors cursor-pointer"
               >
                 {link.name}
               </a>
@@ -122,7 +122,7 @@ export default function Header() {
                 href={t.personalInfo.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground"
+                className="text-muted-foreground hover:text-blue-600 dark:hover:text-blue-400"
               >
                 <Github className="h-5 w-5" />
               </Link>
@@ -130,7 +130,7 @@ export default function Header() {
                 href={t.personalInfo.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground"
+                className="text-muted-foreground hover:text-blue-600 dark:hover:text-blue-400"
               >
                 <Linkedin className="h-5 w-5" />
               </Link>

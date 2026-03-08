@@ -28,7 +28,7 @@ export default function SkillsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center"
+          className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300"
         >
           {t.skills.title}
         </motion.h2>
@@ -44,7 +44,7 @@ export default function SkillsSection() {
             <motion.div 
               key={category} 
               variants={item}
-              className="bg-card text-card-foreground rounded-xl border shadow-sm p-6 hover:shadow-md transition-shadow duration-300"
+              className="bg-card text-card-foreground rounded-xl border border-blue-600 dark:border-blue-400 shadow-[0_4px_20px_rgba(37,99,235,0.2)] dark:shadow-[0_4px_20px_rgba(96,165,250,0.2)] p-6 hover:shadow-[0_8px_30px_rgba(37,99,235,0.3)] dark:hover:shadow-[0_8px_30px_rgba(96,165,250,0.3)] transition-shadow duration-300"
             >
               <h3 className="text-xl font-semibold mb-4 text-primary">
                 {t.skills.categories[category as keyof typeof t.skills.categories]}
@@ -53,7 +53,7 @@ export default function SkillsSection() {
                 {items.map((skill) => (
                   <span
                     key={skill}
-                    className="inline-flex items-center rounded-md border px-3 py-1 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground cursor-default"
+                    className="inline-flex items-center rounded-md border px-3 py-1 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-blue-600 hover:text-white dark:hover:bg-blue-400 dark:hover:text-gray-900 cursor-default"
                   >
                     {skill}
                   </span>

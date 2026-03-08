@@ -14,7 +14,7 @@ export default function AboutSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center"
+          className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300"
         >
           {t.about.title}
         </motion.h2>
@@ -36,7 +36,7 @@ export default function AboutSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="bg-background p-6 rounded-lg shadow-sm border"
+              className="bg-background p-6 rounded-lg border border-blue-600 dark:border-blue-400 shadow-[0_4px_20px_rgba(37,99,235,0.2)] dark:shadow-[0_4px_20px_rgba(96,165,250,0.2)]"
             >
               <h3 className="text-xl font-semibold mb-4 text-foreground">{t.about.softSkillsTitle}</h3>
               <ul className="list-disc list-inside space-y-2">
@@ -51,7 +51,7 @@ export default function AboutSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="bg-background p-6 rounded-lg shadow-sm border"
+              className="bg-background p-6 rounded-lg border border-blue-600 dark:border-blue-400 shadow-[0_4px_20px_rgba(37,99,235,0.2)] dark:shadow-[0_4px_20px_rgba(96,165,250,0.2)]"
             >
               <h3 className="text-xl font-semibold mb-4 text-foreground">{t.about.educationTitle}</h3>
               <ul className="space-y-4">

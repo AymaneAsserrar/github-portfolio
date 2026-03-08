@@ -20,14 +20,14 @@ export default function ContactSection() {
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-6"
+            className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300"
           >
             {t.contact.title}
           </motion.h2>
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="max-w-md mx-auto p-6 bg-background rounded-lg border shadow-sm"
+            className="max-w-md mx-auto p-6 bg-background rounded-lg border border-blue-600 dark:border-blue-400 shadow-[0_4px_20px_rgba(37,99,235,0.2)] dark:shadow-[0_4px_20px_rgba(96,165,250,0.2)]"
           >
             <div className="w-32 h-32 mx-auto mb-6">
               <ContactIllustration />
@@ -52,7 +52,7 @@ export default function ContactSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center"
+          className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300"
         >
           {t.contact.title}
         </motion.h2>
@@ -75,7 +75,7 @@ export default function ContactSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="w-full"
           >
-            <form className="space-y-6 bg-background p-6 rounded-xl border shadow-sm" onSubmit={handleSubmit}>
+            <form className="space-y-6 bg-background p-6 rounded-xl border border-blue-600 dark:border-blue-400 shadow-[0_4px_20px_rgba(37,99,235,0.2)] dark:shadow-[0_4px_20px_rgba(96,165,250,0.2)]" onSubmit={handleSubmit}>
               <div className="space-y-2">
                 <label
                   htmlFor="name"
@@ -146,7 +146,7 @@ export default function ContactSection() {
               <button
                 type="submit"
                 disabled={state.submitting}
-                className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full"
+                className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-blue-600 text-white hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 h-10 px-4 py-2 w-full"
               >
                 {state.submitting ? t.contact.sendingButton : t.contact.sendButton}
               </button>

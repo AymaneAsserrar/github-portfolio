@@ -30,7 +30,7 @@ export default function ExperienceSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center"
+          className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300"
         >
           {t.experience.title}
         </motion.h2>
@@ -49,7 +49,7 @@ export default function ExperienceSection() {
               
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
                 <h3 className="text-xl font-bold text-foreground">{exp.role}</h3>
-                <span className="text-sm text-muted-foreground font-medium bg-background px-2 py-1 rounded border mt-1 sm:mt-0 w-fit">
+                <span className="text-sm text-muted-foreground font-medium bg-background px-2 py-1 rounded border border-blue-600 dark:border-blue-400 shadow-[0_2px_10px_rgba(37,99,235,0.15)] dark:shadow-[0_2px_10px_rgba(96,165,250,0.15)] mt-1 sm:mt-0 w-fit">
                   {exp.dates}
                 </span>
               </div>

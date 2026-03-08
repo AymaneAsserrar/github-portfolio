@@ -69,7 +69,7 @@ export default function ProjectContent({ slug }: ProjectContentProps) {
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-md border bg-card hover:bg-accent transition-colors"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-md border bg-card hover:bg-blue-50 hover:text-blue-600 hover:border-blue-300 dark:hover:bg-blue-900/30 dark:hover:text-blue-400 dark:hover:border-blue-700 transition-colors"
             >
               <Github className="h-4 w-4" />
               <span>GitHub</span>
@@ -79,7 +79,7 @@ export default function ProjectContent({ slug }: ProjectContentProps) {
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-colors"
               >
                 <ExternalLink className="h-4 w-4" />
                 <span>{t.projectPage?.viewLive || "View Live"}</span>
@@ -136,7 +136,7 @@ export default function ProjectContent({ slug }: ProjectContentProps) {
                   href={project.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-blue-600 text-white hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-colors"
                 >
                   <ExternalLink className="h-4 w-4" />
                   <span>{t.projectPage?.viewLive || "View Live"}</span>
@@ -152,7 +152,7 @@ export default function ProjectContent({ slug }: ProjectContentProps) {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 mt-4 text-primary hover:underline"
+                  className="inline-flex items-center gap-2 mt-4 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 hover:underline"
                 >
                   <Github className="h-4 w-4" />
                   <span>
@@ -245,7 +245,7 @@ export default function ProjectContent({ slug }: ProjectContentProps) {
               {project.tech.map((techItem) => (
                 <span
                   key={techItem}
-                  className="inline-flex items-center rounded-lg border px-4 py-2 text-sm font-semibold bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
+                  className="inline-flex items-center rounded-lg border px-4 py-2 text-sm font-semibold bg-blue-600/10 text-blue-600 hover:bg-blue-600/20 dark:bg-blue-400/10 dark:text-blue-400 dark:hover:bg-blue-400/20 transition-colors"
                 >
                   {techItem}
                 </span>
@@ -301,7 +301,7 @@ export default function ProjectContent({ slug }: ProjectContentProps) {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-md border bg-muted/50 hover:bg-muted transition-colors"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-md border bg-muted/50 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-300 dark:hover:bg-blue-900/30 dark:hover:text-blue-400 dark:hover:border-blue-700 transition-colors"
                 >
                   <Github className="h-4 w-4" />
                   <span>GitHub Repository</span>
@@ -311,7 +311,7 @@ export default function ProjectContent({ slug }: ProjectContentProps) {
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-md border bg-muted/50 hover:bg-muted transition-colors"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-md border bg-muted/50 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-300 dark:hover:bg-blue-900/30 dark:hover:text-blue-400 dark:hover:border-blue-700 transition-colors"
                   >
                     <ExternalLink className="h-4 w-4" />
                     <span>{t.projectPage?.viewLive || "Live Demo"}</span>
@@ -326,7 +326,7 @@ export default function ProjectContent({ slug }: ProjectContentProps) {
         <div className="max-w-4xl mx-auto text-center">
           <Link
             href="/#projects"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-md border bg-card hover:bg-accent transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-md border bg-card hover:bg-blue-50 hover:text-blue-600 hover:border-blue-300 dark:hover:bg-blue-900/30 dark:hover:text-blue-400 dark:hover:border-blue-700 transition-colors"
           >
             <ArrowLeft className="h-4 w-4" />
             <span>{t.projectPage?.backToProjects || "Back to Projects"}</span>
@@ -341,7 +341,7 @@ export default function ProjectContent({ slug }: ProjectContentProps) {
           onClick={() => setSelectedImage(null)}
         >
           <button
-            className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors z-10"
+            className="absolute top-4 right-4 text-white hover:text-blue-400 transition-colors z-10"
             onClick={() => setSelectedImage(null)}
             aria-label="Close"
           >
