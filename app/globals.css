@@ -23,6 +23,8 @@
   --input: #e2e8f0;
   --ring: #0f172a;
   --radius: 0.5rem;
+  --crosshair-color: rgba(99, 102, 241, 0.18);
+  --crosshair-accent: rgba(99, 102, 241, 0.5);
 }
 
 .dark {
@@ -45,6 +47,8 @@
   --border: #1e293b;
   --input: #1e293b;
   --ring: #cbd5e1;
+  --crosshair-color: rgba(165, 180, 252, 0.15);
+  --crosshair-accent: rgba(165, 180, 252, 0.45);
 }
 
 @theme inline {
