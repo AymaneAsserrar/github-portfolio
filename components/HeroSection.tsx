@@ -1,14 +1,34 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Download } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
+import { useLoading } from "@/context/LoadingContext";
 
 export default function HeroSection() {
   const { t } = useLanguage();
+  const { isLoaded } = useLoading();
   const basePath = process.env.NODE_ENV === 'production' ? '/github-portfolio' : '';
+
+  const controlsH1 = useAnimation();
+  const controlsP = useAnimation();
+  const controlsButtons = useAnimation();
+  const controlsImage = useAnimation();
+  const [hasPlayedInitial, setHasPlayedInitial] = useState(false);
+
+  // Play initial animation after loading screen finishes
+  useEffect(() => {
+    if (isLoaded && !hasPlayedInitial) {
+      setHasPlayedInitial(true);
+      controlsH1.start({ opacity: 1, y: 0, transition: { duration: 0.5 } });
+      controlsP.start({ opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.2 } });
+      controlsButtons.start({ opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.4 } });
+      controlsImage.start({ opacity: 1, scale: 1, transition: { duration: 0.8 } });
+    }
+  }, [isLoaded, hasPlayedInitial, controlsH1, controlsP, controlsButtons, controlsImage]);
 
   return (
     <section
@@ -18,7 +38,9 @@ export default function HeroSection() {
       <div className="max-w-2xl space-y-8 text-center md:text-left flex-1 z-10">
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          animate={controlsH1}
+          whileInView={hasPlayedInitial ? { opacity: 1, y: 0 } : undefined}
+          viewport={{ once: false, amount: 0.1 }}
           transition={{ duration: 0.5 }}
           className="text-4xl md:text-6xl font-bold tracking-tighter sm:text-5xl xl:text-7xl/none bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300 pb-2"
         >
@@ -26,7 +48,9 @@ export default function HeroSection() {
         </motion.h1>
         <motion.p 
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          animate={controlsP}
+          whileInView={hasPlayedInitial ? { opacity: 1, y: 0 } : undefined}
+          viewport={{ once: false, amount: 0.1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-xl md:text-xl text-muted-foreground max-w-[700px] mx-auto md:mx-0"
         >
@@ -34,7 +58,9 @@ export default function HeroSection() {
         </motion.p>
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          animate={controlsButtons}
+          whileInView={hasPlayedInitial ? { opacity: 1, y: 0 } : undefined}
+          viewport={{ once: false, amount: 0.1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
           className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
         >
@@ -58,7 +84,9 @@ export default function HeroSection() {
       
       <motion.div 
         initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
+        animate={controlsImage}
+        whileInView={hasPlayedInitial ? { opacity: 1, scale: 1 } : undefined}
+        viewport={{ once: false, amount: 0.1 }}
         transition={{ duration: 0.8 }}
         className="flex-1 w-full max-w-[500px] relative z-0 flex justify-center items-center"
       >

@@ -69,7 +69,7 @@ export default function ProjectContent({ slug }: ProjectContentProps) {
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-md border bg-card hover:bg-blue-50 hover:text-blue-600 hover:border-blue-300 dark:hover:bg-blue-900/30 dark:hover:text-blue-400 dark:hover:border-blue-700 transition-colors"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-blue-600 dark:border-blue-400 bg-card hover:bg-blue-50 hover:text-blue-600 hover:border-blue-300 dark:hover:bg-blue-900/30 dark:hover:text-blue-400 dark:hover:border-blue-700 transition-colors"
             >
               <Github className="h-4 w-4" />
               <span>GitHub</span>
@@ -89,14 +89,14 @@ export default function ProjectContent({ slug }: ProjectContentProps) {
         </div>
 
         {/* Overview Section */}
-        <section id="overview" className="max-w-4xl mx-auto mb-16 scroll-mt-24">
-          <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
-            <span className="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center text-sm font-bold">
+        <section id="overview" className="group max-w-4xl mx-auto mb-16 scroll-mt-24">
+          <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2 transition-colors group-hover:text-blue-600 dark:group-hover:text-blue-400">
+            <span className="w-8 h-8 rounded-full bg-blue-600/10 text-blue-600 dark:bg-blue-400/10 dark:text-blue-400 flex items-center justify-center text-sm font-bold">
               1
             </span>
             {t.projectPage?.overview || "Overview"}
           </h2>
-          <div className="p-6 rounded-lg border bg-card">
+          <div className="p-6 rounded-lg border border-blue-600 dark:border-blue-400 bg-card shadow-[0_4px_20px_rgba(37,99,235,0.15)] dark:shadow-[0_4px_20px_rgba(96,165,250,0.15)] transition-all hover:shadow-[0_8px_30px_rgba(37,99,235,0.25)] dark:hover:shadow-[0_8px_30px_rgba(96,165,250,0.25)] hover:border-blue-300 dark:hover:border-blue-700">
             <p className="text-lg text-foreground leading-relaxed">
               {project.description}
             </p>
@@ -109,14 +109,14 @@ export default function ProjectContent({ slug }: ProjectContentProps) {
         </section>
 
         {/* Demo Section */}
-        <section id="demo" className="max-w-4xl mx-auto mb-16 scroll-mt-24">
-          <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
-            <span className="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center text-sm font-bold">
+        <section id="demo" className="group max-w-4xl mx-auto mb-16 scroll-mt-24">
+          <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2 transition-colors group-hover:text-blue-600 dark:group-hover:text-blue-400">
+            <span className="w-8 h-8 rounded-full bg-blue-600/10 text-blue-600 dark:bg-blue-400/10 dark:text-blue-400 flex items-center justify-center text-sm font-bold">
               2
             </span>
             {t.projectPage?.demo || "Demo"}
           </h2>
-          <div className="p-6 rounded-lg border bg-card">
+          <div className="p-6 rounded-lg border border-blue-600 dark:border-blue-400 bg-card shadow-[0_4px_20px_rgba(37,99,235,0.15)] dark:shadow-[0_4px_20px_rgba(96,165,250,0.15)] transition-all hover:shadow-[0_8px_30px_rgba(37,99,235,0.25)] dark:hover:shadow-[0_8px_30px_rgba(96,165,250,0.25)] hover:border-blue-300 dark:hover:border-blue-700">
             {project.demoUrl ? (
               <div className="aspect-video rounded-lg overflow-hidden bg-muted">
                 <iframe
@@ -166,9 +166,9 @@ export default function ProjectContent({ slug }: ProjectContentProps) {
         </section>
 
         {/* Gallery Section */}
-        <section id="gallery" className="max-w-4xl mx-auto mb-16 scroll-mt-24">
-          <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
-            <span className="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center text-sm font-bold">
+        <section id="gallery" className="group/section max-w-4xl mx-auto mb-16 scroll-mt-24">
+          <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2 transition-colors group-hover/section:text-blue-600 dark:group-hover/section:text-blue-400">
+            <span className="w-8 h-8 rounded-full bg-blue-600/10 text-blue-600 dark:bg-blue-400/10 dark:text-blue-400 flex items-center justify-center text-sm font-bold">
               3
             </span>
             {t.projectPage?.gallery || "Gallery"}
@@ -178,7 +178,7 @@ export default function ProjectContent({ slug }: ProjectContentProps) {
               {project.gallery.map((image, index) => (
                 <div
                   key={index}
-                  className="relative aspect-video rounded-lg overflow-hidden border bg-muted group cursor-pointer"
+                  className="relative aspect-video rounded-lg overflow-hidden border bg-muted group/card cursor-pointer"
                   onClick={() =>
                     setSelectedImage({
                       src: getImagePath(image.src),
@@ -193,10 +193,10 @@ export default function ProjectContent({ slug }: ProjectContentProps) {
                       image.alt || `${project.title} screenshot ${index + 1}`
                     }
                     fill
-                    className="object-cover transition-transform group-hover:scale-105"
+                    className="object-cover transition-transform group-hover/card:scale-105"
                   />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
-                    <span className="opacity-0 group-hover:opacity-100 transition-opacity text-white text-sm font-medium bg-black/50 px-3 py-1 rounded-full">
+                  <div className="absolute inset-0 bg-black/0 group-hover/card:bg-black/20 transition-colors flex items-center justify-center">
+                    <span className="opacity-0 group-hover/card:opacity-100 transition-opacity text-white text-sm font-medium bg-black/50 px-3 py-1 rounded-full">
                       {t.projectPage?.clickToExpand || "Click to expand"}
                     </span>
                   </div>
@@ -209,7 +209,7 @@ export default function ProjectContent({ slug }: ProjectContentProps) {
               ))}
             </div>
           ) : (
-            <div className="p-12 rounded-lg border bg-card text-center">
+            <div className="p-12 rounded-lg border border-blue-600 dark:border-blue-400 bg-card shadow-[0_4px_20px_rgba(37,99,235,0.15)] dark:shadow-[0_4px_20px_rgba(96,165,250,0.15)] transition-all hover:shadow-[0_8px_30px_rgba(37,99,235,0.25)] dark:hover:shadow-[0_8px_30px_rgba(96,165,250,0.25)] hover:border-blue-300 dark:hover:border-blue-700 text-center">
               <div className="w-16 h-16 mx-auto mb-4 rounded-lg bg-muted flex items-center justify-center">
                 <svg
                   className="h-8 w-8 text-muted-foreground/50"
@@ -233,14 +233,14 @@ export default function ProjectContent({ slug }: ProjectContentProps) {
         </section>
 
         {/* Tech Section */}
-        <section id="tech" className="max-w-4xl mx-auto mb-16 scroll-mt-24">
-          <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
-            <span className="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center text-sm font-bold">
+        <section id="tech" className="group max-w-4xl mx-auto mb-16 scroll-mt-24">
+          <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2 transition-colors group-hover:text-blue-600 dark:group-hover:text-blue-400">
+            <span className="w-8 h-8 rounded-full bg-blue-600/10 text-blue-600 dark:bg-blue-400/10 dark:text-blue-400 flex items-center justify-center text-sm font-bold">
               4
             </span>
             {t.projectPage?.tech || "Tech"}
           </h2>
-          <div className="p-6 rounded-lg border bg-card">
+          <div className="p-6 rounded-lg border border-blue-600 dark:border-blue-400 bg-card shadow-[0_4px_20px_rgba(37,99,235,0.15)] dark:shadow-[0_4px_20px_rgba(96,165,250,0.15)] transition-all hover:shadow-[0_8px_30px_rgba(37,99,235,0.25)] dark:hover:shadow-[0_8px_30px_rgba(96,165,250,0.25)] hover:border-blue-300 dark:hover:border-blue-700">
             <div className="flex flex-wrap gap-3">
               {project.tech.map((techItem) => (
                 <span
@@ -255,14 +255,14 @@ export default function ProjectContent({ slug }: ProjectContentProps) {
         </section>
 
         {/* Details Section */}
-        <section id="details" className="max-w-4xl mx-auto mb-16 scroll-mt-24">
-          <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
-            <span className="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center text-sm font-bold">
+        <section id="details" className="group max-w-4xl mx-auto mb-16 scroll-mt-24">
+          <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2 transition-colors group-hover:text-blue-600 dark:group-hover:text-blue-400">
+            <span className="w-8 h-8 rounded-full bg-blue-600/10 text-blue-600 dark:bg-blue-400/10 dark:text-blue-400 flex items-center justify-center text-sm font-bold">
               5
             </span>
             {t.projectPage?.details || "Details"}
           </h2>
-          <div className="p-6 rounded-lg border bg-card space-y-6">
+          <div className="p-6 rounded-lg border border-blue-600 dark:border-blue-400 bg-card shadow-[0_4px_20px_rgba(37,99,235,0.15)] dark:shadow-[0_4px_20px_rgba(96,165,250,0.15)] transition-all hover:shadow-[0_8px_30px_rgba(37,99,235,0.25)] dark:hover:shadow-[0_8px_30px_rgba(96,165,250,0.25)] hover:border-blue-300 dark:hover:border-blue-700 space-y-6">
             {/* Features */}
             {project.features && project.features.length > 0 ? (
               <div>
@@ -275,7 +275,7 @@ export default function ProjectContent({ slug }: ProjectContentProps) {
                       key={index}
                       className="flex items-start gap-3 p-3 rounded-lg bg-muted/50"
                     >
-                      <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center text-xs font-medium">
+                      <span className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-600/10 text-blue-600 dark:bg-blue-400/10 dark:text-blue-400 flex items-center justify-center text-xs font-medium">
                         {index + 1}
                       </span>
                       <span className="text-foreground">{feature}</span>
@@ -301,7 +301,7 @@ export default function ProjectContent({ slug }: ProjectContentProps) {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-md border bg-muted/50 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-300 dark:hover:bg-blue-900/30 dark:hover:text-blue-400 dark:hover:border-blue-700 transition-colors"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-blue-600 dark:border-blue-400 bg-muted/50 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-300 dark:hover:bg-blue-900/30 dark:hover:text-blue-400 dark:hover:border-blue-700 transition-colors"
                 >
                   <Github className="h-4 w-4" />
                   <span>GitHub Repository</span>
@@ -311,7 +311,7 @@ export default function ProjectContent({ slug }: ProjectContentProps) {
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-md border bg-muted/50 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-300 dark:hover:bg-blue-900/30 dark:hover:text-blue-400 dark:hover:border-blue-700 transition-colors"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-blue-600 dark:border-blue-400 bg-muted/50 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-300 dark:hover:bg-blue-900/30 dark:hover:text-blue-400 dark:hover:border-blue-700 transition-colors"
                   >
                     <ExternalLink className="h-4 w-4" />
                     <span>{t.projectPage?.viewLive || "Live Demo"}</span>
@@ -326,7 +326,7 @@ export default function ProjectContent({ slug }: ProjectContentProps) {
         <div className="max-w-4xl mx-auto text-center">
           <Link
             href="/#projects"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-md border bg-card hover:bg-blue-50 hover:text-blue-600 hover:border-blue-300 dark:hover:bg-blue-900/30 dark:hover:text-blue-400 dark:hover:border-blue-700 transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-md border border-blue-600 dark:border-blue-400 bg-card hover:bg-blue-50 hover:text-blue-600 hover:border-blue-300 dark:hover:bg-blue-900/30 dark:hover:text-blue-400 dark:hover:border-blue-700 transition-colors"
           >
             <ArrowLeft className="h-4 w-4" />
             <span>{t.projectPage?.backToProjects || "Back to Projects"}</span>
