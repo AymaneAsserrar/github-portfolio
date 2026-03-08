@@ -6,7 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { content } from "@/lib/data";
 import { LanguageProvider } from "@/context/LanguageContext";
-import { PageBackground } from "@/components/Illustrations";
+import AnimatedBackground from "@/components/AnimatedBackground";
 import MouseCrosshair from "@/components/MouseCrosshair";
 import LoadingScreen from "@/components/LoadingScreen";
 import { LoadingProvider } from "@/context/LoadingContext";
@@ -40,7 +40,7 @@ export default function RootLayout({
       >
         <LoadingProvider>
         <LoadingScreen />
-        <PageBackground />
+        <AnimatedBackground />
         <MouseCrosshair />
         <LanguageProvider>
           <ThemeProvider
