@@ -10,8 +10,8 @@ const TERMINAL_LINES = [
   "Starting dev server...",
 ];
 
-const LINE_INTERVAL = 50;
-const CHAR_SPEED = 1;
+const LINE_INTERVAL = 20;
+const CHAR_SPEED = 0;
 
 interface TerminalLoaderProps {
   onComplete?: () => void;
@@ -69,7 +69,7 @@ export default function TerminalLoader({ onComplete }: TerminalLoaderProps) {
       className="fixed inset-0 z-[9999] flex items-center justify-center bg-[#060a14]"
       initial={{ opacity: 1 }}
       animate={{ opacity: fadeOut ? 0 : 1, scale: fadeOut ? 1.02 : 1 }}
-      transition={{ duration: 0.7, ease: "easeInOut" }}
+      transition={{ duration: 0.4, ease: "easeInOut" }}
       onAnimationComplete={() => {
         if (fadeOut && onComplete) onComplete();
       }}
@@ -123,10 +123,10 @@ export default function TerminalLoader({ onComplete }: TerminalLoaderProps) {
               className="flex items-center gap-2 mt-1"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.2 }}
+              transition={{ delay: 0.1 }}
               onAnimationComplete={() => {
                 // After "Ready." appears, wait a beat then fade out
-                setTimeout(() => setFadeOut(true), 250);
+                setTimeout(() => setFadeOut(true), 100);
               }}
             >
               <span className="text-blue-700 select-none">❯</span>

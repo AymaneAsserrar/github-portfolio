@@ -88,7 +88,7 @@ export default function ProjectContent({ slug }: ProjectContentProps) {
           </div>
         </div>
 
-        {/* Overview Section */}
+        {/* Overview Section - Visual & Animated */}
         <section id="overview" className="group max-w-4xl mx-auto mb-16 scroll-mt-24">
           <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2 transition-colors group-hover:text-blue-600 dark:group-hover:text-blue-400">
             <span className="w-8 h-8 rounded-full bg-blue-600/10 text-blue-600 dark:bg-blue-400/10 dark:text-blue-400 flex items-center justify-center text-sm font-bold">
@@ -96,72 +96,109 @@ export default function ProjectContent({ slug }: ProjectContentProps) {
             </span>
             {t.projectPage?.overview || "Overview"}
           </h2>
-          <div className="p-6 rounded-lg border border-blue-600 dark:border-blue-400 bg-card shadow-[0_4px_20px_rgba(37,99,235,0.15)] dark:shadow-[0_4px_20px_rgba(96,165,250,0.15)] transition-all hover:shadow-[0_8px_30px_rgba(37,99,235,0.25)] dark:hover:shadow-[0_8px_30px_rgba(96,165,250,0.25)] hover:border-blue-300 dark:hover:border-blue-700">
-            <p className="text-lg text-foreground leading-relaxed">
-              {project.description}
-            </p>
-            {project.fullDescription && (
-              <p className="mt-4 text-muted-foreground leading-relaxed whitespace-pre-line">
-                {project.fullDescription}
-              </p>
-            )}
+
+          {/* Animated Visual Card */}
+          <div className="relative rounded-2xl border border-blue-600 dark:border-blue-400 bg-card overflow-hidden shadow-[0_4px_20px_rgba(37,99,235,0.15)] dark:shadow-[0_4px_20px_rgba(96,165,250,0.15)] transition-all hover:shadow-[0_8px_30px_rgba(37,99,235,0.25)] dark:hover:shadow-[0_8px_30px_rgba(96,165,250,0.25)] hover:border-blue-300 dark:hover:border-blue-700">
+
+            {/* Animated Gradient Background */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+              <div className="absolute -top-1/2 -left-1/2 w-full h-full rounded-full bg-blue-500/5 dark:bg-blue-400/5 animate-[spin_20s_linear_infinite]" />
+              <div className="absolute -bottom-1/2 -right-1/2 w-full h-full rounded-full bg-indigo-500/5 dark:bg-indigo-400/5 animate-[spin_25s_linear_infinite_reverse]" />
+              <div className="absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-blue-400/10 dark:bg-blue-300/10 animate-[pulse_4s_ease-in-out_infinite]" />
+              <div className="absolute bottom-1/4 right-1/4 w-24 h-24 rounded-full bg-indigo-400/10 dark:bg-indigo-300/10 animate-[pulse_5s_ease-in-out_infinite_1s]" />
+            </div>
+
+            {/* Content */}
+            <div className="relative z-10 p-8">
+              {/* Animated Feature Highlights */}
+              {project.features && project.features.length > 0 && (
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+                  {project.features.map((feature, i) => (
+                    <div
+                      key={i}
+                      className="overview-feature-card group/feature relative p-4 rounded-xl bg-background/60 dark:bg-background/40 backdrop-blur-sm border border-blue-600/10 dark:border-blue-400/10 hover:border-blue-600/40 dark:hover:border-blue-400/40 transition-all duration-300 hover:scale-[1.03] hover:shadow-lg"
+                      style={{
+                        animationDelay: `${0.3 + i * 0.1}s`,
+                      }}
+                    >
+                      {/* Animated number indicator */}
+                      <div className="flex items-center gap-3 mb-2">
+                        <span className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600/10 dark:bg-blue-400/10 flex items-center justify-center overview-pulse-ring">
+                          <span className="text-blue-600 dark:text-blue-400 text-sm font-bold">
+                            {i + 1}
+                          </span>
+                        </span>
+                        <div className="h-px flex-1 bg-gradient-to-r from-blue-600/20 to-transparent dark:from-blue-400/20 overview-line-grow" style={{ animationDelay: `${0.5 + i * 0.1}s` }} />
+                      </div>
+                      <p className="text-sm text-foreground/80 leading-relaxed line-clamp-3 group-hover/feature:text-foreground transition-colors">
+                        {feature}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {/* Visual Separator with animated dots */}
+              <div className="flex items-center justify-center gap-2 py-4">
+                <span className="w-2 h-2 rounded-full bg-blue-600/40 dark:bg-blue-400/40 animate-[pulse_2s_ease-in-out_infinite]" />
+                <span className="w-2 h-2 rounded-full bg-blue-600/40 dark:bg-blue-400/40 animate-[pulse_2s_ease-in-out_infinite_0.3s]" />
+                <span className="w-2 h-2 rounded-full bg-blue-600/40 dark:bg-blue-400/40 animate-[pulse_2s_ease-in-out_infinite_0.6s]" />
+              </div>
+
+              {/* Quick Stats Row */}
+              <div className="flex flex-wrap justify-center gap-6 text-center">
+                <div className="overview-stat-item" style={{ animationDelay: '0.2s' }}>
+                  <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 overview-count-up">
+                    {project.tech.length}
+                  </div>
+                  <div className="text-xs text-muted-foreground uppercase tracking-wider mt-1">
+                    {language === 'fr' ? 'Technologies' : 'Technologies'}
+                  </div>
+                </div>
+                {project.features && (
+                  <div className="overview-stat-item" style={{ animationDelay: '0.4s' }}>
+                    <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 overview-count-up">
+                      {project.features.length}
+                    </div>
+                    <div className="text-xs text-muted-foreground uppercase tracking-wider mt-1">
+                      {language === 'fr' ? 'Fonctionnalités' : 'Features'}
+                    </div>
+                  </div>
+                )}
+                {project.gallery && (
+                  <div className="overview-stat-item" style={{ animationDelay: '0.6s' }}>
+                    <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 overview-count-up">
+                      {project.gallery.length}
+                    </div>
+                    <div className="text-xs text-muted-foreground uppercase tracking-wider mt-1">
+                      {language === 'fr' ? 'Captures' : 'Screenshots'}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* Demo Section */}
-        <section id="demo" className="group max-w-4xl mx-auto mb-16 scroll-mt-24">
+        {/* Tech Section */}
+        <section id="tech" className="group max-w-4xl mx-auto mb-16 scroll-mt-24">
           <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2 transition-colors group-hover:text-blue-600 dark:group-hover:text-blue-400">
             <span className="w-8 h-8 rounded-full bg-blue-600/10 text-blue-600 dark:bg-blue-400/10 dark:text-blue-400 flex items-center justify-center text-sm font-bold">
               2
             </span>
-            {t.projectPage?.demo || "Demo"}
+            {t.projectPage?.tech || "Tech"}
           </h2>
           <div className="p-6 rounded-lg border border-blue-600 dark:border-blue-400 bg-card shadow-[0_4px_20px_rgba(37,99,235,0.15)] dark:shadow-[0_4px_20px_rgba(96,165,250,0.15)] transition-all hover:shadow-[0_8px_30px_rgba(37,99,235,0.25)] dark:hover:shadow-[0_8px_30px_rgba(96,165,250,0.25)] hover:border-blue-300 dark:hover:border-blue-700">
-            {project.demoUrl ? (
-              <div className="aspect-video rounded-lg overflow-hidden bg-muted">
-                <iframe
-                  src={project.demoUrl}
-                  className="w-full h-full"
-                  allowFullScreen
-                  title={`${project.title} demo`}
-                />
-              </div>
-            ) : project.liveUrl ? (
-              <div className="text-center py-12">
-                <Play className="h-16 w-16 mx-auto text-muted-foreground mb-4" />
-                <p className="text-muted-foreground mb-4">
-                  {t.projectPage?.tryLiveDemo || "Try the live demo"}
-                </p>
-                <Link
-                  href={project.liveUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-blue-600 text-white hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-colors"
+            <div className="flex flex-wrap gap-3">
+              {project.tech.map((techItem) => (
+                <span
+                  key={techItem}
+                  className="inline-flex items-center rounded-lg border px-4 py-2 text-sm font-semibold bg-blue-600/10 text-blue-600 hover:bg-blue-600/20 dark:bg-blue-400/10 dark:text-blue-400 dark:hover:bg-blue-400/20 transition-colors"
                 >
-                  <ExternalLink className="h-4 w-4" />
-                  <span>{t.projectPage?.viewLive || "View Live"}</span>
-                </Link>
-              </div>
-            ) : (
-              <div className="text-center py-12">
-                <Play className="h-16 w-16 mx-auto text-muted-foreground/50 mb-4" />
-                <p className="text-muted-foreground">
-                  {t.projectPage?.noDemo || "No demo available yet"}
-                </p>
-                <Link
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 mt-4 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 hover:underline"
-                >
-                  <Github className="h-4 w-4" />
-                  <span>
-                    {t.projectPage?.checkGithub ||
-                      "Check the GitHub repository"}
-                  </span>
-                </Link>
-              </div>
-            )}
+                  {techItem}
+                </span>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -232,93 +269,60 @@ export default function ProjectContent({ slug }: ProjectContentProps) {
           )}
         </section>
 
-        {/* Tech Section */}
-        <section id="tech" className="group max-w-4xl mx-auto mb-16 scroll-mt-24">
+        {/* Demo Section */}
+        <section id="demo" className="group max-w-4xl mx-auto mb-16 scroll-mt-24">
           <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2 transition-colors group-hover:text-blue-600 dark:group-hover:text-blue-400">
             <span className="w-8 h-8 rounded-full bg-blue-600/10 text-blue-600 dark:bg-blue-400/10 dark:text-blue-400 flex items-center justify-center text-sm font-bold">
               4
             </span>
-            {t.projectPage?.tech || "Tech"}
+            {t.projectPage?.demo || "Demo"}
           </h2>
           <div className="p-6 rounded-lg border border-blue-600 dark:border-blue-400 bg-card shadow-[0_4px_20px_rgba(37,99,235,0.15)] dark:shadow-[0_4px_20px_rgba(96,165,250,0.15)] transition-all hover:shadow-[0_8px_30px_rgba(37,99,235,0.25)] dark:hover:shadow-[0_8px_30px_rgba(96,165,250,0.25)] hover:border-blue-300 dark:hover:border-blue-700">
-            <div className="flex flex-wrap gap-3">
-              {project.tech.map((techItem) => (
-                <span
-                  key={techItem}
-                  className="inline-flex items-center rounded-lg border px-4 py-2 text-sm font-semibold bg-blue-600/10 text-blue-600 hover:bg-blue-600/20 dark:bg-blue-400/10 dark:text-blue-400 dark:hover:bg-blue-400/20 transition-colors"
+            {project.demoUrl ? (
+              <div className="aspect-video rounded-lg overflow-hidden bg-muted">
+                <iframe
+                  src={project.demoUrl}
+                  className="w-full h-full"
+                  allowFullScreen
+                  title={`${project.title} demo`}
+                />
+              </div>
+            ) : project.liveUrl ? (
+              <div className="text-center py-12">
+                <Play className="h-16 w-16 mx-auto text-muted-foreground mb-4" />
+                <p className="text-muted-foreground mb-4">
+                  {t.projectPage?.tryLiveDemo || "Try the live demo"}
+                </p>
+                <Link
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-blue-600 text-white hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-colors"
                 >
-                  {techItem}
-                </span>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Details Section */}
-        <section id="details" className="group max-w-4xl mx-auto mb-16 scroll-mt-24">
-          <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2 transition-colors group-hover:text-blue-600 dark:group-hover:text-blue-400">
-            <span className="w-8 h-8 rounded-full bg-blue-600/10 text-blue-600 dark:bg-blue-400/10 dark:text-blue-400 flex items-center justify-center text-sm font-bold">
-              5
-            </span>
-            {t.projectPage?.details || "Details"}
-          </h2>
-          <div className="p-6 rounded-lg border border-blue-600 dark:border-blue-400 bg-card shadow-[0_4px_20px_rgba(37,99,235,0.15)] dark:shadow-[0_4px_20px_rgba(96,165,250,0.15)] transition-all hover:shadow-[0_8px_30px_rgba(37,99,235,0.25)] dark:hover:shadow-[0_8px_30px_rgba(96,165,250,0.25)] hover:border-blue-300 dark:hover:border-blue-700 space-y-6">
-            {/* Features */}
-            {project.features && project.features.length > 0 ? (
-              <div>
-                <h3 className="text-lg font-medium mb-4">
-                  {t.projectPage?.keyFeatures || "Key Features"}
-                </h3>
-                <ul className="grid gap-3">
-                  {project.features.map((feature, index) => (
-                    <li
-                      key={index}
-                      className="flex items-start gap-3 p-3 rounded-lg bg-muted/50"
-                    >
-                      <span className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-600/10 text-blue-600 dark:bg-blue-400/10 dark:text-blue-400 flex items-center justify-center text-xs font-medium">
-                        {index + 1}
-                      </span>
-                      <span className="text-foreground">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+                  <ExternalLink className="h-4 w-4" />
+                  <span>{t.projectPage?.viewLive || "View Live"}</span>
+                </Link>
               </div>
             ) : (
-              <div className="text-center py-8">
+              <div className="text-center py-12">
+                <Play className="h-16 w-16 mx-auto text-muted-foreground/50 mb-4" />
                 <p className="text-muted-foreground">
-                  {t.projectPage?.noDetails || "More details coming soon"}
+                  {t.projectPage?.noDemo || "No demo available yet"}
                 </p>
-              </div>
-            )}
-
-            {/* Links */}
-            <div className="pt-6 border-t">
-              <h3 className="text-lg font-medium mb-4">
-                {t.projectPage?.links || "Links"}
-              </h3>
-              <div className="flex flex-wrap gap-3">
                 <Link
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-blue-600 dark:border-blue-400 bg-muted/50 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-300 dark:hover:bg-blue-900/30 dark:hover:text-blue-400 dark:hover:border-blue-700 transition-colors"
+                  className="inline-flex items-center gap-2 mt-4 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 hover:underline"
                 >
                   <Github className="h-4 w-4" />
-                  <span>GitHub Repository</span>
+                  <span>
+                    {t.projectPage?.checkGithub ||
+                      "Check the GitHub repository"}
+                  </span>
                 </Link>
-                {project.liveUrl && (
-                  <Link
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-blue-600 dark:border-blue-400 bg-muted/50 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-300 dark:hover:bg-blue-900/30 dark:hover:text-blue-400 dark:hover:border-blue-700 transition-colors"
-                  >
-                    <ExternalLink className="h-4 w-4" />
-                    <span>{t.projectPage?.viewLive || "Live Demo"}</span>
-                  </Link>
-                )}
               </div>
-            </div>
+            )}
           </div>
         </section>
 
