@@ -169,7 +169,7 @@ export const content = {
       aboutProject: "About this Project",
       keyFeatures: "Key Features",
       gallery: "Gallery",
-      viewDetails: "View Details",
+      viewDetails: "Details",
       overview: "Overview",
       demo: "Demo",
       tech: "Tech",
@@ -186,13 +186,13 @@ export const content = {
     projects: {
       title: "My Projects",
       viewOnGithub: "View on GitHub",
-      viewDetails: "View Details",
+      viewDetails: "Details",
       list: [
         {
           slug: "networking-ai",
           title: "Networking AI (International Project)",
           description:
-            "End-to-end RAG solution for reliable network configuration generation & validation, developed by a 10-person multicultural team. Used a 3-sub-team approach: Data Engineering, LLM Inference (RAG, Prompt Builder), and Batfish Validation with Orchestration Agent. Achieved 100% pipeline success rate with Gemini and 0.155 semantic distance. Workflow: Search → Generate → Validate → Rewrite.",
+            "Complete end-to-end Augmented Generation by Recovery (RAG) solution to reliably generate and validate network configurations, developed by a multicultural team of 10 people.",
           tech: [
             "LLM",
             "RAG",
@@ -420,7 +420,7 @@ The application, built in Java, uses Swing for its user interface and FlatLaf fo
       aboutProject: "À propos de ce Projet",
       keyFeatures: "Fonctionnalités Clés",
       gallery: "Galerie",
-      viewDetails: "Voir Détails",
+      viewDetails: "Détails",
       overview: "Aperçu",
       demo: "Démo",
       tech: "Technologies",
@@ -437,7 +437,7 @@ The application, built in Java, uses Swing for its user interface and FlatLaf fo
     projects: {
       title: "Mes Projets",
       viewOnGithub: "Voir sur GitHub",
-      viewDetails: "Voir Détails",
+      viewDetails: "Détails",
       list: [
         {
           slug: "networking-ai",

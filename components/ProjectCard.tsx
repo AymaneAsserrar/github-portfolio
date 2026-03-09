@@ -18,7 +18,7 @@ export default function ProjectCard({
   github,
   slug,
   viewOnGithubLabel = "View on GitHub",
-  viewDetailsLabel = "View Details",
+  viewDetailsLabel = "Details",
 }: ProjectCardProps) {
   return (
     <div className="group flex flex-col justify-between rounded-lg border border-blue-600 dark:border-blue-400 bg-card text-card-foreground shadow-[0_4px_20px_rgba(37,99,235,0.15)] dark:shadow-[0_4px_20px_rgba(96,165,250,0.15)] transition-all hover:shadow-[0_8px_30px_rgba(37,99,235,0.25)] dark:hover:shadow-[0_8px_30px_rgba(96,165,250,0.25)] hover:border-blue-300 dark:hover:border-blue-700 h-full">
@@ -30,14 +30,14 @@ export default function ProjectCard({
           <div className="flex items-center gap-2">
             <Link
               href={`/projects/${slug}`}
-              className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              className="inline-flex items-center gap-1.5 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors text-xs font-medium"
               title={viewDetailsLabel}
             >
-              <span className="relative flex h-5 w-5">
+              <span className="relative flex h-4 w-4">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-400 opacity-75"></span>
-                <ExternalLink className="relative h-5 w-5 text-blue-500" />
+                <ExternalLink className="relative h-4 w-4" />
               </span>
-              <span className="sr-only">{viewDetailsLabel}</span>
+              <span>{viewDetailsLabel}</span>
             </Link>
             <Link
               href={github}
