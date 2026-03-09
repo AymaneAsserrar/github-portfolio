@@ -9,6 +9,8 @@ import { ThemeToggle } from "./ThemeToggle";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { useLanguage } from "@/context/LanguageContext";
 
+const basePath = process.env.NODE_ENV === 'production' ? '/github-portfolio' : '';
+
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t } = useLanguage();
@@ -47,7 +49,7 @@ export default function Header() {
       <div className="container mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center">
           <Image
-            src="/logo-light.png"
+            src={`${basePath}/logo-light.png`}
             alt={t.personalInfo.name}
             width={120}
             height={40}
@@ -55,7 +57,7 @@ export default function Header() {
             priority
           />
           <Image
-            src="/logo-dark.png"
+            src={`${basePath}/logo-dark.png`}
             alt={t.personalInfo.name}
             width={120}
             height={40}
