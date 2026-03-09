@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { content, Project } from "@/lib/data";
+import { getTechIconUrl } from "@/lib/techIcons";
 import { Github, ExternalLink, Play, ArrowLeft, X } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -190,14 +191,25 @@ export default function ProjectContent({ slug }: ProjectContentProps) {
           </h2>
           <div className="p-6 rounded-lg border border-blue-600 dark:border-blue-400 bg-card shadow-[0_4px_20px_rgba(37,99,235,0.15)] dark:shadow-[0_4px_20px_rgba(96,165,250,0.15)] transition-all hover:shadow-[0_8px_30px_rgba(37,99,235,0.25)] dark:hover:shadow-[0_8px_30px_rgba(96,165,250,0.25)] hover:border-blue-300 dark:hover:border-blue-700">
             <div className="flex flex-wrap gap-3">
-              {project.tech.map((techItem) => (
-                <span
-                  key={techItem}
-                  className="inline-flex items-center rounded-lg border px-4 py-2 text-sm font-semibold bg-blue-600/10 text-blue-600 hover:bg-blue-600/20 dark:bg-blue-400/10 dark:text-blue-400 dark:hover:bg-blue-400/20 transition-colors"
-                >
-                  {techItem}
-                </span>
-              ))}
+              {project.tech.map((techItem) => {
+                const iconUrl = getTechIconUrl(techItem);
+                return (
+                  <span
+                    key={techItem}
+                    className="tech-icon-float inline-flex items-center gap-2 rounded-lg border px-4 py-2 text-sm font-semibold bg-blue-600/10 text-blue-600 hover:bg-blue-600/20 dark:bg-blue-400/10 dark:text-blue-400 dark:hover:bg-blue-400/20 transition-colors"
+                  >
+                    {iconUrl && (
+                      <img
+                        src={iconUrl}
+                        alt={`${techItem} logo`}
+                        className="w-5 h-5 object-contain"
+                        loading="lazy"
+                      />
+                    )}
+                    {techItem}
+                  </span>
+                );
+              })}
             </div>
           </div>
         </section>

@@ -86,6 +86,35 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ===== Tech Icon Floating Animation ===== */
+
+@keyframes techIconFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.tech-icon-float {
+  animation: techIconFloat 3s ease-in-out infinite;
+}
+
+/* Stagger the floating for variety */
+.tech-icon-float:nth-child(2n) {
+  animation-delay: 0.5s;
+}
+.tech-icon-float:nth-child(3n) {
+  animation-delay: 1s;
+}
+.tech-icon-float:nth-child(4n) {
+  animation-delay: 1.5s;
+}
+.tech-icon-float:nth-child(5n) {
+  animation-delay: 0.3s;
+}
+
 /* ===== Overview Section Animations ===== */
 
 /* Floating pill animation */

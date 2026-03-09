@@ -1,6 +1,7 @@
 "use client";
 
 import { useLanguage } from "@/context/LanguageContext";
+import { getTechIconUrl } from "@/lib/techIcons";
 import { motion } from "framer-motion";
 
 const container = {
@@ -50,14 +51,25 @@ export default function SkillsSection() {
                 {t.skills.categories[category as keyof typeof t.skills.categories]}
               </h3>
               <div className="flex flex-wrap gap-2">
-                {items.map((skill) => (
-                  <span
-                    key={skill}
-                    className="inline-flex items-center rounded-md border px-3 py-1 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-blue-600 hover:text-white dark:hover:bg-blue-400 dark:hover:text-gray-900 cursor-default"
-                  >
-                    {skill}
-                  </span>
-                ))}
+                {items.map((skill) => {
+                  const iconUrl = getTechIconUrl(skill);
+                  return (
+                    <span
+                      key={skill}
+                      className="inline-flex items-center gap-1.5 rounded-md border px-3 py-1 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-blue-600 hover:text-white dark:hover:bg-blue-400 dark:hover:text-gray-900 cursor-default"
+                    >
+                      {iconUrl && (
+                        <img
+                          src={iconUrl}
+                          alt={`${skill} logo`}
+                          className="w-4 h-4 object-contain tech-icon-float"
+                          loading="lazy"
+                        />
+                      )}
+                      {skill}
+                    </span>
+                  );
+                })}
               </div>
             </motion.div>
           ))}
