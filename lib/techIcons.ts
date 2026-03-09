@@ -20,6 +20,7 @@ const techIconMap: Record<string, string> = {
   "React": `${DEVICON_BASE}/react/react-original.svg`,
   "Next.js": `${DEVICON_BASE}/nextjs/nextjs-original.svg`,
   "Vue.js": `${DEVICON_BASE}/vuejs/vuejs-original.svg`,
+  "Angular": `${DEVICON_BASE}/angular/angular-original.svg`,
   "Tailwind CSS": `${DEVICON_BASE}/tailwindcss/tailwindcss-original.svg`,
   "HTML5": `${DEVICON_BASE}/html5/html5-original.svg`,
   "CSS3": `${DEVICON_BASE}/css3/css3-original.svg`,
@@ -27,6 +28,7 @@ const techIconMap: Record<string, string> = {
 
   // Backend
   "Laravel": `${DEVICON_BASE}/laravel/laravel-original.svg`,
+  "Symfony": `${DEVICON_BASE}/symfony/symfony-original.svg`,
   "Flask": `${DEVICON_BASE}/flask/flask-original.svg`,
   "Spring Boot": `${DEVICON_BASE}/spring/spring-original.svg`,
   "Node.js": `${DEVICON_BASE}/nodejs/nodejs-original.svg`,

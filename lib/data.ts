@@ -40,6 +40,7 @@ const skillsList = {
     "React",
     "Next.js",
     "Vue.js",
+    "Angular",
     "Tailwind CSS",
     "HTML5",
     "CSS3",
@@ -47,6 +48,7 @@ const skillsList = {
   ],
   backend: [
     "Laravel",
+    "Symfony",
     "Flask",
     "Spring Boot",
     "Node.js",
