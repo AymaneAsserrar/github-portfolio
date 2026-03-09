@@ -23,6 +23,7 @@ export default function Header() {
     { name: t.nav.skills, href: "#skills" },
     { name: t.experience.title, href: "#experience" },
     { name: t.nav.projects, href: "#projects" },
+    { name: "Certifications", href: "#certifications" },
     { name: t.nav.contact, href: "#contact" },
   ];
 

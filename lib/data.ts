@@ -591,3 +591,99 @@ export const personalInfo = content.en.personalInfo;
 export const skills = content.en.skills.list;
 export const experience = content.en.experience.list;
 export const projects = content.en.projects.list;
+
+// Certifications data for CertificationsSection
+export interface CertificationData {
+  title: string;
+  organization: string;
+  logo: string;
+  credentialUrl?: string;
+  issued?: string;
+  expires?: string;
+  credentialId?: string;
+  skills?: string[];
+}
+
+export const certifications: CertificationData[] = [
+  {
+    title: "Sensibilisation à la cybersécurité",
+    organization: "Groupe Casino",
+    logo: "https://media.licdn.com/dms/image/v2/D4E0BAQEX_TIBsem8Uw/company-logo_100_100/company-logo_100_100/0/1736952138852/groupe_casino_logo?e=1774483200&v=beta&t=Y7XLgPEDl1vWNEW_M5EIGfBWySVeqS9lIxFZ-WiO4Eo",
+    credentialUrl: "https://mycampus-casino.360learning.com/api/certification/9565711184551404/file.pdf",
+    issued: "Feb 2026",
+    credentialId: "9565711184551404",
+  },
+  {
+    title: "MOOC",
+    organization: "ANSSI - Agence nationale de la sécurité des systèmes d'information",
+    logo: "https://media.licdn.com/dms/image/v2/C4E0BAQHIVo7ZFcWBsw/company-logo_100_100/company-logo_100_100/0/1631314234060?e=1774483200&v=beta&t=N0lFXAiPvDfD92pNcAUXPAJmZZ8ZIEyiYL2DUks1yjQ",
+    credentialUrl: "https://www.linkedin.com/in/aymane-asserrar/details/certifications/1771036408472/single-media-viewer?type=DOCUMENT&profileId=ACoAACbgvJ4B5DPKHT_8gLd4AruseNB7AagiuzE&locale=en_US&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BmEH4aN6IQ4O8rou7sh%2Futw%3D%3D",
+    issued: "Feb 2026",
+  },
+  {
+    title: "Introduction to SQL Using Google BigQuery",
+    organization: "LinkedIn",
+    logo: "https://media.licdn.com/dms/image/v2/C560BAQHaVYd13rRz3A/company-logo_100_100/company-logo_100_100/0/1638831590218/linkedin_logo?e=1774483200&v=beta&t=Rxz3WQoYd6hgn7CRQ_uIFOizEERqC2z4kccfR57TmqI",
+    credentialUrl: "https://www.linkedin.com/learning/certificates/4c6ce834a466c638c5a7cd4e0c59fc2cd6ab865b7b346cc2255a4d4c0c447352?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BmEH4aN6IQ4O8rou7sh%2Futw%3D%3D",
+    issued: "Dec 2025",
+    skills: ["Google BigQuery"],
+  },
+  {
+    title: "Mission RGPD",
+    organization: "Groupe Casino",
+    logo: "https://media.licdn.com/dms/image/v2/D4E0BAQEX_TIBsem8Uw/company-logo_100_100/company-logo_100_100/0/1736952138852/groupe_casino_logo?e=1774483200&v=beta&t=Y7XLgPEDl1vWNEW_M5EIGfBWySVeqS9lIxFZ-WiO4Eo",
+    credentialUrl: "https://mycampus-casino.360learning.com/api/certification/1908271131306477/file.pdf",
+    issued: "Dec 2025",
+    credentialId: "1908271131306477",
+  },
+  {
+    title: "Procédure de recueil des signalements",
+    organization: "Groupe Casino",
+    logo: "https://media.licdn.com/dms/image/v2/D4E0BAQEX_TIBsem8Uw/company-logo_100_100/company-logo_100_100/0/1736952138852/groupe_casino_logo?e=1774483200&v=beta&t=Y7XLgPEDl1vWNEW_M5EIGfBWySVeqS9lIxFZ-WiO4Eo",
+    credentialUrl: "https://mycampus-casino.360learning.com/api/certification/1958906746092530/file.pdf",
+    issued: "Dec 2025",
+    expires: "Dec 2027",
+    credentialId: "1958906746092530",
+  },
+  {
+    title: "La lutte contre la corruption",
+    organization: "Groupe Casino",
+    logo: "https://media.licdn.com/dms/image/v2/D4E0BAQEX_TIBsem8Uw/company-logo_100_100/company-logo_100_100/0/1736952138852/groupe_casino_logo?e=1774483200&v=beta&t=Y7XLgPEDl1vWNEW_M5EIGfBWySVeqS9lIxFZ-WiO4Eo",
+    credentialUrl: "https://mycampus-casino.360learning.com/api/certification/8144861057310410/file.pdf",
+    issued: "Dec 2025",
+    credentialId: "8144861057310410",
+  },
+  {
+    title: "Gestion des conflits d'intérêts",
+    organization: "Groupe Casino",
+    logo: "https://media.licdn.com/dms/image/v2/D4E0BAQEX_TIBsem8Uw/company-logo_100_100/company-logo_100_100/0/1736952138852/groupe_casino_logo?e=1774483200&v=beta&t=Y7XLgPEDl1vWNEW_M5EIGfBWySVeqS9lIxFZ-WiO4Eo",
+    credentialUrl: "https://mycampus-casino.360learning.com/api/certification/1798525946566709/file.pdf",
+    issued: "Dec 2025",
+    credentialId: "1798525946566709",
+  },
+  {
+    title: "ETS TOEIC",
+    organization: "TOEIC Program",
+    logo: "https://media.licdn.com/dms/image/v2/D4E0BAQHnBDu3L_2ubA/company-logo_100_100/company-logo_100_100/0/1719257438779/thetoeicprogram_logo?e=1774483200&v=beta&t=dM8OnEvsQkOz4Vi1lDkbL4FkRiWOYTZCDs8s_raLjuQ",
+    issued: "Dec 2024",
+    expires: "Dec 2026",
+    skills: ["English"],
+    credentialUrl: "#",
+  },
+  {
+    title: "Advanced PHP: Debugging Techniques",
+    organization: "LinkedIn",
+    logo: "https://media.licdn.com/dms/image/v2/C560BAQHaVYd13rRz3A/company-logo_100_100/company-logo_100_100/0/1638831590218/linkedin_logo?e=1774483200&v=beta&t=Rxz3WQoYd6hgn7CRQ_uIFOizEERqC2z4kccfR57TmqI",
+    credentialUrl: "https://www.linkedin.com/learning/certificates/ac28fd379ebf20b3d10995aa803e7f4e46c126f36ae24443aa9b179d23d335f8?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BmEH4aN6IQ4O8rou7sh%2Futw%3D%3D",
+    issued: "Nov 2025",
+    skills: ["PHP"],
+  },
+  {
+    title: "Advanced Laravel",
+    organization: "LinkedIn",
+    logo: "https://media.licdn.com/dms/image/v2/C560BAQHaVYd13rRz3A/company-logo_100_100/company-logo_100_100/0/1638831590218/linkedin_logo?e=1774483200&v=beta&t=Rxz3WQoYd6hgn7CRQ_uIFOizEERqC2z4kccfR57TmqI",
+    credentialUrl: "https://www.linkedin.com/learning/certificates/3e512dfb9c9ee0e396f2f69956e0efe571b2d9cf504d9effa9fc9d0fb0e51109?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BmEH4aN6IQ4O8rou7sh%2Futw%3D%3D",
+    issued: "Nov 2025",
+    skills: ["Laravel"],
+  },
+];

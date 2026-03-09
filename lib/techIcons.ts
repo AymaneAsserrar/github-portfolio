@@ -55,6 +55,7 @@ const techIconMap: Record<string, string> = {
 
   // Cloud
   "GCP (BigQuery)": `${DEVICON_BASE}/googlecloud/googlecloud-original.svg`,
+  "Google BigQuery": `${DEVICON_BASE}/googlecloud/googlecloud-original.svg`,
   "Azure (IoT Hub)": `${DEVICON_BASE}/azure/azure-original.svg`,
 
   // AI / ML / Misc

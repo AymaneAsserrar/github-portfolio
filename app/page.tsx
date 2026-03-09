@@ -5,6 +5,9 @@ import ExperienceSection from "@/components/ExperienceSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import ContactSection from "@/components/ContactSection";
 
+import CertificationsSection from "@/components/CertificationsSection";
+import { certifications } from "@/lib/data";
+
 // Home Page Component
 export default function Home() {
   return (
@@ -14,6 +17,7 @@ export default function Home() {
       <SkillsSection />
       <ExperienceSection />
       <ProjectsSection />
+      <CertificationsSection certifications={certifications} />
       <ContactSection />
     </div>
   );
