@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
 import { Github, Linkedin, Menu, X } from "lucide-react";
 import { useState } from "react";
@@ -44,8 +45,23 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 dark:border-gray-800">
       <div className="container mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
-        <Link href="/" className="font-bold text-xl tracking-tight">
-          {t.personalInfo.name}
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/logo-light.png"
+            alt={t.personalInfo.name}
+            width={120}
+            height={40}
+            className="h-10 w-auto dark:hidden"
+            priority
+          />
+          <Image
+            src="/logo-dark.png"
+            alt={t.personalInfo.name}
+            width={120}
+            height={40}
+            className="h-10 w-auto hidden dark:block"
+            priority
+          />
         </Link>
 
         {/* Desktop Navigation */}
