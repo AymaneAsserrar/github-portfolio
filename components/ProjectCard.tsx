@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Github, ExternalLink } from "lucide-react";
+import { getTechIconUrl } from "../lib/techIcons";
 
 interface ProjectCardProps {
   title: string;
@@ -56,14 +57,25 @@ export default function ProjectCard({
 
       <div className="p-6 pt-0 mt-auto">
         <div className="flex flex-wrap gap-2">
-          {tech.map((t) => (
-            <span
-              key={t}
-              className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-blue-600/10 text-blue-600 hover:bg-blue-600/20 dark:bg-blue-400/10 dark:text-blue-400 dark:hover:bg-blue-400/20"
-            >
-              {t}
-            </span>
-          ))}
+              {tech.map((t) => {
+                const iconUrl = getTechIconUrl(t);
+                return (
+                  <span
+                    key={t}
+                    className="inline-flex items-center gap-1 rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-blue-600/10 text-blue-600 hover:bg-blue-600/20 dark:bg-blue-400/10 dark:text-blue-400 dark:hover:bg-blue-400/20"
+                  >
+                    {iconUrl && (
+                      <img
+                        src={iconUrl}
+                        alt={t + ' logo'}
+                        className="w-4 h-4 mr-1 tech-icon-float"
+                        style={{ display: 'inline-block' }}
+                      />
+                    )}
+                    {t}
+                  </span>
+                );
+              })}
         </div>
       </div>
     </div>
