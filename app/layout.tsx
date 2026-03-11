@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import { content } from "@/lib/data";
 import { LanguageProvider } from "@/context/LanguageContext";
 import AnimatedBackground from "@/components/AnimatedBackground";
-import MouseCrosshair from "@/components/MouseCrosshair";
+import MouseCrosshairWrapper from "@/components/MouseCrosshairWrapper";
 import LoadingScreen from "@/components/LoadingScreen";
 import { LoadingProvider } from "@/context/LoadingContext";
 
@@ -32,6 +32,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // MouseCrosshairWrapper handles mobile detection
   return (
     <html lang="fr" suppressHydrationWarning>
       <body
@@ -41,7 +42,7 @@ export default function RootLayout({
         <LoadingProvider>
         <LoadingScreen />
         <AnimatedBackground />
-        <MouseCrosshair />
+        <MouseCrosshairWrapper />
         <LanguageProvider>
           <ThemeProvider
             attribute="class"

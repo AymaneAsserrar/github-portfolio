@@ -3,6 +3,7 @@ import React from "react";
 import { ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useCarousel } from "./useCarousel";
+import { useIsMobile } from "./useIsMobile";
 import { getTechIconUrl } from "@/lib/techIcons";
 
 export interface Certification {
@@ -42,6 +43,7 @@ export default function CertificationsSection({ certifications }: Certifications
   );
 }
 
+
 function Carousel({ certifications }: { certifications: Certification[] }) {
   const {
     index,
@@ -51,12 +53,17 @@ function Carousel({ certifications }: { certifications: Certification[] }) {
     isPaused,
     setIsPaused,
   } = useCarousel(certifications.length, 2500);
+  const isMobile = useIsMobile();
 
-  // Show two cards at a time
+  // Show one card at a time on mobile, two on desktop
   const getIndices = () => {
-    const first = index;
-    const second = (index + 1) % certifications.length;
-    return [first, second];
+    if (isMobile) {
+      return [index];
+    } else {
+      const first = index;
+      const second = (index + 1) % certifications.length;
+      return [first, second];
+    }
   };
   const indices = getIndices();
 
