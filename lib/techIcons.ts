@@ -60,6 +60,7 @@ const techIconMap: Record<string, string> = {
   // Graphics
   "OpenGL": `${DEVICON_BASE}/opengl/opengl-original.svg`,
   "Qt": `${DEVICON_BASE}/qt/qt-original.svg`,
+  "OpenCV": `${DEVICON_BASE}/opencv/opencv-original.svg`,
 
   // Cloud
   "GCP (BigQuery)": `${DEVICON_BASE}/googlecloud/googlecloud-original.svg`,
