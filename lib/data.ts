@@ -414,9 +414,26 @@ The application, built in Java, uses Swing for its user interface and FlatLaf fo
           description: "Real-time system monitoring dashboard.",
           tech: ["Python", "Flask", "Dash", "Docker"],
           github: "https://github.com/AymaneAsserrar/PrInterfaceAdmin-UI",
-          // fullDescription: "",
-          // features: [],
-          // gallery: [],
+          fullDescription: `The Admin Interface project is a real-time dashboard for monitoring server health and system metrics.\n\n**Initial Page:**\n- **Server Health:** Indicates whether the server is reachable or not.\n- **CPU Usage:** Displays the current CPU usage as a percentage.\n- **RAM Usage:** Displays the current RAM usage as a percentage.\n\n**Detailed Dashboard (after 'View Details'):**\n- **Server Health:** Status of the server.\n- **CPU Metrics:**\n  - Average CPU Usage\n  - CPU History Graph: A graphical representation of CPU usage over time\n  - CPU Cores Graph: Details of individual core usage\n- **RAM Metrics:**\n  - RAM Gauge: A gauge indicating current RAM usage\n  - RAM History Graph: A timeline showing RAM usage patterns\n  - Detailed RAM Metrics: Total RAM, Used RAM, Available RAM, and Free RAM\n- **Refresh Rate:** An adjustable control to set how often the dashboard refreshes the metrics.`,
+          features: [
+            "Server Health: Indicates if the server is reachable",
+            "CPU Usage: Real-time percentage display",
+            "RAM Usage: Real-time percentage display",
+            "View Details: Access a detailed interactive dashboard",
+            "CPU Metrics: Average usage, history graph, per-core graph",
+            "RAM Metrics: Gauge, history graph, total/used/available/free RAM",
+            "Adjustable refresh rate for metrics",
+          ],
+          gallery: [
+            {
+              src: "/projects/admin-interface/1.jpeg",
+              alt: "Dashboard initial - Vue d'ensemble du tableau de bord montrant la santé du serveur, l'utilisation CPU et RAM",
+            },
+            {
+              src: "/projects/admin-interface/2.jpeg",
+              alt: "Connexion serveur - Exemple du mécanisme d'authentification personnalisé utilisant les en-têtes HTTP pour sécuriser les endpoints",
+            },
+          ],
         },
         {
           slug: "slice-defender",
@@ -805,9 +822,26 @@ L'application, développée en Java, utilise Swing pour son interface utilisateu
           description: "Tableau de bord de surveillance système en temps réel.",
           tech: ["Python", "Flask", "Dash", "Docker"],
           github: "https://github.com/AymaneAsserrar/PrInterfaceAdmin-UI",
-          // fullDescription: "",
-          // features: [],
-          // gallery: [],
+          fullDescription: `Le projet Interface Admin est un tableau de bord en temps réel pour surveiller la santé du serveur et les métriques système.\n\n**Page initiale :**\n- **Santé du serveur :** Indique si le serveur est joignable ou non.\n- **Utilisation CPU :** Affiche l'utilisation actuelle du CPU en pourcentage.\n- **Utilisation RAM :** Affiche l'utilisation actuelle de la RAM en pourcentage.\n\n**Tableau de bord détaillé (après 'Voir Détails') :**\n- **Santé du serveur :** Statut du serveur.\n- **Métriques CPU :**\n  - Utilisation moyenne du CPU\n  - Graphique historique du CPU : évolution de l'utilisation dans le temps\n  - Graphique des cœurs CPU : détails par cœur\n- **Métriques RAM :**\n  - Jauge RAM : indicateur de l'utilisation actuelle\n  - Graphique historique RAM : évolution de l'utilisation dans le temps\n  - Détails RAM : RAM totale, utilisée, disponible et libre\n- **Fréquence d'actualisation :** Contrôle ajustable pour définir la fréquence de rafraîchissement des métriques.`,
+          features: [
+            "Santé du serveur : indique si le serveur est joignable",
+            "Utilisation CPU : affichage en temps réel du pourcentage",
+            "Utilisation RAM : affichage en temps réel du pourcentage",
+            "Voir Détails : accès à un tableau de bord interactif détaillé",
+            "Métriques CPU : moyenne, historique, par cœur",
+            "Métriques RAM : jauge, historique, total/utilisée/disponible/libre",
+            "Fréquence d'actualisation ajustable des métriques",
+          ],
+          gallery: [
+            {
+              src: "/projects/admin-interface/1.jpeg",
+              alt: "Dashboard initial - Vue d'ensemble du tableau de bord montrant la santé du serveur, l'utilisation CPU et RAM",
+            },
+            {
+              src: "/projects/admin-interface/2.jpeg",
+              alt: "Exemple de connexion serveur - Exemple du mécanisme d'authentification personnalisé utilisant les en-têtes HTTP pour sécuriser les endpoints",
+            },
+          ],
         },
         {
           slug: "slice-defender",
