@@ -27,6 +27,8 @@ const techIconMap: Record<string, string> = {
   "HTML5": `${DEVICON_BASE}/html5/html5-original.svg`,
   "CSS3": `${DEVICON_BASE}/css3/css3-original.svg`,
   "Swing": `${DEVICON_BASE}/java/java-original.svg`,
+  "RxJS": `${DEVICON_BASE}/rxjs/rxjs-original.svg`,
+  "JSON": `${DEVICON_BASE}/json/json-original.svg`,
 
   // Backend
   "Laravel": `${DEVICON_BASE}/laravel/laravel-original.svg`,

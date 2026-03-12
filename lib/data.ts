@@ -242,6 +242,50 @@ Looking ahead, our next steps include adding synthetic and adversarial tests for
           ],
         },
         {
+          slug: "aymans-bike-shop",
+          title: "Ayman's Bike Shop",
+          description:
+            "A modern, responsive Angular 15 e-commerce app for browsing and purchasing bikes and accessories.",
+          tech: [
+            "Angular",
+            "TypeScript",
+            "CSS3",
+            "RxJS",
+            "JSON Data",
+          ],
+          github: "https://github.com/AymaneAsserrar/aymans-bike-shop",
+          fullDescription: `A modern, responsive e-commerce application for browsing and purchasing bikes and accessories. Built with Angular 15, this application demonstrates a modular architecture with clear separation of concerns.\n\nKey Features:\n- Interactive Catalog: Browse a comprehensive collection of bikes and accessories.\n- Shopping Cart Management: Add items to cart, view summaries, and manage quantities seamlessly.\n- Product Details: Rich product presentations with BikeCard components.\n- Categorization: Distinct handling for Bikes and Accessories.\n- Contact & Support: Dedicated contact section for customer inquiries.\n- Responsive Layout: Optimized for various screen sizes.\n\nTech Stack:\n- Framework: Angular 15\n- Language: TypeScript\n- Styling: CSS3\n- Data: JSON-based local data storage (Assets)\n- State Management: RxJS Services\n\nProject Structure:\n\n\`\`\`\nsrc/\n├── app/\n│   ├── core/            # Singleton services and models\n│   │   ├── models/      # Data interfaces (Bike, Accessory, CartItem)\n│   │   └── services/    # Business logic (Cart, Catalog services)\n│   ├── features/        # Feature modules\n│   │   ├── cart/        # Shopping cart functionality\n│   │   ├── catalog/     # Product listing pages\n│   │   ├── contact/     # Contact form and info\n│   │   └── home/        # Landing page\n│   └── shared/          # Reusable artifacts\n│       ├── components/  # Shared UI components (Footer, BikeCard)\n│       └── pipes/       # Custom pipes (CurrencyFormat)\n├── assets/\n│   └── data/            # Static data files (bikes.json, accessories.json)\n└── environments/        # Configuration files\n\`\`\`\n\nSee the README for full details, setup, and usage instructions.`,
+          features: [
+            "Interactive catalog for bikes and accessories",
+            "Shopping cart with quantity management",
+            "Rich product details with BikeCard components",
+            "Category-based browsing (Bikes & Accessories)",
+            "Contact and support section",
+            "Responsive design for all devices",
+            "Modular Angular architecture",
+            "Local JSON data storage",
+            "RxJS-based state management",
+          ],
+          gallery: [
+            {
+              src: "/projects/aymans-bike-shop/1.png",
+              alt: "Page d'accueil - La page principale présentant les vélos en vedette et la navigation",
+            },
+            {
+              src: "/projects/aymans-bike-shop/2.png",
+              alt: "Catalogue vélos - La page catalogue affichant la liste des vélos disponibles avec options de filtrage",
+            },
+            {
+              src: "/projects/aymans-bike-shop/3.png",
+              alt: "Catalogue accessoires - La page catalogue affichant la liste des accessoires disponibles avec options de filtrage",
+            },
+            {
+              src: "/projects/aymans-bike-shop/4.png",
+              alt: "Page panier - La page panier affichant les articles sélectionnés, quantités et prix total",
+            },
+          ],
+        },
+        {
           slug: "bike-shop-api",
           title: "Bike Shop API",
           description:
@@ -536,6 +580,50 @@ Pour l'avenir, nos prochaines étapes incluent l'ajout de tests synthétiques et
             { src: "/projects/networking-ai/1.jpg", alt: "Screenshot 1" },
             { src: "/projects/networking-ai/2.jpg", alt: "Screenshot 2" },
             { src: "/projects/networking-ai/3.jpg", alt: "Screenshot 3" },
+          ],
+        },
+        {
+          slug: "aymans-bike-shop",
+          title: "Ayman's Bike Shop",
+          description:
+            "Application e-commerce moderne et responsive Angular 15 pour parcourir et acheter des vélos et accessoires.",
+          tech: [
+            "Angular",
+            "TypeScript",
+            "CSS3",
+            "RxJS",
+            "JSON",
+          ],
+          github: "https://github.com/AymaneAsserrar/aymans-bike-shop",
+          fullDescription: `Une application e-commerce moderne et responsive pour parcourir et acheter des vélos et accessoires. Construite avec Angular 15, elle met en avant une architecture modulaire et une séparation claire des responsabilités.\n\nFonctionnalités principales :\n- Catalogue interactif : Parcourez une large collection de vélos et accessoires.\n- Gestion du panier : Ajoutez des articles, visualisez le résumé et gérez les quantités facilement.\n- Détails produits : Présentation riche des produits avec les composants BikeCard.\n- Catégorisation : Gestion distincte des vélos et accessoires.\n- Contact & support : Section dédiée pour les demandes clients.\n- Responsive : Optimisée pour tous les écrans.\n\nStack technique :\n- Framework : Angular 15\n- Langage : TypeScript\n- Style : CSS3\n- Données : Stockage local JSON (Assets)\n- Gestion d'état : Services RxJS\n\nStructure du projet :\n\n\`\`\`\nsrc/\n├── app/\n│   ├── core/            # Services singletons et modèles\n│   │   ├── models/      # Interfaces de données (Bike, Accessory, CartItem)\n│   │   └── services/    # Logique métier (services Panier, Catalogue)\n│   ├── features/        # Modules fonctionnels\n│   │   ├── cart/        # Fonctionnalité panier\n│   │   ├── catalog/     # Pages de listing produits\n│   │   ├── contact/     # Formulaire et infos contact\n│   │   └── home/        # Page d'accueil\n│   └── shared/          # Artéfacts réutilisables\n│       ├── components/  # Composants UI partagés (Footer, BikeCard)\n│       └── pipes/       # Pipes personnalisés (CurrencyFormat)\n├── assets/\n│   └── data/            # Données statiques (bikes.json, accessories.json)\n└── environments/        # Fichiers de configuration\n\`\`\`\n\nVoir le README pour tous les détails, installation et instructions d'utilisation.`,
+          features: [
+            "Catalogue interactif pour vélos et accessoires",
+            "Panier d'achat avec gestion des quantités",
+            "Détails produits riches avec composants BikeCard",
+            "Navigation par catégorie (Vélos & Accessoires)",
+            "Section contact et support",
+            "Design responsive pour tous les appareils",
+            "Architecture modulaire Angular",
+            "Stockage local des données en JSON",
+            "Gestion d'état avec RxJS",
+          ],
+          gallery: [
+            {
+              src: "/projects/aymans-bike-shop/1.png",
+              alt: "Home Page - The main landing page showcasing featured bikes and navigation",
+            },
+            {
+              src: "/projects/aymans-bike-shop/2.png",
+              alt: "Bike Catalog - The catalog page displaying a list of available bikes with filtering options",
+            },
+            {
+              src: "/projects/aymans-bike-shop/3.png",
+              alt: "accessory Catalog - The catalog page displaying a list of available accessories with filtering options",
+            },
+            {
+              src: "/projects/aymans-bike-shop/4.png",
+              alt: "cart Page - The shopping cart page showing selected items, quantities, and total price",
+            },
           ],
         },
         {
