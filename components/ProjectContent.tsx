@@ -89,6 +89,106 @@ export default function ProjectContent({ slug }: ProjectContentProps) {
           </div>
         </div>
 
+        {/* Gallery Section */}
+        <section id="gallery" className="group/section max-w-4xl mx-auto mb-16 scroll-mt-24">
+          <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2 transition-colors group-hover/section:text-blue-600 dark:group-hover/section:text-blue-400">
+            <span className="w-8 h-8 rounded-full bg-blue-600/10 text-blue-600 dark:bg-blue-400/10 dark:text-blue-400 flex items-center justify-center text-sm font-bold">
+              3
+            </span>
+            {t.projectPage?.gallery || "Gallery"}
+          </h2>
+          {project.gallery && project.gallery.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {project.gallery.map((image, index) => (
+                <div
+                  key={index}
+                  className="relative aspect-video rounded-lg overflow-hidden border bg-muted group/card cursor-pointer"
+                  onClick={() =>
+                    setSelectedImage({
+                      src: getImagePath(image.src),
+                      alt:
+                        image.alt || `${project.title} screenshot ${index + 1}`,
+                    })
+                  }
+                >
+                  <Image
+                    src={getImagePath(image.src)}
+                    alt={
+                      image.alt || `${project.title} screenshot ${index + 1}`
+                    }
+                    fill
+                    className="object-cover transition-transform group-hover/card:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover/card:bg-black/20 transition-colors flex items-center justify-center">
+                    <span className="opacity-0 group-hover/card:opacity-100 transition-opacity text-white text-sm font-medium bg-black/50 px-3 py-1 rounded-full">
+                      {t.projectPage?.clickToExpand || "Click to expand"}
+                    </span>
+                  </div>
+                  {image.caption && (
+                    <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/70 to-transparent">
+                      <p className="text-white text-sm">{image.caption}</p>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="p-12 rounded-lg border border-blue-600 dark:border-blue-400 bg-card shadow-[0_4px_20px_rgba(37,99,235,0.15)] dark:shadow-[0_4px_20px_rgba(96,165,250,0.15)] transition-all hover:shadow-[0_8px_30px_rgba(37,99,235,0.25)] dark:hover:shadow-[0_8px_30px_rgba(96,165,250,0.25)] hover:border-blue-300 dark:hover:border-blue-700 text-center">
+              <div className="w-16 h-16 mx-auto mb-4 rounded-lg bg-muted flex items-center justify-center">
+                <svg
+                  className="h-8 w-8 text-muted-foreground/50"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={1.5}
+                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                  />
+                </svg>
+              </div>
+              <p className="text-muted-foreground">
+                {t.projectPage?.noGallery || "No screenshots available yet"}
+              </p>
+            </div>
+          )}
+        </section>
+
+        {/* Tech Section */}
+        <section id="tech" className="group max-w-4xl mx-auto mb-16 scroll-mt-24">
+          <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2 transition-colors group-hover:text-blue-600 dark:group-hover:text-blue-400">
+            <span className="w-8 h-8 rounded-full bg-blue-600/10 text-blue-600 dark:bg-blue-400/10 dark:text-blue-400 flex items-center justify-center text-sm font-bold">
+              2
+            </span>
+            {t.projectPage?.tech || "Tech"}
+          </h2>
+          <div className="p-6 rounded-lg border border-blue-600 dark:border-blue-400 bg-card shadow-[0_4px_20px_rgba(37,99,235,0.15)] dark:shadow-[0_4px_20px_rgba(96,165,250,0.15)] transition-all hover:shadow-[0_8px_30px_rgba(37,99,235,0.25)] dark:hover:shadow-[0_8px_30px_rgba(96,165,250,0.25)] hover:border-blue-300 dark:hover:border-blue-700">
+            <div className="flex flex-wrap gap-3">
+              {project.tech.map((techItem) => {
+                const iconUrl = getTechIconUrl(techItem);
+                return (
+                  <span
+                    key={techItem}
+                    className="tech-icon-float inline-flex items-center gap-2 rounded-lg border px-4 py-2 text-sm font-semibold bg-blue-600/10 text-blue-600 hover:bg-blue-600/20 dark:bg-blue-400/10 dark:text-blue-400 dark:hover:bg-blue-400/20 transition-colors"
+                  >
+                    {iconUrl && (
+                      <img
+                        src={iconUrl}
+                        alt={`${techItem} logo`}
+                        className="w-5 h-5 object-contain"
+                        loading="lazy"
+                      />
+                    )}
+                    {techItem}
+                  </span>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
         {/* Overview Section - Visual & Animated */}
         <section id="overview" className="group max-w-4xl mx-auto mb-16 scroll-mt-24">
           <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2 transition-colors group-hover:text-blue-600 dark:group-hover:text-blue-400">
@@ -179,106 +279,6 @@ export default function ProjectContent({ slug }: ProjectContentProps) {
               </div>
             </div>
           </div>
-        </section>
-
-        {/* Tech Section */}
-        <section id="tech" className="group max-w-4xl mx-auto mb-16 scroll-mt-24">
-          <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2 transition-colors group-hover:text-blue-600 dark:group-hover:text-blue-400">
-            <span className="w-8 h-8 rounded-full bg-blue-600/10 text-blue-600 dark:bg-blue-400/10 dark:text-blue-400 flex items-center justify-center text-sm font-bold">
-              2
-            </span>
-            {t.projectPage?.tech || "Tech"}
-          </h2>
-          <div className="p-6 rounded-lg border border-blue-600 dark:border-blue-400 bg-card shadow-[0_4px_20px_rgba(37,99,235,0.15)] dark:shadow-[0_4px_20px_rgba(96,165,250,0.15)] transition-all hover:shadow-[0_8px_30px_rgba(37,99,235,0.25)] dark:hover:shadow-[0_8px_30px_rgba(96,165,250,0.25)] hover:border-blue-300 dark:hover:border-blue-700">
-            <div className="flex flex-wrap gap-3">
-              {project.tech.map((techItem) => {
-                const iconUrl = getTechIconUrl(techItem);
-                return (
-                  <span
-                    key={techItem}
-                    className="tech-icon-float inline-flex items-center gap-2 rounded-lg border px-4 py-2 text-sm font-semibold bg-blue-600/10 text-blue-600 hover:bg-blue-600/20 dark:bg-blue-400/10 dark:text-blue-400 dark:hover:bg-blue-400/20 transition-colors"
-                  >
-                    {iconUrl && (
-                      <img
-                        src={iconUrl}
-                        alt={`${techItem} logo`}
-                        className="w-5 h-5 object-contain"
-                        loading="lazy"
-                      />
-                    )}
-                    {techItem}
-                  </span>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        {/* Gallery Section */}
-        <section id="gallery" className="group/section max-w-4xl mx-auto mb-16 scroll-mt-24">
-          <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2 transition-colors group-hover/section:text-blue-600 dark:group-hover/section:text-blue-400">
-            <span className="w-8 h-8 rounded-full bg-blue-600/10 text-blue-600 dark:bg-blue-400/10 dark:text-blue-400 flex items-center justify-center text-sm font-bold">
-              3
-            </span>
-            {t.projectPage?.gallery || "Gallery"}
-          </h2>
-          {project.gallery && project.gallery.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {project.gallery.map((image, index) => (
-                <div
-                  key={index}
-                  className="relative aspect-video rounded-lg overflow-hidden border bg-muted group/card cursor-pointer"
-                  onClick={() =>
-                    setSelectedImage({
-                      src: getImagePath(image.src),
-                      alt:
-                        image.alt || `${project.title} screenshot ${index + 1}`,
-                    })
-                  }
-                >
-                  <Image
-                    src={getImagePath(image.src)}
-                    alt={
-                      image.alt || `${project.title} screenshot ${index + 1}`
-                    }
-                    fill
-                    className="object-cover transition-transform group-hover/card:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-black/0 group-hover/card:bg-black/20 transition-colors flex items-center justify-center">
-                    <span className="opacity-0 group-hover/card:opacity-100 transition-opacity text-white text-sm font-medium bg-black/50 px-3 py-1 rounded-full">
-                      {t.projectPage?.clickToExpand || "Click to expand"}
-                    </span>
-                  </div>
-                  {image.caption && (
-                    <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/70 to-transparent">
-                      <p className="text-white text-sm">{image.caption}</p>
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          ) : (
-            <div className="p-12 rounded-lg border border-blue-600 dark:border-blue-400 bg-card shadow-[0_4px_20px_rgba(37,99,235,0.15)] dark:shadow-[0_4px_20px_rgba(96,165,250,0.15)] transition-all hover:shadow-[0_8px_30px_rgba(37,99,235,0.25)] dark:hover:shadow-[0_8px_30px_rgba(96,165,250,0.25)] hover:border-blue-300 dark:hover:border-blue-700 text-center">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-lg bg-muted flex items-center justify-center">
-                <svg
-                  className="h-8 w-8 text-muted-foreground/50"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1.5}
-                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                  />
-                </svg>
-              </div>
-              <p className="text-muted-foreground">
-                {t.projectPage?.noGallery || "No screenshots available yet"}
-              </p>
-            </div>
-          )}
         </section>
 
         {/* Demo Section */}
