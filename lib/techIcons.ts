@@ -37,6 +37,9 @@ const techIconMap: Record<string, string> = {
   "Spring Boot": `${DEVICON_BASE}/spring/spring-original.svg`,
   "Spring Data JPA": `${DEVICON_BASE}/spring/spring-original.svg`,
   "Node.js": `${DEVICON_BASE}/nodejs/nodejs-original.svg`,
+  "Express.js": `${DEVICON_BASE}/express/express-original.svg`,
+  "Socket.IO": `${DEVICON_BASE}/socketio/socketio-original.svg`,
+  "better-sqlite3": `${DEVICON_BASE}/sqlite/sqlite-original.svg`,
 
   // Databases
   "MySQL": `${DEVICON_BASE}/mysql/mysql-original.svg`,
@@ -88,6 +91,7 @@ const techIconMap: Record<string, string> = {
   "Unit Testing": `${DEVICON_BASE}/junit/junit-original.svg`,
   "System Design": "",
   "Project Management": "",
+  "Multer": "https://miro.medium.com/v2/1*xN_65YL4_n5pp1k6lozs_A.png",
 };
 
 /**

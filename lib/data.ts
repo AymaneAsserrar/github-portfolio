@@ -376,11 +376,37 @@ The application, built in Java, uses Swing for its user interface and FlatLaf fo
           slug: "my-chat-app",
           title: "MyChatApp",
           description: "Real-time chat application with private rooms.",
-          tech: ["Vue.js", "WebSockets", "SQL"],
+          tech: [
+            "Node.js",
+            "Express.js",
+            "Socket.IO",
+            "better-sqlite3",
+            "Multer",
+            "Tailwind CSS"
+          ],
           github: "https://github.com/AymaneAsserrar/MyChatApp",
-          // fullDescription: "",
-          // features: [],
-          // gallery: [],
+          fullDescription: `A real-time chat application built with Node.js, Socket.IO, and SQLite, featuring a modern UI with Tailwind CSS.\n\nKey Features:\n- Real-time messaging with Socket.IO\n- User authentication and presence detection\n- Customizable user avatars with upload support\n- Automatic reconnection and message recovery\n- Typing indicators and online/away status\n- Message history persistence with SQLite\n- Private messaging and multiple chat channels\n- Responsive design with Tailwind CSS\n- Cluster mode support for scalability\n\nTech Stack:\n- Node.js, Express.js, Socket.IO\n- better-sqlite3 for fast, synchronous database access\n- Multer for file uploads\n- Tailwind CSS for UI\n\nUsage Tips:\n- Upload or select an avatar by clicking the avatar icon.\n- Private message by clicking a user's name.\n- Away status is shown when you tab out.\n- Message history and avatars persist across sessions.\n\nSee the README for full setup, database schema, and advanced features.`,
+          features: [
+            "Real-time messaging with Socket.IO",
+            "User authentication and online/away presence detection",
+            "Customizable avatars with upload support",
+            "Automatic reconnection and message recovery",
+            "Typing indicators and user status updates",
+            "Persistent message history with SQLite",
+            "Private messaging between users",
+            "Multiple public and private chat channels",
+            "Responsive, modern UI with Tailwind CSS",
+            "Cluster mode support for scalability",
+            "Avatar and user info persistence across sessions",
+            "File upload validation and security",
+            "Efficient, synchronous database access with better-sqlite3"
+          ],
+          gallery: [
+            {
+              src: "/projects/my-chat-app/1.png",
+              alt: "Main Chat Interface - The main chat interface showing multiple channels, user list, and message history",
+            },
+          ],
         },
         {
           slug: "admin-interface",
@@ -741,11 +767,37 @@ L'application, développée en Java, utilise Swing pour son interface utilisateu
           slug: "my-chat-app",
           title: "MyChatApp",
           description: "Application de chat en temps réel avec salons privés.",
-          tech: ["Vue.js", "WebSockets", "SQL"],
+          tech: [
+            "Node.js",
+            "Express.js",
+            "Socket.IO",
+            "better-sqlite3",
+            "Multer",
+            "Tailwind CSS"
+          ],
           github: "https://github.com/AymaneAsserrar/MyChatApp",
-          // fullDescription: "",
-          // features: [],
-          // gallery: [],
+          fullDescription: `Application de chat en temps réel construite avec Node.js, Socket.IO et SQLite, dotée d'une interface moderne avec Tailwind CSS.\n\nFonctionnalités principales :\n- Messagerie instantanée avec Socket.IO\n- Authentification des utilisateurs et détection de présence\n- Avatars personnalisables avec support de l'upload\n- Reconnexion automatique et récupération des messages\n- Indicateurs de saisie et statuts en ligne/absent\n- Historique des messages persistant avec SQLite\n- Messagerie privée et gestion de multiples salons\n- Design responsive avec Tailwind CSS\n- Mode cluster pour la scalabilité\n\nStack technique :\n- Node.js, Express.js, Socket.IO\n- better-sqlite3 pour un accès base de données rapide et synchrone\n- Multer pour la gestion des uploads\n- Tailwind CSS pour l'UI\n\nConseils d'utilisation :\n- Cliquez sur l'avatar pour en choisir un ou en téléverser un.\n- Envoyez un message privé en cliquant sur le nom d'un utilisateur.\n- Le statut "absent" s'affiche si vous changez d'onglet.\n- L'historique et les avatars sont conservés entre les sessions.\n\nVoir le README pour l'installation complète, le schéma de la base et les fonctionnalités avancées.`,
+          features: [
+            "Messagerie instantanée avec Socket.IO",
+            "Authentification des utilisateurs et détection de présence en ligne/absent",
+            "Avatars personnalisables avec support de l'upload",
+            "Reconnexion automatique et récupération des messages",
+            "Indicateurs de saisie et mises à jour de statut utilisateur",
+            "Historique des messages persistant avec SQLite",
+            "Messagerie privée entre utilisateurs",
+            "Multiples salons de discussion publics et privés",
+            "Interface moderne et responsive avec Tailwind CSS",
+            "Mode cluster pour la scalabilité",
+            "Persistance des avatars et infos utilisateur entre les sessions",
+            "Validation et sécurité des fichiers uploadés",
+            "Accès base de données synchrone et performant avec better-sqlite3"
+          ],
+          gallery: [
+            {
+              src: "/projects/my-chat-app/1.png",
+              alt: "Interface principale de chat - L'interface principale du chat montrant plusieurs salons, la liste des utilisateurs et l'historique des messages",
+            },
+          ],
         },
         {
           slug: "admin-interface",
