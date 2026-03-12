@@ -242,6 +242,52 @@ Looking ahead, our next steps include adding synthetic and adversarial tests for
           ],
         },
         {
+          slug: "bike-shop-api",
+          title: "Bike Shop API",
+          description:
+            "A REST API for managing a bike shop built with Spring Boot 3.2.4 and Java 17.",
+          tech: [
+            "Java 17",
+            "Spring Boot",
+            "Spring Data JPA",
+            "H2",
+            "Lombok",
+            "Maven",
+            "Swagger",
+          ],
+          github: "https://github.com/AymaneAsserrar/exam-spring",
+          fullDescription: `A robust RESTful API designed for efficient bike shop management. This project demonstrates modern Java backend practices, focusing on clean architecture and secure endpoint management.
+
+        Key Highlights:
+        • Architecture: Implements a clean separation of concerns using DTOs, mappers, and dedicated service layers.
+        • Persistence: Uses Spring Data JPA for entity relationship management with an H2 in-memory database for rapid development and testing.
+        • Security: Features custom authentication implemented via a specific HTTP header filter to protect sensitive endpoints.
+        • Documentation: Fully documented with Swagger UI and OpenAPI 3, providing an interactive interface to test endpoints directly.`,
+          features: [
+            "Full CRUD operations for bikes and accessories",
+            "User-based shopping cart system",
+            "Advanced search and filtering endpoints",
+            "Request validation and global error handling",
+            "Pre-loaded sample data for immediate demo/testing",
+            "Interactive API documentation with Swagger UI",
+            "Custom authentication via HTTP header",
+          ],
+          gallery: [
+            {
+              src: "/projects/bike-shop-api/1.png",
+              alt: "Swagger UI - Interactive API documentation showcasing available endpoints and their details",
+            },
+            {
+              src: "/projects/bike-shop-api/2.png",
+              alt: "Token Authentication - Example of the custom authentication mechanism using HTTP headers to secure endpoints",
+            },
+            {
+              src: "/projects/bike-shop-api/3.png",
+              alt: "Api bikes endpoint - Sample response from the /api/bikes endpoint showing the list of available bikes in the shop",
+            },
+          ],
+        },
+        {
           slug: "my-comic-app",
           title: "MyComicApp",
           description:
@@ -490,6 +536,52 @@ Pour l'avenir, nos prochaines étapes incluent l'ajout de tests synthétiques et
             { src: "/projects/networking-ai/1.jpg", alt: "Screenshot 1" },
             { src: "/projects/networking-ai/2.jpg", alt: "Screenshot 2" },
             { src: "/projects/networking-ai/3.jpg", alt: "Screenshot 3" },
+          ],
+        },
+        {
+          slug: "bike-shop-api",
+          title: "Bike Shop API",
+          description:
+            "Une API REST pour la gestion d'un magasin de vélos, construite avec Spring Boot 3.2.4 et Java 17.",
+          tech: [
+            "Java 17",
+            "Spring Boot",
+            "Spring Data JPA",
+            "H2",
+            "Lombok",
+            "Maven",
+            "Swagger",
+          ],
+          github: "https://github.com/AymaneAsserrar/exam-spring",
+          fullDescription: `Une API RESTful robuste conçue pour une gestion efficace de magasin de vélos. Ce projet démontre les pratiques modernes du backend Java, en mettant l'accent sur l'architecture propre et la gestion sécurisée des points d'accès.
+
+        Points forts :
+        • Architecture : Mise en œuvre d'une séparation claire des responsabilités via des DTO, des mappers et des couches de services dédiées.
+        • Persistance : Utilisation de Spring Data JPA pour la gestion des relations entre entités avec une base de données H2 en mémoire.
+        • Sécurité : Authentification personnalisée implémentée via un filtre d'en-tête HTTP pour protéger les endpoints sensibles.
+        • Documentation : Entièrement documenté avec Swagger UI et OpenAPI 3, offrant une interface interactive pour tester les endpoints directement.`,
+          features: [
+            "Opérations CRUD complètes pour les vélos et accessoires",
+            "Système de panier d'achat basé sur l'utilisateur",
+            "Endpoints de recherche et filtrage avancés",
+            "Validation des requêtes et gestion globale des erreurs",
+            "Données d'exemple préchargées pour les tests/démos",
+            "Documentation interactive de l'API avec Swagger UI",
+            "Authentification personnalisée via en-tête HTTP",
+          ],
+          gallery: [
+            {
+              src: "/projects/bike-shop-api/1.png",
+              alt: "Swagger UI - Documentation API interactive montrant les endpoints disponibles et leurs détails",
+            },
+            {
+              src: "/projects/bike-shop-api/2.png",
+              alt: "Authentification par jeton - Exemple du mécanisme d'authentification personnalisé utilisant les en-têtes HTTP pour sécuriser les endpoints",
+            },
+            {
+              src: "/projects/bike-shop-api/3.png",
+              alt: "Endpoint api bikes - Exemple de réponse de l'endpoint /api/bikes affichant la liste des vélos disponibles dans le magasin",
+            },
           ],
         },
         {

@@ -7,13 +7,15 @@ const techIconMap: Record<string, string> = {
   // Languages
   "Python": `${DEVICON_BASE}/python/python-original.svg`,
   "Java": `${DEVICON_BASE}/java/java-original.svg`,
+  "Java 17": `${DEVICON_BASE}/java/java-original.svg`,
+  "Maven": `${DEVICON_BASE}/maven/maven-original.svg`,
+  "Swagger": `${DEVICON_BASE}/swagger/swagger-original.svg`,
   "C++": `${DEVICON_BASE}/cplusplus/cplusplus-original.svg`,
   "C": `${DEVICON_BASE}/c/c-original.svg`,
   "C/C++": `${DEVICON_BASE}/cplusplus/cplusplus-original.svg`,
   "JavaScript": `${DEVICON_BASE}/javascript/javascript-original.svg`,
   "TypeScript": `${DEVICON_BASE}/typescript/typescript-original.svg`,
   "PHP": `${DEVICON_BASE}/php/php-original.svg`,
-  "SQL": `${DEVICON_BASE}/azuresqldatabase/azuresqldatabase-original.svg`,
   "Bash": `${DEVICON_BASE}/bash/bash-original.svg`,
 
   // Frontend
@@ -31,6 +33,7 @@ const techIconMap: Record<string, string> = {
   "Symfony": `${DEVICON_BASE}/symfony/symfony-original.svg`,
   "Flask": `${DEVICON_BASE}/flask/flask-original.svg`,
   "Spring Boot": `${DEVICON_BASE}/spring/spring-original.svg`,
+  "Spring Data JPA": `${DEVICON_BASE}/spring/spring-original.svg`,
   "Node.js": `${DEVICON_BASE}/nodejs/nodejs-original.svg`,
 
   // Databases
@@ -39,6 +42,9 @@ const techIconMap: Record<string, string> = {
   "MongoDB": `${DEVICON_BASE}/mongodb/mongodb-original.svg`,
   "SQLite": `${DEVICON_BASE}/sqlite/sqlite-original.svg`,
   "Redis": `${DEVICON_BASE}/redis/redis-original.svg`,
+  "SQL": `${DEVICON_BASE}/azuresqldatabase/azuresqldatabase-original.svg`,
+  "H2": `${DEVICON_BASE}/azuresqldatabase/azuresqldatabase-original.svg`,
+
 
   // DevOps & Tools
   "Docker": `${DEVICON_BASE}/docker/docker-original.svg`,
@@ -59,18 +65,18 @@ const techIconMap: Record<string, string> = {
   "Azure (IoT Hub)": `${DEVICON_BASE}/azure/azure-original.svg`,
 
   // AI / ML / Misc
-  "LLM": "",
-  "RAG": "",
-  "Langchain": "",
+  "LLM": `${DEVICON_BASE}/tensorflow/tensorflow-original.svg`,
+  "RAG": `${DEVICON_BASE}/azuresqldatabase/azuresqldatabase-original.svg`,
+  "Langchain": `https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/LangChain_Logo.svg/1280px-LangChain_Logo.svg.png?_=20250612121153`,
   "Dash": `${DEVICON_BASE}/plotly/plotly-original.svg`,
 
   // Other
   "REST API": `${DEVICON_BASE}/fastapi/fastapi-original.svg`,
   "JDBC": `${DEVICON_BASE}/java/java-original.svg`,
   "WebSockets": `${DEVICON_BASE}/socketio/socketio-original.svg`,
-  "Batfish": "",
-  "Agile": "",
-  "Agile/Scrum": "",
+  "Batfish": "https://avatars.githubusercontent.com/u/24584846?s=280&v=4",
+  "Agile": "https://cdn-icons-png.flaticon.com/128/5271/5271425.png",
+  "Agile/Scrum": "https://cdn-icons-png.flaticon.com/128/5271/5271425.png",
   "Blade": `${DEVICON_BASE}/laravel/laravel-original.svg`,
   "Postman": `${DEVICON_BASE}/postman/postman-original.svg`,
   "REST APIs": `${DEVICON_BASE}/fastapi/fastapi-original.svg`,
