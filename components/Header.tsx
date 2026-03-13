@@ -8,6 +8,7 @@ import { useState } from "react";
 import { ThemeToggle } from "./ThemeToggle";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { useLanguage } from "@/context/LanguageContext";
+import { motion, AnimatePresence } from "framer-motion";
 
 const basePath = process.env.NODE_ENV === 'production' ? '/github-portfolio' : '';
 
@@ -123,9 +124,15 @@ export default function Header() {
       </div>
 
       {/* Mobile Navigation */}
-      {isMenuOpen && (
-        <div className="md:hidden border-t p-4 bg-background">
-          <nav className="flex flex-col gap-4">
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            className="md:hidden border-t bg-background overflow-hidden"
+          >
+            <nav className="flex flex-col gap-4 p-4">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -154,9 +161,10 @@ export default function Header() {
                 <Linkedin className="h-5 w-5" />
               </Link>
             </div>
-          </nav>
-        </div>
-      )}
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }

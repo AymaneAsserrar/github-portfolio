@@ -67,6 +67,11 @@ function Carousel({ certifications }: { certifications: Certification[] }) {
   };
   const indices = getIndices();
 
+  const swipeConfidenceThreshold = 10000;
+  const swipePower = (offset: number, velocity: number) => {
+    return Math.abs(offset) * velocity;
+  };
+
   return (
     <div
       className="relative flex flex-col items-center group"
@@ -108,6 +113,17 @@ function Carousel({ certifications }: { certifications: Certification[] }) {
             exit={{ x: -100, opacity: 0 }}
             transition={{ duration: 0.5, type: "spring" }}
             className="absolute w-full flex gap-8 justify-center px-0 md:px-8"
+            drag={isMobile ? "x" : false}
+            dragConstraints={{ left: 0, right: 0 }}
+            dragElastic={1}
+            onDragEnd={(e, { offset, velocity }) => {
+              const swipe = swipePower(offset.x, velocity.x);
+              if (swipe < -swipeConfidenceThreshold) {
+                next();
+              } else if (swipe > swipeConfidenceThreshold) {
+                prev();
+              }
+            }}
           >
             {indices.map((i) => {
               const cert = certifications[i];
@@ -168,4 +184,3 @@ function Carousel({ certifications }: { certifications: Certification[] }) {
     </div>
   );
 }
-
