@@ -53,8 +53,8 @@ export default function AboutSection() {
             >
               <h3 className="text-xl font-semibold mb-4 text-foreground group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">{t.about.softSkillsTitle}</h3>
               <ul className="list-disc list-inside space-y-2 marker:text-blue-600 dark:marker:text-blue-400">
-                {t.about.softSkills.map((skill, index) => (
-                  <li key={index}>{skill}</li>
+                {t.about.softSkills.map((skill) => (
+                  <li key={skill}>{skill}</li>
                 ))}
               </ul>
             </motion.div>
@@ -65,8 +65,8 @@ export default function AboutSection() {
             >
               <h3 className="text-xl font-semibold mb-4 text-foreground group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">{t.about.educationTitle}</h3>
               <ul className="space-y-4">
-                {t.about.education.map((edu, index) => (
-                  <li key={index}>
+                {t.about.education.map((edu) => (
+                  <li key={edu.school + edu.degree}>
                     <div className="font-medium text-foreground">{edu.school}</div>
                     <div className="text-sm">{edu.degree}</div>
                   </li>
