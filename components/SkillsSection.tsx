@@ -21,13 +21,15 @@ const item = {
 
 export default function SkillsSection() {
   const { t } = useLanguage();
+  
   return (
     <section id="skills" className="py-20 scroll-mt-20">
       <div className="container mx-auto px-4 md:px-6">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.3 }}
+          // CHANGE: Set once to true to prevent re-triggering on mobile scroll
+          viewport={{ once: true, amount: 0.3 }} 
           transition={{ duration: 0.5 }}
           className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300"
         >
@@ -38,7 +40,8 @@ export default function SkillsSection() {
           variants={container}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.3 }}
+          // Ensure this stays once: true
+          viewport={{ once: true, amount: 0.1 }} 
           className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto"
         >
           {Object.entries(t.skills.list).map(([category, items]) => (
