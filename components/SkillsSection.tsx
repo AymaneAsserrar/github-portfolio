@@ -26,7 +26,7 @@ export default function SkillsSection() {
           {Object.entries(t.skills.list).map(([category, items]) => (
             <motion.div
               key={`skill-cat-${category}`}
-              className="group bg-card text-card-foreground rounded-lg border border-blue-600 dark:border-blue-400 shadow-[0_4px_20px_rgba(37,99,235,0.15)] dark:shadow-[0_4px_20px_rgba(96,165,250,0.15)] p-6 transition-all hover:shadow-[0_8px_30px_rgba(37,99,235,0.25)] dark:hover:shadow-[0_8px_30px_rgba(96,165,250,0.25)] hover:border-blue-300 dark:hover:border-blue-700"
+              className="group bg-card text-card-foreground rounded-lg border border-blue-600 dark:border-blue-400 shadow-[0_4px_20px_rgba(37,99,235,0.15)] dark:shadow-[0_4px_20px_rgba(96,165,250,0.15)] p-6 transition-colors hover:border-blue-300 dark:hover:border-blue-700"
               variants={skillCardVariants}
               whileHover={{ scale: 1.05, boxShadow: "0 8px 30px rgba(37,99,235,0.18)" }}
             >
