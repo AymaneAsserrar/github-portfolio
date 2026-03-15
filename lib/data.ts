@@ -191,6 +191,99 @@ export const content = {
       viewDetails: "Details",
       list: [
         {
+          slug: "fleet-tracker",
+          title: "FleetTracker",
+          description:
+            "A full-stack real-time fleet management system for tracking vehicles, trips, and routes — built with Spring Boot, PostGIS, Angular 21, and Leaflet.js.",
+          tech: [
+            "Java",
+            "Spring Boot",
+            "PostgreSQL",
+            "PostGIS",
+            "Angular",
+            "TypeScript",
+            "Tailwind CSS",
+            "Leaflet.js",
+            "WebSocket",
+          ],
+          github: "https://github.com/AymaneAsserrar/FleetTracker",
+          fullDescription: `FleetTracker — Real-Time Fleet Management System
+
+A full-stack application for managing vehicles, trips, and routes in real time, built with a layered Spring Boot REST API and a standalone Angular SPA.
+
+Tech Stack
+Backend
+- Java 21 + Spring Boot 3.5 — REST API with full CRUD operations
+- PostgreSQL + PostGIS — geospatial database with geometry columns for vehicle coordinates
+- Hibernate Spatial — ORM with native PostGIS geometry support
+- Spring WebSocket (STOMP) — real-time location update infrastructure
+- SpringDoc OpenAPI — auto-generated Swagger UI at /swagger-ui.html
+
+Frontend
+- Angular 21 — standalone components, signals-based state management, lazy-loaded routes
+- TypeScript 5.9 — strict mode, typed models and services
+- Tailwind CSS 4 — utility-first responsive UI
+- Leaflet.js — interactive fleet map with live vehicle markers
+- RxJS — reactive HTTP services with forkJoin for parallel data loading
+
+Key Features
+- Live Fleet Map — color-coded markers per vehicle status (Active / In Transit / Maintenance / Inactive), click-to-focus from the active trips panel
+- Dashboard — real-time stats cards, active trips panel, recent trips table with skeleton loading states
+- Vehicle Management — full CRUD with status filtering, GPS coordinate input, inline delete confirmation
+- Trip Management — one-click status transitions (Start / Complete / Cancel), datetime pickers, vehicle and route dropdowns
+- Route Management — create/edit routes with active/inactive toggle
+- Geospatial Tracking — vehicle positions stored as PostGIS geometry points, exposed as lat/lng via REST
+- API Documentation — Swagger UI available at /swagger-ui.html
+- CORS-enabled for local full-stack development
+
+Architecture
+- Layered backend: Controller → Service → Repository → Entity with dedicated request/response DTOs
+- Standalone Angular components with Angular 17+ control flow (@if, @for) and the Signals API (signal, computed)
+- All HTTP logic isolated in typed services — UI components stay clean`,
+          features: [
+            "Live fleet map with color-coded markers by vehicle status (Leaflet.js)",
+            "Real-time location updates via Spring WebSocket (STOMP)",
+            "Dashboard with stats cards, active trips panel, and recent trips table",
+            "Full CRUD for vehicles, trips, and routes",
+            "One-click trip status transitions: Start / Complete / Cancel",
+            "Vehicle GPS coordinates stored as PostGIS geometry points",
+            "Signals-based state management with Angular 21 standalone components",
+            "Skeleton loading states for async data",
+            "Auto-generated Swagger UI for API documentation",
+            "Lazy-loaded routes and reactive RxJS services",
+          ],
+          gallery: [
+            {
+              src: "/projects/fleettracker/fleettracker 1.png",
+              alt: "Dashboard — real-time stats cards, live fleet map with vehicle markers, active trips panel, and recent trips table",
+            },
+            {
+              src: "/projects/fleettracker/fleettracker 2.png",
+              alt: "Vehicles page — full fleet list with status badges (Active, In Transit, Maintenance, Inactive) and filter tabs",
+            },
+            {
+              src: "/projects/fleettracker/fleettracker 3.png",
+              alt: "Add Vehicle modal — form with label, name, license plate, status, and GPS coordinate inputs",
+            },
+            {
+              src: "/projects/fleettracker/fleettracker 4.png",
+              alt: "Trips page — list of all trips with status filters and one-click Start / Complete / Cancel actions",
+            },
+            {
+              src: "/projects/fleettracker/fleettracker 5.png",
+              alt: "New Trip modal — vehicle and route dropdowns, status selector, and start/end datetime pickers",
+            },
+            {
+              src: "/projects/fleettracker/fleettracker 6.png",
+              alt: "Routes page — list of fleet routes with Active/Inactive status and total/active/inactive summary cards",
+            },
+            {
+              src: "/projects/fleettracker/fleettracker 7.png",
+              alt: "Add Route modal — route name, optional description, and active toggle",
+            },
+          ],
+        },
+        {
           slug: "personal-portfolio",
           title: "Personal Portfolio",
           description:
@@ -675,6 +768,99 @@ The application, built in Java, uses Swing for its user interface and FlatLaf fo
       viewOnGithub: "Voir sur GitHub",
       viewDetails: "Détails",
       list: [
+        {
+          slug: "fleet-tracker",
+          title: "FleetTracker",
+          description:
+            "Système de gestion de flotte en temps réel pour le suivi des véhicules, trajets et routes — développé avec Spring Boot, PostGIS, Angular 21 et Leaflet.js.",
+          tech: [
+            "Java",
+            "Spring Boot",
+            "PostgreSQL",
+            "PostGIS",
+            "Angular",
+            "TypeScript",
+            "Tailwind CSS",
+            "Leaflet.js",
+            "WebSocket",
+          ],
+          github: "https://github.com/AymaneAsserrar/FleetTracker",
+          fullDescription: `FleetTracker — Système de Gestion de Flotte en Temps Réel
+
+Application full-stack pour gérer des véhicules, des trajets et des routes en temps réel, construite avec une API REST Spring Boot en couches et une SPA Angular standalone.
+
+Stack Technique
+Backend
+- Java 21 + Spring Boot 3.5 — API REST avec opérations CRUD complètes
+- PostgreSQL + PostGIS — base de données géospatiale avec colonnes geometry pour les coordonnées des véhicules
+- Hibernate Spatial — ORM avec support natif des géométries PostGIS
+- Spring WebSocket (STOMP) — infrastructure de mise à jour de localisation en temps réel
+- SpringDoc OpenAPI — Swagger UI auto-généré disponible à /swagger-ui.html
+
+Frontend
+- Angular 21 — composants standalone, gestion d'état par signaux, routes lazy-loaded
+- TypeScript 5.9 — mode strict, modèles et services typés
+- Tailwind CSS 4 — UI responsive utility-first
+- Leaflet.js — carte de flotte interactive avec marqueurs de véhicules en direct
+- RxJS — services HTTP réactifs avec forkJoin pour le chargement parallèle
+
+Fonctionnalités Clés
+- Carte de flotte en direct — marqueurs colorés par statut du véhicule (Actif / En transit / Maintenance / Inactif), focus au clic depuis le panneau des trajets actifs
+- Tableau de bord — cartes de statistiques, panneau des trajets actifs, tableau des trajets récents avec états de chargement skeleton
+- Gestion des véhicules — CRUD complet avec filtrage par statut, saisie de coordonnées GPS, confirmation de suppression inline
+- Gestion des trajets — transitions de statut en un clic (Démarrer / Terminer / Annuler), sélecteurs de date/heure, listes déroulantes véhicule et route
+- Gestion des routes — création/modification avec bascule actif/inactif
+- Suivi géospatial — positions des véhicules stockées en points PostGIS, exposées en lat/lng via REST
+- Documentation API — Swagger UI disponible à /swagger-ui.html
+- CORS configuré pour le développement full-stack local
+
+Architecture
+- Backend en couches : Controller → Service → Repository → Entity avec DTOs dédiés requête/réponse
+- Composants Angular standalone avec control flow Angular 17+ (@if, @for) et l'API Signals (signal, computed)
+- Toute la logique HTTP isolée dans des services typés — les composants UI restent propres`,
+          features: [
+            "Carte de flotte en direct avec marqueurs colorés par statut (Leaflet.js)",
+            "Mises à jour de localisation en temps réel via Spring WebSocket (STOMP)",
+            "Tableau de bord avec cartes de stats, panneau de trajets actifs et tableau des récents",
+            "CRUD complet pour véhicules, trajets et routes",
+            "Transitions de statut de trajet en un clic : Démarrer / Terminer / Annuler",
+            "Coordonnées GPS stockées en points géométriques PostGIS",
+            "Gestion d'état par signaux avec composants Angular 21 standalone",
+            "États de chargement skeleton pour les données asynchrones",
+            "Swagger UI auto-généré pour la documentation de l'API",
+            "Routes lazy-loaded et services RxJS réactifs",
+          ],
+          gallery: [
+            {
+              src: "/projects/fleettracker/fleettracker 1.png",
+              alt: "Tableau de bord — cartes de stats en temps réel, carte de flotte avec marqueurs, panneau des trajets actifs et tableau des trajets récents",
+            },
+            {
+              src: "/projects/fleettracker/fleettracker 2.png",
+              alt: "Page Véhicules — liste complète avec badges de statut (Actif, En transit, Maintenance, Inactif) et onglets de filtrage",
+            },
+            {
+              src: "/projects/fleettracker/fleettracker 3.png",
+              alt: "Modal Ajouter un véhicule — formulaire avec label, nom, plaque, statut et coordonnées GPS",
+            },
+            {
+              src: "/projects/fleettracker/fleettracker 4.png",
+              alt: "Page Trajets — liste des trajets avec filtres par statut et actions en un clic : Démarrer / Terminer / Annuler",
+            },
+            {
+              src: "/projects/fleettracker/fleettracker 5.png",
+              alt: "Modal Nouveau trajet — sélection du véhicule et de la route, statut et sélecteurs de date/heure",
+            },
+            {
+              src: "/projects/fleettracker/fleettracker 6.png",
+              alt: "Page Routes — liste des routes avec statut Actif/Inactif et cartes récapitulatives",
+            },
+            {
+              src: "/projects/fleettracker/fleettracker 7.png",
+              alt: "Modal Ajouter une route — nom, description optionnelle et bascule actif/inactif",
+            },
+          ],
+        },
         {
           slug: "personal-portfolio",
           title: "Portfolio Personnel",
