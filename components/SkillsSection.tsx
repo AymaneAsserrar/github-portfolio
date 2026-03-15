@@ -21,7 +21,7 @@ export default function SkillsSection() {
           variants={skillsContainerVariants}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, margin: "-50px" }}
+          viewport={{ once: false, margin: "-50px" }}
         >
           {Object.entries(t.skills.list).map(([category, items]) => (
             <motion.div

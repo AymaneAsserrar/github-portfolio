@@ -1,6 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
+import { useLanguage } from "@/context/LanguageContext";
 
 const container = {
   hidden: { opacity: 0 },
@@ -14,20 +16,34 @@ const container = {
 
 const item = {
   hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
-import { useLanguage } from "@/context/LanguageContext";
 
 export default function AboutSection() {
   const { t } = useLanguage();
 
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { amount: 0.3 });
+
+  const headingControls = useAnimation();
+  const containerControls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      headingControls.start({ opacity: 1, y: 0 });
+      containerControls.start("show");
+    } else {
+      headingControls.set({ opacity: 0, y: 20 });
+      containerControls.set("hidden");
+    }
+  }, [isInView, headingControls, containerControls]);
+
   return (
-    <section id="about" className="py-20 bg-secondary/10 scroll-mt-20">
+    <section id="about" className="py-20 bg-secondary/10 scroll-mt-20" ref={sectionRef}>
       <div className="container mx-auto px-4 md:px-6">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
+          animate={headingControls}
           transition={{ duration: 0.5 }}
           className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300"
         >
@@ -36,8 +52,7 @@ export default function AboutSection() {
         <motion.div
           variants={container}
           initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.3 }}
+          animate={containerControls}
           className="max-w-3xl mx-auto space-y-8 text-lg text-muted-foreground"
         >
           <motion.p variants={item}>
@@ -49,7 +64,7 @@ export default function AboutSection() {
           <div className="grid md:grid-cols-2 gap-8 mt-8">
             <motion.div
               variants={item}
-              className="group bg-card text-card-foreground p-6 rounded-lg border border-blue-600 dark:border-blue-400 shadow-[0_4px_20px_rgba(37,99,235,0.15)] dark:shadow-[0_4px_20px_rgba(96,165,250,0.15)] transition-all hover:shadow-[0_8px_30px_rgba(37,99,235,0.25)] dark:hover:shadow-[0_8px_30px_rgba(96,165,250,0.25)] hover:border-blue-300 dark:hover:border-blue-700"
+              className="group bg-card text-card-foreground p-6 rounded-lg border border-blue-600 dark:border-blue-400 shadow-[0_4px_20px_rgba(37,99,235,0.15)] dark:shadow-[0_4px_20px_rgba(96,165,250,0.15)] transition-colors hover:shadow-[0_8px_30px_rgba(37,99,235,0.25)] dark:hover:shadow-[0_8px_30px_rgba(96,165,250,0.25)] hover:border-blue-300 dark:hover:border-blue-700"
             >
               <h3 className="text-xl font-semibold mb-4 text-foreground group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">{t.about.softSkillsTitle}</h3>
               <ul className="list-disc list-inside space-y-2 marker:text-blue-600 dark:marker:text-blue-400">
@@ -61,7 +76,7 @@ export default function AboutSection() {
 
             <motion.div
               variants={item}
-              className="group bg-card text-card-foreground p-6 rounded-lg border border-blue-600 dark:border-blue-400 shadow-[0_4px_20px_rgba(37,99,235,0.15)] dark:shadow-[0_4px_20px_rgba(96,165,250,0.15)] transition-all hover:shadow-[0_8px_30px_rgba(37,99,235,0.25)] dark:hover:shadow-[0_8px_30px_rgba(96,165,250,0.25)] hover:border-blue-300 dark:hover:border-blue-700"
+              className="group bg-card text-card-foreground p-6 rounded-lg border border-blue-600 dark:border-blue-400 shadow-[0_4px_20px_rgba(37,99,235,0.15)] dark:shadow-[0_4px_20px_rgba(96,165,250,0.15)] transition-colors hover:shadow-[0_8px_30px_rgba(37,99,235,0.25)] dark:hover:shadow-[0_8px_30px_rgba(96,165,250,0.25)] hover:border-blue-300 dark:hover:border-blue-700"
             >
               <h3 className="text-xl font-semibold mb-4 text-foreground group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">{t.about.educationTitle}</h3>
               <ul className="space-y-4">
