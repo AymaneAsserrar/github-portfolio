@@ -191,6 +191,88 @@ export const content = {
       viewDetails: "Details",
       list: [
         {
+          slug: "personal-portfolio",
+          title: "Personal Portfolio",
+          description:
+            "A multilingual (EN/FR) personal portfolio built with Next.js 15, TypeScript, and Tailwind CSS, featuring smooth Framer Motion animations, dark mode, and fully responsive design.",
+          tech: [
+            "Next.js",
+            "TypeScript",
+            "React",
+            "Tailwind CSS",
+            "Framer Motion",
+          ],
+          github: "https://github.com/AymaneAsserrar/github-portfolio",
+          liveUrl: "https://aymaneasserrar.github.io/github-portfolio/",
+          fullDescription: `Personal Portfolio — aymane-asserrar.vercel.app
+
+A fully custom, multilingual portfolio website built to showcase my projects, skills, and experience as a Full Stack developer.
+
+Key Features
+- Multilingual Support (EN / FR): Seamless language switching with all content fully translated.
+- Smooth Animations: Page transitions, scroll-triggered reveals, staggered lists, and hover effects powered by Framer Motion.
+- Dark Mode: System-aware theme toggle with persistent preference.
+- Fully Responsive: Optimized layout for mobile, tablet, and desktop.
+- Project Showcase: Detailed project pages with feature lists, tech stacks, and image galleries.
+- Certifications Section: Displays professional certifications with issuer logos and credential links.
+- Contact Form: Functional contact form with email delivery.
+- CV Download: Direct download of my latest CV.
+
+Tech Stack
+- Framework: Next.js 15 (App Router)
+- Language: TypeScript
+- Styling: Tailwind CSS
+- Animations: Framer Motion
+- Deployment: Vercel
+
+Architecture
+- Single data source (lib/data.ts) for all EN/FR content — no CMS needed.
+- Component-based design with reusable UI primitives.
+- Static generation for fast load times.`,
+          features: [
+            "Multilingual support (English / French) with instant language switching",
+            "Framer Motion animations: scroll reveals, staggered lists, hover effects",
+            "Dark mode with system-aware detection and persistent toggle",
+            "Fully responsive design across mobile, tablet, and desktop",
+            "Detailed project pages with galleries, features, and tech stacks",
+            "Certifications section with issuer logos and credential links",
+            "Functional contact form with email delivery",
+            "CV download button",
+            "Static generation via Next.js App Router for fast performance",
+            "Single data source for all bilingual content (lib/data.ts)",
+          ],
+          gallery: [
+            {
+              src: "/projects/portfolio/portfolio 1.png",
+              alt: "Portfolio homepage hero section",
+            },
+            {
+              src: "/projects/portfolio/portfolio 2.png",
+              alt: "About section",
+            },
+            {
+              src: "/projects/portfolio/portfolio 3.png",
+              alt: "Skills section",
+            },
+            {
+              src: "/projects/portfolio/portfolio 4.png",
+              alt: "Projects section",
+            },
+            {
+              src: "/projects/portfolio/portfolio 5.png",
+              alt: "Project detail page",
+            },
+            {
+              src: "/projects/portfolio/portfolio 6.png",
+              alt: "Certifications section",
+            },
+            {
+              src: "/projects/portfolio/portfolio 7.png",
+              alt: "Contact section",
+            },
+          ],
+        },
+        {
           slug: "networking-ai",
           title: "Networking AI (International Project)",
           description:
@@ -246,13 +328,7 @@ Looking ahead, our next steps include adding synthetic and adversarial tests for
           title: "Ayman's Bike Shop",
           description:
             "A modern, responsive Angular 15 e-commerce app for browsing and purchasing bikes and accessories.",
-          tech: [
-            "Angular",
-            "TypeScript",
-            "CSS3",
-            "RxJS",
-            "JSON",
-          ],
+          tech: ["Angular", "TypeScript", "CSS3", "RxJS", "JSON"],
           github: "https://github.com/AymaneAsserrar/aymans-bike-shop",
           fullDescription: `A modern, responsive e-commerce application for browsing and purchasing bikes and accessories. Built with Angular 15, this application demonstrates a modular architecture with clear separation of concerns.\n\nKey Features:\n- Interactive Catalog: Browse a comprehensive collection of bikes and accessories.\n- Shopping Cart Management: Add items to cart, view summaries, and manage quantities seamlessly.\n- Product Details: Rich product presentations with BikeCard components.\n- Categorization: Distinct handling for Bikes and Accessories.\n- Contact & Support: Dedicated contact section for customer inquiries.\n- Responsive Layout: Optimized for various screen sizes.\n\nTech Stack:\n- Framework: Angular 15\n- Language: TypeScript\n- Styling: CSS3\n- Data: JSON-based local data storage (Assets)\n- State Management: RxJS Services\n\nProject Structure:\n\n\`\`\`\nsrc/\n├── app/\n│   ├── core/            # Singleton services and models\n│   │   ├── models/      # Data interfaces (Bike, Accessory, CartItem)\n│   │   └── services/    # Business logic (Cart, Catalog services)\n│   ├── features/        # Feature modules\n│   │   ├── cart/        # Shopping cart functionality\n│   │   ├── catalog/     # Product listing pages\n│   │   ├── contact/     # Contact form and info\n│   │   └── home/        # Landing page\n│   └── shared/          # Reusable artifacts\n│       ├── components/  # Shared UI components (Footer, BikeCard)\n│       └── pipes/       # Custom pipes (CurrencyFormat)\n├── assets/\n│   └── data/            # Static data files (bikes.json, accessories.json)\n└── environments/        # Configuration files\n\`\`\`\n\nSee the README for full details, setup, and usage instructions.`,
           features: [
@@ -382,7 +458,7 @@ The application, built in Java, uses Swing for its user interface and FlatLaf fo
             "Socket.IO",
             "better-sqlite3",
             "Multer",
-            "Tailwind CSS"
+            "Tailwind CSS",
           ],
           github: "https://github.com/AymaneAsserrar/MyChatApp",
           fullDescription: `A real-time chat application built with Node.js, Socket.IO, and SQLite, featuring a modern UI with Tailwind CSS.\n\nKey Features:\n- Real-time messaging with Socket.IO\n- User authentication and presence detection\n- Customizable user avatars with upload support\n- Automatic reconnection and message recovery\n- Typing indicators and online/away status\n- Message history persistence with SQLite\n- Private messaging and multiple chat channels\n- Responsive design with Tailwind CSS\n- Cluster mode support for scalability\n\nTech Stack:\n- Node.js, Express.js, Socket.IO\n- better-sqlite3 for fast, synchronous database access\n- Multer for file uploads\n- Tailwind CSS for UI\n\nUsage Tips:\n- Upload or select an avatar by clicking the avatar icon.\n- Private message by clicking a user's name.\n- Away status is shown when you tab out.\n- Message history and avatars persist across sessions.\n\nSee the README for full setup, database schema, and advanced features.`,
@@ -399,7 +475,7 @@ The application, built in Java, uses Swing for its user interface and FlatLaf fo
             "Cluster mode support for scalability",
             "Avatar and user info persistence across sessions",
             "File upload validation and security",
-            "Efficient, synchronous database access with better-sqlite3"
+            "Efficient, synchronous database access with better-sqlite3",
           ],
           gallery: [
             {
@@ -438,7 +514,8 @@ The application, built in Java, uses Swing for its user interface and FlatLaf fo
         {
           slug: "slice-defender",
           title: "Slice Defender",
-          description: "Interactive 3D fruit-slicing game with real-time hand tracking and physics.",
+          description:
+            "Interactive 3D fruit-slicing game with real-time hand tracking and physics.",
           tech: ["C++", "OpenGL", "Qt", "OpenCV"],
           github: "https://github.com/AymaneAsserrar/SliceDefender3D",
           fullDescription: `🍍 Fruit Slicer 3D — Slice Defender\n\nFruit Slicer 3D is an interactive gesture-based game built with Qt, OpenGL, and OpenCV. The player slices flying fruits in a 3D arena using a virtual sword controlled by real-time hand movements captured via webcam.\n\nKey Features\n- 3D Gameplay with OpenGL rendering: fruits, textures, sword, and a realistic environment.\n- Real-time Hand Tracking using OpenCV and webcam input.\n- Interactive Controls: move the camera using arrow keys and control the sword by moving your hand.\n- Fruit Slicing Physics: fruits split into two animated fragments with visible cut planes and realistic gravity.\n- Dynamic Shadows and Textures for immersive visual effects.\n- Score System & Timer: game lasts 120 seconds, and your score increases with each successful slice.\n\nArchitecture\n- MainWindow: Main GUI window handling score display, camera feed, and game start/stop.\n- OpenGLWidget: Core 3D rendering engine (arena, sword, fruits) and game logic.\n- WebcamHandler: Captures webcam frames and detects hand regions using Haar Cascade.\n- PalmTracker: Tracks the palm's position using ORB+FLANN for precise control.\n- Projectile: Models the fruits and their physical behaviors (movement, slicing, rendering).\n- PalmDetection: Handles initial palm detection before tracking.\n\nRequirements\n- Qt 5+\n- OpenGL\n- OpenCV 4+\n\nHow to Build\n- Clone the repository.\n- Open the project in Qt Creator or your preferred C++ IDE.\n- Make sure OpenCV and OpenGL development packages are installed.\n- Build and run the project.\n\nControls & Gameplay\n- Move your hand in front of the webcam — your virtual sword will follow.\n- Slice fruits by intersecting them with your virtual blade.\n- Arrow keys allow rotating the camera around the scene.\n- Avoid slicing wood cubes – slicing one will end the game immediately!\n\nCompleted Features\n- Fully functional 3D scene rendering with textures and shadows.\n- Real-time webcam integration and hand detection.\n- Smooth slicing animations and realistic fruit fragment physics.\n- In-game HUD for timer and score.\n\nKnown Limitations\n- Hand tracking may be less accurate under low lighting or fast movements.\n- Haar cascade detection can occasionally misfire — deep learning models may improve this.\n\nFuture Improvements\n- Add sound effects and ambient music.\n- Introduce difficulty levels and bonus items.\n- Replace palm detection with a neural network for robustness.\n- Polish UI elements for better UX.\n\nAuthors\nAymane ASSERRAR\nMarieme BENZHA\nAcademic Project – Télécom Saint-Étienne | 2024–2025`,
@@ -599,6 +676,88 @@ The application, built in Java, uses Swing for its user interface and FlatLaf fo
       viewDetails: "Détails",
       list: [
         {
+          slug: "personal-portfolio",
+          title: "Portfolio Personnel",
+          description:
+            "Un portfolio personnel multilingue (EN/FR) développé avec Next.js 15, TypeScript et Tailwind CSS, avec des animations Framer Motion fluides, le mode sombre et un design entièrement responsive.",
+          tech: [
+            "Next.js",
+            "TypeScript",
+            "React",
+            "Tailwind CSS",
+            "Framer Motion",
+          ],
+          github: "https://github.com/AymaneAsserrar/github-portfolio",
+          liveUrl: "https://aymaneasserrar.github.io/github-portfolio/",
+          fullDescription: `Portfolio Personnel — aymane-asserrar.vercel.app
+
+Un site portfolio multilingue entièrement personnalisé, conçu pour présenter mes projets, compétences et expériences en tant que développeur Full Stack.
+
+Fonctionnalités principales
+- Support multilingue (EN / FR) : changement de langue instantané avec tout le contenu traduit.
+- Animations fluides : transitions de pages, révélations au défilement, listes décalées et effets de survol via Framer Motion.
+- Mode sombre : basculement de thème détectant les préférences système, avec persistance.
+- Entièrement responsive : mise en page optimisée pour mobile, tablette et bureau.
+- Vitrine de projets : pages de projets détaillées avec listes de fonctionnalités, stacks techniques et galeries d'images.
+- Section Certifications : affichage des certifications professionnelles avec logos d'émetteurs et liens de validation.
+- Formulaire de contact : formulaire fonctionnel avec envoi d'e-mail.
+- Téléchargement du CV : bouton de téléchargement direct du dernier CV.
+
+Stack Technique
+- Framework : Next.js 15 (App Router)
+- Langage : TypeScript
+- Style : Tailwind CSS
+- Animations : Framer Motion
+- Déploiement : Vercel
+
+Architecture
+- Source de données unique (lib/data.ts) pour tout le contenu EN/FR — sans CMS.
+- Design orienté composants avec primitives UI réutilisables.
+- Génération statique pour des temps de chargement rapides.`,
+          features: [
+            "Support multilingue (Anglais / Français) avec changement de langue instantané",
+            "Animations Framer Motion : révélations au défilement, listes décalées, effets de survol",
+            "Mode sombre avec détection système et bascule persistante",
+            "Design entièrement responsive (mobile, tablette, bureau)",
+            "Pages de projets détaillées avec galeries, fonctionnalités et stacks techniques",
+            "Section certifications avec logos d'émetteurs et liens de validation",
+            "Formulaire de contact fonctionnel avec envoi d'e-mail",
+            "Bouton de téléchargement du CV",
+            "Génération statique via Next.js App Router pour de meilleures performances",
+            "Source de données unique pour tout le contenu bilingue (lib/data.ts)",
+          ],
+          gallery: [
+            {
+              src: "/projects/portfolio/portfolio 1.png",
+              alt: "Section héro de la page d'accueil",
+            },
+            {
+              src: "/projects/portfolio/portfolio 2.png",
+              alt: "Section à propos",
+            },
+            {
+              src: "/projects/portfolio/portfolio 3.png",
+              alt: "Section compétences",
+            },
+            {
+              src: "/projects/portfolio/portfolio 4.png",
+              alt: "Section projets",
+            },
+            {
+              src: "/projects/portfolio/portfolio 5.png",
+              alt: "Page de détail d'un projet",
+            },
+            {
+              src: "/projects/portfolio/portfolio 6.png",
+              alt: "Section certifications",
+            },
+            {
+              src: "/projects/portfolio/portfolio 7.png",
+              alt: "Section contact",
+            },
+          ],
+        },
+        {
           slug: "networking-ai",
           title: "Networking AI (Projet International)",
           description:
@@ -654,13 +813,7 @@ Pour l'avenir, nos prochaines étapes incluent l'ajout de tests synthétiques et
           title: "Ayman's Bike Shop",
           description:
             "Application e-commerce moderne et responsive Angular 15 pour parcourir et acheter des vélos et accessoires.",
-          tech: [
-            "Angular",
-            "TypeScript",
-            "CSS3",
-            "RxJS",
-            "JSON",
-          ],
+          tech: ["Angular", "TypeScript", "CSS3", "RxJS", "JSON"],
           github: "https://github.com/AymaneAsserrar/aymans-bike-shop",
           fullDescription: `Une application e-commerce moderne et responsive pour parcourir et acheter des vélos et accessoires. Construite avec Angular 15, elle met en avant une architecture modulaire et une séparation claire des responsabilités.\n\nFonctionnalités principales :\n- Catalogue interactif : Parcourez une large collection de vélos et accessoires.\n- Gestion du panier : Ajoutez des articles, visualisez le résumé et gérez les quantités facilement.\n- Détails produits : Présentation riche des produits avec les composants BikeCard.\n- Catégorisation : Gestion distincte des vélos et accessoires.\n- Contact & support : Section dédiée pour les demandes clients.\n- Responsive : Optimisée pour tous les écrans.\n\nStack technique :\n- Framework : Angular 15\n- Langage : TypeScript\n- Style : CSS3\n- Données : Stockage local JSON (Assets)\n- Gestion d'état : Services RxJS\n\nStructure du projet :\n\n\`\`\`\nsrc/\n├── app/\n│   ├── core/            # Services singletons et modèles\n│   │   ├── models/      # Interfaces de données (Bike, Accessory, CartItem)\n│   │   └── services/    # Logique métier (services Panier, Catalogue)\n│   ├── features/        # Modules fonctionnels\n│   │   ├── cart/        # Fonctionnalité panier\n│   │   ├── catalog/     # Pages de listing produits\n│   │   ├── contact/     # Formulaire et infos contact\n│   │   └── home/        # Page d'accueil\n│   └── shared/          # Artéfacts réutilisables\n│       ├── components/  # Composants UI partagés (Footer, BikeCard)\n│       └── pipes/       # Pipes personnalisés (CurrencyFormat)\n├── assets/\n│   └── data/            # Données statiques (bikes.json, accessories.json)\n└── environments/        # Fichiers de configuration\n\`\`\`\n\nVoir le README pour tous les détails, installation et instructions d'utilisation.`,
           features: [
@@ -790,7 +943,7 @@ L'application, développée en Java, utilise Swing pour son interface utilisateu
             "Socket.IO",
             "better-sqlite3",
             "Multer",
-            "Tailwind CSS"
+            "Tailwind CSS",
           ],
           github: "https://github.com/AymaneAsserrar/MyChatApp",
           fullDescription: `Application de chat en temps réel construite avec Node.js, Socket.IO et SQLite, dotée d'une interface moderne avec Tailwind CSS.\n\nFonctionnalités principales :\n- Messagerie instantanée avec Socket.IO\n- Authentification des utilisateurs et détection de présence\n- Avatars personnalisables avec support de l'upload\n- Reconnexion automatique et récupération des messages\n- Indicateurs de saisie et statuts en ligne/absent\n- Historique des messages persistant avec SQLite\n- Messagerie privée et gestion de multiples salons\n- Design responsive avec Tailwind CSS\n- Mode cluster pour la scalabilité\n\nStack technique :\n- Node.js, Express.js, Socket.IO\n- better-sqlite3 pour un accès base de données rapide et synchrone\n- Multer pour la gestion des uploads\n- Tailwind CSS pour l'UI\n\nConseils d'utilisation :\n- Cliquez sur l'avatar pour en choisir un ou en téléverser un.\n- Envoyez un message privé en cliquant sur le nom d'un utilisateur.\n- Le statut "absent" s'affiche si vous changez d'onglet.\n- L'historique et les avatars sont conservés entre les sessions.\n\nVoir le README pour l'installation complète, le schéma de la base et les fonctionnalités avancées.`,
@@ -807,7 +960,7 @@ L'application, développée en Java, utilise Swing pour son interface utilisateu
             "Mode cluster pour la scalabilité",
             "Persistance des avatars et infos utilisateur entre les sessions",
             "Validation et sécurité des fichiers uploadés",
-            "Accès base de données synchrone et performant avec better-sqlite3"
+            "Accès base de données synchrone et performant avec better-sqlite3",
           ],
           gallery: [
             {
@@ -923,22 +1076,26 @@ export const certifications: CertificationData[] = [
     title: "Sensibilisation à la cybersécurité",
     organization: "Groupe Casino",
     logo: "https://media.licdn.com/dms/image/v2/D4E0BAQEX_TIBsem8Uw/company-logo_100_100/company-logo_100_100/0/1736952138852/groupe_casino_logo?e=1774483200&v=beta&t=Y7XLgPEDl1vWNEW_M5EIGfBWySVeqS9lIxFZ-WiO4Eo",
-    credentialUrl: "https://mycampus-casino.360learning.com/api/certification/9565711184551404/file.pdf",
+    credentialUrl:
+      "https://mycampus-casino.360learning.com/api/certification/9565711184551404/file.pdf",
     issued: "Feb 2026",
     credentialId: "9565711184551404",
   },
   {
     title: "MOOC",
-    organization: "ANSSI - Agence nationale de la sécurité des systèmes d'information",
+    organization:
+      "ANSSI - Agence nationale de la sécurité des systèmes d'information",
     logo: "https://media.licdn.com/dms/image/v2/C4E0BAQHIVo7ZFcWBsw/company-logo_100_100/company-logo_100_100/0/1631314234060?e=1774483200&v=beta&t=N0lFXAiPvDfD92pNcAUXPAJmZZ8ZIEyiYL2DUks1yjQ",
-    credentialUrl: "https://www.linkedin.com/in/aymane-asserrar/details/certifications/1771036408472/single-media-viewer?type=DOCUMENT&profileId=ACoAACbgvJ4B5DPKHT_8gLd4AruseNB7AagiuzE&locale=en_US&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BmEH4aN6IQ4O8rou7sh%2Futw%3D%3D",
+    credentialUrl:
+      "https://www.linkedin.com/in/aymane-asserrar/details/certifications/1771036408472/single-media-viewer?type=DOCUMENT&profileId=ACoAACbgvJ4B5DPKHT_8gLd4AruseNB7AagiuzE&locale=en_US&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BmEH4aN6IQ4O8rou7sh%2Futw%3D%3D",
     issued: "Feb 2026",
   },
   {
     title: "Introduction to SQL Using Google BigQuery",
     organization: "LinkedIn",
     logo: "https://media.licdn.com/dms/image/v2/C560BAQHaVYd13rRz3A/company-logo_100_100/company-logo_100_100/0/1638831590218/linkedin_logo?e=1774483200&v=beta&t=Rxz3WQoYd6hgn7CRQ_uIFOizEERqC2z4kccfR57TmqI",
-    credentialUrl: "https://www.linkedin.com/learning/certificates/4c6ce834a466c638c5a7cd4e0c59fc2cd6ab865b7b346cc2255a4d4c0c447352?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BmEH4aN6IQ4O8rou7sh%2Futw%3D%3D",
+    credentialUrl:
+      "https://www.linkedin.com/learning/certificates/4c6ce834a466c638c5a7cd4e0c59fc2cd6ab865b7b346cc2255a4d4c0c447352?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BmEH4aN6IQ4O8rou7sh%2Futw%3D%3D",
     issued: "Dec 2025",
     skills: ["Google BigQuery"],
   },
@@ -946,7 +1103,8 @@ export const certifications: CertificationData[] = [
     title: "Mission RGPD",
     organization: "Groupe Casino",
     logo: "https://media.licdn.com/dms/image/v2/D4E0BAQEX_TIBsem8Uw/company-logo_100_100/company-logo_100_100/0/1736952138852/groupe_casino_logo?e=1774483200&v=beta&t=Y7XLgPEDl1vWNEW_M5EIGfBWySVeqS9lIxFZ-WiO4Eo",
-    credentialUrl: "https://mycampus-casino.360learning.com/api/certification/1908271131306477/file.pdf",
+    credentialUrl:
+      "https://mycampus-casino.360learning.com/api/certification/1908271131306477/file.pdf",
     issued: "Dec 2025",
     credentialId: "1908271131306477",
   },
@@ -954,7 +1112,8 @@ export const certifications: CertificationData[] = [
     title: "Procédure de recueil des signalements",
     organization: "Groupe Casino",
     logo: "https://media.licdn.com/dms/image/v2/D4E0BAQEX_TIBsem8Uw/company-logo_100_100/company-logo_100_100/0/1736952138852/groupe_casino_logo?e=1774483200&v=beta&t=Y7XLgPEDl1vWNEW_M5EIGfBWySVeqS9lIxFZ-WiO4Eo",
-    credentialUrl: "https://mycampus-casino.360learning.com/api/certification/1958906746092530/file.pdf",
+    credentialUrl:
+      "https://mycampus-casino.360learning.com/api/certification/1958906746092530/file.pdf",
     issued: "Dec 2025",
     expires: "Dec 2027",
     credentialId: "1958906746092530",
@@ -963,7 +1122,8 @@ export const certifications: CertificationData[] = [
     title: "La lutte contre la corruption",
     organization: "Groupe Casino",
     logo: "https://media.licdn.com/dms/image/v2/D4E0BAQEX_TIBsem8Uw/company-logo_100_100/company-logo_100_100/0/1736952138852/groupe_casino_logo?e=1774483200&v=beta&t=Y7XLgPEDl1vWNEW_M5EIGfBWySVeqS9lIxFZ-WiO4Eo",
-    credentialUrl: "https://mycampus-casino.360learning.com/api/certification/8144861057310410/file.pdf",
+    credentialUrl:
+      "https://mycampus-casino.360learning.com/api/certification/8144861057310410/file.pdf",
     issued: "Dec 2025",
     credentialId: "8144861057310410",
   },
@@ -971,7 +1131,8 @@ export const certifications: CertificationData[] = [
     title: "Gestion des conflits d'intérêts",
     organization: "Groupe Casino",
     logo: "https://media.licdn.com/dms/image/v2/D4E0BAQEX_TIBsem8Uw/company-logo_100_100/company-logo_100_100/0/1736952138852/groupe_casino_logo?e=1774483200&v=beta&t=Y7XLgPEDl1vWNEW_M5EIGfBWySVeqS9lIxFZ-WiO4Eo",
-    credentialUrl: "https://mycampus-casino.360learning.com/api/certification/1798525946566709/file.pdf",
+    credentialUrl:
+      "https://mycampus-casino.360learning.com/api/certification/1798525946566709/file.pdf",
     issued: "Dec 2025",
     credentialId: "1798525946566709",
   },
@@ -988,7 +1149,8 @@ export const certifications: CertificationData[] = [
     title: "Advanced PHP: Debugging Techniques",
     organization: "LinkedIn",
     logo: "https://media.licdn.com/dms/image/v2/C560BAQHaVYd13rRz3A/company-logo_100_100/company-logo_100_100/0/1638831590218/linkedin_logo?e=1774483200&v=beta&t=Rxz3WQoYd6hgn7CRQ_uIFOizEERqC2z4kccfR57TmqI",
-    credentialUrl: "https://www.linkedin.com/learning/certificates/ac28fd379ebf20b3d10995aa803e7f4e46c126f36ae24443aa9b179d23d335f8?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BmEH4aN6IQ4O8rou7sh%2Futw%3D%3D",
+    credentialUrl:
+      "https://www.linkedin.com/learning/certificates/ac28fd379ebf20b3d10995aa803e7f4e46c126f36ae24443aa9b179d23d335f8?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BmEH4aN6IQ4O8rou7sh%2Futw%3D%3D",
     issued: "Nov 2025",
     skills: ["PHP"],
   },
@@ -996,7 +1158,8 @@ export const certifications: CertificationData[] = [
     title: "Advanced Laravel",
     organization: "LinkedIn",
     logo: "https://media.licdn.com/dms/image/v2/C560BAQHaVYd13rRz3A/company-logo_100_100/company-logo_100_100/0/1638831590218/linkedin_logo?e=1774483200&v=beta&t=Rxz3WQoYd6hgn7CRQ_uIFOizEERqC2z4kccfR57TmqI",
-    credentialUrl: "https://www.linkedin.com/learning/certificates/3e512dfb9c9ee0e396f2f69956e0efe571b2d9cf504d9effa9fc9d0fb0e51109?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BmEH4aN6IQ4O8rou7sh%2Futw%3D%3D",
+    credentialUrl:
+      "https://www.linkedin.com/learning/certificates/3e512dfb9c9ee0e396f2f69956e0efe571b2d9cf504d9effa9fc9d0fb0e51109?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BmEH4aN6IQ4O8rou7sh%2Futw%3D%3D",
     issued: "Nov 2025",
     skills: ["Laravel"],
   },
