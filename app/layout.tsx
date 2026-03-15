@@ -10,6 +10,7 @@ import AnimatedBackground from "@/components/AnimatedBackground";
 import MouseCrosshairWrapper from "@/components/MouseCrosshairWrapper";
 import LoadingScreen from "@/components/LoadingScreen";
 import { LoadingProvider } from "@/context/LoadingContext";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -53,6 +54,7 @@ export default function RootLayout({
             <Header />
             <main className="flex-1">{children}</main>
             <Footer />
+            <ScrollToTop />
           </ThemeProvider>
         </LanguageProvider>
         </LoadingProvider>
