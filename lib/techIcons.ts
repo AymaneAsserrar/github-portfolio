@@ -1,39 +1,40 @@
 // Map technology names to their Devicon CDN SVG URLs
 // Uses https://devicon.dev/ for well-known technologies
 
-const DEVICON_BASE = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
+const DEVICON_BASE =
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
 
 const techIconMap: Record<string, string> = {
   // Languages
-  "Python": `${DEVICON_BASE}/python/python-original.svg`,
-  "Java": `${DEVICON_BASE}/java/java-original.svg`,
+  Python: `${DEVICON_BASE}/python/python-original.svg`,
+  Java: `${DEVICON_BASE}/java/java-original.svg`,
   "Java 17": `${DEVICON_BASE}/java/java-original.svg`,
-  "Maven": `${DEVICON_BASE}/maven/maven-original.svg`,
-  "Swagger": `${DEVICON_BASE}/swagger/swagger-original.svg`,
+  Maven: `${DEVICON_BASE}/maven/maven-original.svg`,
+  Swagger: `${DEVICON_BASE}/swagger/swagger-original.svg`,
   "C++": `${DEVICON_BASE}/cplusplus/cplusplus-original.svg`,
-  "C": `${DEVICON_BASE}/c/c-original.svg`,
+  C: `${DEVICON_BASE}/c/c-original.svg`,
   "C/C++": `${DEVICON_BASE}/cplusplus/cplusplus-original.svg`,
-  "JavaScript": `${DEVICON_BASE}/javascript/javascript-original.svg`,
-  "TypeScript": `${DEVICON_BASE}/typescript/typescript-original.svg`,
-  "PHP": `${DEVICON_BASE}/php/php-original.svg`,
-  "Bash": `${DEVICON_BASE}/bash/bash-original.svg`,
+  JavaScript: `${DEVICON_BASE}/javascript/javascript-original.svg`,
+  TypeScript: `${DEVICON_BASE}/typescript/typescript-original.svg`,
+  PHP: `${DEVICON_BASE}/php/php-original.svg`,
+  Bash: `${DEVICON_BASE}/bash/bash-original.svg`,
 
   // Frontend
-  "React": `${DEVICON_BASE}/react/react-original.svg`,
+  React: `${DEVICON_BASE}/react/react-original.svg`,
   "Next.js": `${DEVICON_BASE}/nextjs/nextjs-original.svg`,
   "Vue.js": `${DEVICON_BASE}/vuejs/vuejs-original.svg`,
-  "Angular": `${DEVICON_BASE}/angular/angular-original.svg`,
+  Angular: `${DEVICON_BASE}/angular/angular-original.svg`,
   "Tailwind CSS": `${DEVICON_BASE}/tailwindcss/tailwindcss-original.svg`,
-  "HTML5": `${DEVICON_BASE}/html5/html5-original.svg`,
-  "CSS3": `${DEVICON_BASE}/css3/css3-original.svg`,
-  "Swing": `${DEVICON_BASE}/java/java-original.svg`,
-  "RxJS": `${DEVICON_BASE}/rxjs/rxjs-original.svg`,
-  "JSON": `${DEVICON_BASE}/json/json-original.svg`,
+  HTML5: `${DEVICON_BASE}/html5/html5-original.svg`,
+  CSS3: `${DEVICON_BASE}/css3/css3-original.svg`,
+  Swing: `${DEVICON_BASE}/java/java-original.svg`,
+  RxJS: `${DEVICON_BASE}/rxjs/rxjs-original.svg`,
+  JSON: `${DEVICON_BASE}/json/json-original.svg`,
 
   // Backend
-  "Laravel": `${DEVICON_BASE}/laravel/laravel-original.svg`,
-  "Symfony": `${DEVICON_BASE}/symfony/symfony-original.svg`,
-  "Flask": `${DEVICON_BASE}/flask/flask-original.svg`,
+  Laravel: `${DEVICON_BASE}/laravel/laravel-original.svg`,
+  Symfony: `${DEVICON_BASE}/symfony/symfony-original.svg`,
+  Flask: `${DEVICON_BASE}/flask/flask-original.svg`,
   "Spring Boot": `${DEVICON_BASE}/spring/spring-original.svg`,
   "Spring Data JPA": `${DEVICON_BASE}/spring/spring-original.svg`,
   "Node.js": `${DEVICON_BASE}/nodejs/nodejs-original.svg`,
@@ -42,28 +43,27 @@ const techIconMap: Record<string, string> = {
   "better-sqlite3": `${DEVICON_BASE}/sqlite/sqlite-original.svg`,
 
   // Databases
-  "MySQL": `${DEVICON_BASE}/mysql/mysql-original.svg`,
-  "PostgreSQL": `${DEVICON_BASE}/postgresql/postgresql-original.svg`,
-  "MongoDB": `${DEVICON_BASE}/mongodb/mongodb-original.svg`,
-  "SQLite": `${DEVICON_BASE}/sqlite/sqlite-original.svg`,
-  "Redis": `${DEVICON_BASE}/redis/redis-original.svg`,
-  "SQL": `${DEVICON_BASE}/azuresqldatabase/azuresqldatabase-original.svg`,
-  "H2": `${DEVICON_BASE}/azuresqldatabase/azuresqldatabase-original.svg`,
-
+  MySQL: `${DEVICON_BASE}/mysql/mysql-original.svg`,
+  PostgreSQL: `${DEVICON_BASE}/postgresql/postgresql-original.svg`,
+  MongoDB: `${DEVICON_BASE}/mongodb/mongodb-original.svg`,
+  SQLite: `${DEVICON_BASE}/sqlite/sqlite-original.svg`,
+  Redis: `${DEVICON_BASE}/redis/redis-original.svg`,
+  SQL: `${DEVICON_BASE}/azuresqldatabase/azuresqldatabase-original.svg`,
+  H2: `${DEVICON_BASE}/azuresqldatabase/azuresqldatabase-original.svg`,
 
   // DevOps & Tools
-  "Docker": `${DEVICON_BASE}/docker/docker-original.svg`,
-  "Git": `${DEVICON_BASE}/git/git-original.svg`,
+  Docker: `${DEVICON_BASE}/docker/docker-original.svg`,
+  Git: `${DEVICON_BASE}/git/git-original.svg`,
   "Git/GitHub": `${DEVICON_BASE}/github/github-original.svg`,
-  "GitHub": `${DEVICON_BASE}/github/github-original.svg`,
+  GitHub: `${DEVICON_BASE}/github/github-original.svg`,
   "GitLab CI/CD": `${DEVICON_BASE}/gitlab/gitlab-original.svg`,
-  "Linux": `${DEVICON_BASE}/linux/linux-original.svg`,
-  "Jira": `${DEVICON_BASE}/jira/jira-original.svg`,
+  Linux: `${DEVICON_BASE}/linux/linux-original.svg`,
+  Jira: `${DEVICON_BASE}/jira/jira-original.svg`,
 
   // Graphics
-  "OpenGL": `${DEVICON_BASE}/opengl/opengl-original.svg`,
-  "Qt": `${DEVICON_BASE}/qt/qt-original.svg`,
-  "OpenCV": `${DEVICON_BASE}/opencv/opencv-original.svg`,
+  OpenGL: `${DEVICON_BASE}/opengl/opengl-original.svg`,
+  Qt: `${DEVICON_BASE}/qt/qt-original.svg`,
+  OpenCV: `${DEVICON_BASE}/opencv/opencv-original.svg`,
 
   // Cloud
   "GCP (BigQuery)": `${DEVICON_BASE}/googlecloud/googlecloud-original.svg`,
@@ -71,27 +71,30 @@ const techIconMap: Record<string, string> = {
   "Azure (IoT Hub)": `${DEVICON_BASE}/azure/azure-original.svg`,
 
   // AI / ML / Misc
-  "LLM": `${DEVICON_BASE}/tensorflow/tensorflow-original.svg`,
-  "RAG": `${DEVICON_BASE}/azuresqldatabase/azuresqldatabase-original.svg`,
-  "Langchain": `https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/LangChain_Logo.svg/1280px-LangChain_Logo.svg.png?_=20250612121153`,
-  "Dash": `${DEVICON_BASE}/plotly/plotly-original.svg`,
+  LLM: `${DEVICON_BASE}/tensorflow/tensorflow-original.svg`,
+  RAG: `${DEVICON_BASE}/azuresqldatabase/azuresqldatabase-original.svg`,
+  Langchain: `https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/LangChain_Logo.svg/1280px-LangChain_Logo.svg.png?_=20250612121153`,
+  Dash: `${DEVICON_BASE}/plotly/plotly-original.svg`,
 
   // Other
   "REST API": `${DEVICON_BASE}/fastapi/fastapi-original.svg`,
-  "JDBC": `${DEVICON_BASE}/java/java-original.svg`,
-  "WebSockets": `${DEVICON_BASE}/socketio/socketio-original.svg`,
-  "Batfish": "https://avatars.githubusercontent.com/u/24584846?s=280&v=4",
-  "Agile": "https://cdn-icons-png.flaticon.com/128/5271/5271425.png",
+  JDBC: `${DEVICON_BASE}/java/java-original.svg`,
+  WebSockets: `${DEVICON_BASE}/socketio/socketio-original.svg`,
+  Batfish: "https://avatars.githubusercontent.com/u/24584846?s=280&v=4",
+  Agile: "https://cdn-icons-png.flaticon.com/128/5271/5271425.png",
   "Agile/Scrum": "https://cdn-icons-png.flaticon.com/128/5271/5271425.png",
-  "Blade": `${DEVICON_BASE}/laravel/laravel-original.svg`,
-  "Postman": `${DEVICON_BASE}/postman/postman-original.svg`,
+  Blade: `${DEVICON_BASE}/laravel/laravel-original.svg`,
+  Livewire: `${DEVICON_BASE}/laravel/laravel-original.svg`,
+  PhpSpreadsheet: `${DEVICON_BASE}/php/php-original.svg`,
+  PHPUnit: `${DEVICON_BASE}/php/php-original.svg`,
+  Postman: `${DEVICON_BASE}/postman/postman-original.svg`,
   "REST APIs": `${DEVICON_BASE}/fastapi/fastapi-original.svg`,
-  "Microservices": "",
+  Microservices: "",
   "Machine Learning (LSTM)": `${DEVICON_BASE}/tensorflow/tensorflow-original.svg`,
   "Unit Testing": `${DEVICON_BASE}/junit/junit-original.svg`,
   "System Design": "",
   "Project Management": "",
-  "Multer": "https://miro.medium.com/v2/1*xN_65YL4_n5pp1k6lozs_A.png",
+  Multer: "https://miro.medium.com/v2/1*xN_65YL4_n5pp1k6lozs_A.png",
 };
 
 /**

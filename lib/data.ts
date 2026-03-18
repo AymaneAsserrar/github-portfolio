@@ -191,6 +191,57 @@ export const content = {
       viewDetails: "Details",
       list: [
         {
+          slug: "livewire-excel-validator",
+          title: "Livewire Excel Validator",
+          description:
+            "An open-source Laravel package that validates Excel uploads against 15+ custom rules and returns an auto-annotated file with red cells, amber headers, and inline comments — in one line of code.",
+          tech: ["PHP", "Laravel", "PhpSpreadsheet", "Livewire", "PHPUnit"],
+          github: "https://github.com/aymane-asserrar/livewire-excel-validator",
+          liveUrl:
+            "https://packagist.org/packages/aymane-asserrar/livewire-excel-validator",
+          fullDescription: `Livewire Excel Validator — Open-Source Laravel Package
+
+A Laravel package that brings server-side Excel validation to Livewire components without any boilerplate. Point it at an uploaded .xlsx file, define your column rules, and get back the same file annotated with visual error feedback — red cells, amber column headers, and inline per-cell comments.
+
+The Problem
+Excel-based data imports are common in business applications, but validating them is painful. Developers either write custom validation loops, parse spreadsheets manually, or return raw error messages with no context about which cell failed. Users then have to cross-reference row and column numbers themselves — a slow, error-prone process.
+
+The Solution
+Livewire Excel Validator automates the full feedback loop. After validation, the package returns the original spreadsheet with:
+- Failing cells highlighted in red
+- Column headers with errors marked in amber
+- Inline cell comments explaining exactly what went wrong
+
+All of this happens in a single method call, returning a ready-to-download file.
+
+Tech Stack
+- PHP — package core logic and validation engine
+- Laravel — service provider, facade, and UploadedFile integration
+- PhpSpreadsheet — spreadsheet parsing, cell styling, and comment injection
+- Livewire — component integration target
+- PHPUnit — full test suite (55 tests, all passing)
+
+Key Design Decisions
+- Accepts both a file path string and Laravel's UploadedFile — works in any context, not just Livewire.
+- Rule definitions mirror Laravel's own validation syntax to minimize learning curve.
+- Each validation rule is isolated and independently tested, making the rule set easy to extend.
+- The annotated file is streamed back directly — no intermediate storage required.
+
+Published on Packagist as v2.0.0.`,
+          features: [
+            "15+ built-in validation rules: required, email, url, numeric, integer, string, boolean, date, unique, regex, in, not_in, min, max, min_length, max_length",
+            "Failing cells highlighted in red for immediate visual feedback",
+            "Error column headers marked in amber",
+            "Inline cell comments with per-cell error explanations",
+            "Accepts Laravel UploadedFile or a raw file path",
+            "Returns the annotated .xlsx file ready for download in one line",
+            "Laravel-style rule syntax — zero learning curve for Laravel developers",
+            "Full test suite: 55 tests, all passing",
+            "Published on Packagist (v2.0.0)",
+            "Service provider and facade included for easy registration",
+          ],
+        },
+        {
           slug: "fleet-tracker",
           title: "FleetTracker",
           description:
@@ -768,6 +819,57 @@ The application, built in Java, uses Swing for its user interface and FlatLaf fo
       viewOnGithub: "Voir sur GitHub",
       viewDetails: "Détails",
       list: [
+        {
+          slug: "livewire-excel-validator",
+          title: "Livewire Excel Validator",
+          description:
+            "Un package Laravel open-source qui valide les imports Excel contre 15+ règles personnalisées et retourne le fichier annoté avec cellules rouges, en-têtes ambrés et commentaires inline — en une seule ligne de code.",
+          tech: ["PHP", "Laravel", "PhpSpreadsheet", "Livewire", "PHPUnit"],
+          github: "https://github.com/aymane-asserrar/livewire-excel-validator",
+          liveUrl:
+            "https://packagist.org/packages/aymane-asserrar/livewire-excel-validator",
+          fullDescription: `Livewire Excel Validator — Package Laravel Open-Source
+
+Un package Laravel qui apporte la validation Excel côté serveur aux composants Livewire sans aucun code répétitif. Pointez-le vers un fichier .xlsx uploadé, définissez vos règles par colonne, et récupérez le même fichier annoté avec un retour visuel sur les erreurs — cellules rouges, en-têtes de colonnes ambrés et commentaires inline par cellule.
+
+Le Problème
+Les imports de données via Excel sont courants dans les applications métier, mais leur validation est fastidieuse. Les développeurs doivent écrire des boucles de validation personnalisées, parser les feuilles de calcul manuellement, ou retourner des messages d'erreur bruts sans contexte sur la cellule en faute. Les utilisateurs doivent ensuite croiser numéros de ligne et de colonne — un processus lent et source d'erreurs.
+
+La Solution
+Livewire Excel Validator automatise toute la boucle de retour. Après validation, le package retourne le tableur original annoté avec :
+- Les cellules en erreur surlignées en rouge
+- Les en-têtes de colonnes concernées marqués en ambre
+- Des commentaires inline expliquant précisément ce qui a échoué
+
+Tout cela se fait en un seul appel de méthode, retournant un fichier prêt au téléchargement.
+
+Stack Technique
+- PHP — logique cœur du package et moteur de validation
+- Laravel — service provider, facade et intégration UploadedFile
+- PhpSpreadsheet — parsing du tableur, style des cellules et injection des commentaires
+- Livewire — composants cibles d'intégration
+- PHPUnit — suite de tests complète (55 tests, tous passants)
+
+Décisions Techniques Clés
+- Accepte à la fois un chemin de fichier et l'UploadedFile de Laravel — fonctionne dans n'importe quel contexte, pas seulement Livewire.
+- La syntaxe des règles reprend celle de Laravel pour minimiser la courbe d'apprentissage.
+- Chaque règle de validation est isolée et testée indépendamment, ce qui facilite l'extension du jeu de règles.
+- Le fichier annoté est retourné directement en streaming — aucun stockage intermédiaire requis.
+
+Publié sur Packagist en v2.0.0.`,
+          features: [
+            "15+ règles de validation intégrées : required, email, url, numeric, integer, string, boolean, date, unique, regex, in, not_in, min, max, min_length, max_length",
+            "Cellules en erreur surlignées en rouge pour un retour visuel immédiat",
+            "En-têtes de colonnes en erreur marqués en ambre",
+            "Commentaires inline avec explications par cellule",
+            "Accepte un UploadedFile Laravel ou un chemin de fichier brut",
+            "Retourne le fichier .xlsx annoté prêt au téléchargement en une ligne",
+            "Syntaxe de règles identique à Laravel — courbe d'apprentissage nulle",
+            "Suite de tests complète : 55 tests, tous passants",
+            "Publié sur Packagist (v2.0.0)",
+            "Service provider et facade inclus pour une intégration simplifiée",
+          ],
+        },
         {
           slug: "fleet-tracker",
           title: "FleetTracker",
