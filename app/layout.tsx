@@ -12,6 +12,7 @@ import LoadingScreen from "@/components/LoadingScreen";
 import { LoadingProvider } from "@/context/LoadingContext";
 import ScrollToTop from "@/components/ScrollToTop";
 import Script from "next/script";
+import CookieBanner from "@/components/CookieBanner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -58,6 +59,7 @@ export default function RootLayout({
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
+          gtag('consent', 'default', { analytics_storage: 'denied', ad_storage: 'denied' });
           gtag('js', new Date());
           gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
         `}
@@ -81,6 +83,7 @@ export default function RootLayout({
             <main className="flex-1">{children}</main>
             <Footer />
             <ScrollToTop />
+            <CookieBanner />
           </ThemeProvider>
         </LanguageProvider>
         </LoadingProvider>
