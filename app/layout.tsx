@@ -44,7 +44,7 @@ export default function RootLayout({
             "default-src 'self'",
             "script-src 'self' https://www.googletagmanager.com 'unsafe-inline'",
             "style-src 'self' 'unsafe-inline'",
-            "img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com",
+            "img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com https://cdn.jsdelivr.net https://cdn-icons-png.flaticon.com https://avatars.githubusercontent.com https://upload.wikimedia.org https://miro.medium.com https://media.licdn.com",
             "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com",
             "font-src 'self' data:",
           ].join("; ")}
