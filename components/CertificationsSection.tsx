@@ -1,10 +1,39 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useCarousel } from "./useCarousel";
 import { useIsMobile } from "./useIsMobile";
 import { getTechIconUrl } from "@/lib/techIcons";
+
+const basePath = process.env.NODE_ENV === 'production' ? '/github-portfolio' : '';
+
+function OrgLogo({ src, alt, org }: { src: string; alt: string; org: string }) {
+  const [failed, setFailed] = useState(false);
+  const resolvedSrc = src.startsWith('/') ? `${basePath}${src}` : src;
+  const initials = org
+    .split(/\s+/)
+    .slice(0, 2)
+    .map((w) => w[0])
+    .join("")
+    .toUpperCase();
+
+  if (failed || !resolvedSrc) {
+    return (
+      <div className="w-16 h-16 rounded flex items-center justify-center bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 font-bold text-xl select-none shrink-0">
+        {initials}
+      </div>
+    );
+  }
+  return (
+    <img
+      src={resolvedSrc}
+      alt={alt}
+      className="w-16 h-16 object-contain rounded shrink-0"
+      onError={() => setFailed(true)}
+    />
+  );
+}
 
 export interface Certification {
   title: string;
@@ -132,10 +161,10 @@ function Carousel({ certifications }: { certifications: Certification[] }) {
                   key={i}
                   className="group flex items-center rounded-lg border border-blue-600 dark:border-blue-400 bg-card text-card-foreground shadow-[0_4px_20px_rgba(37,99,235,0.15)] dark:shadow-[0_4px_20px_rgba(96,165,250,0.15)] transition-all hover:shadow-[0_8px_30px_rgba(37,99,235,0.25)] dark:hover:shadow-[0_8px_30px_rgba(96,165,250,0.25)] hover:border-blue-300 dark:hover:border-blue-700 p-6 gap-4 mx-auto max-w-3xl w-full"
                 >
-                  <img
+                  <OrgLogo
                     src={cert.logo}
                     alt={cert.organization + ' logo'}
-                    className="w-16 h-16 object-contain rounded"
+                    org={cert.organization}
                   />
                   <div className="flex-1 min-w-0">
                     <div className="font-semibold text-lg group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors whitespace-normal">{cert.title}</div>
