@@ -242,6 +242,75 @@ Published on Packagist as v2.0.0.`,
           ],
         },
         {
+          slug: "cinerate",
+          title: "CineRate",
+          description:
+            "A collaborative Symfony REST API platform where users share, discover, and rate detailed critiques of films, series, and documentaries from streaming services — featuring JWT auth, Doctrine ORM, and a clean layered architecture.",
+          tech: [
+            "PHP",
+            "Symfony",
+            "Doctrine ORM",
+            "PostgreSQL",
+            "JWT",
+            "PHPUnit",
+          ],
+          github: "https://github.com/AymaneAsserrar/CineRate",
+          fullDescription: `CineRate — Collaborative Video Critique Platform
+
+CineRate is a Symfony 6.4 REST API platform where users share, discover, and rate detailed critiques of video content (films, series, documentaries) from streaming services.
+
+Architecture
+Layered Symfony architecture:
+- Controllers (Presentation) — HTTP request/response handling
+- Services (Business Logic) — orchestration and domain logic
+- Repositories (Data Access) — custom QueryBuilder queries
+- Doctrine Entities (ORM) — data model with rich relations
+- Event Listeners — automatic hydration and counter synchronization
+- Security — JWT stateless authentication, role-based access control
+
+Data Model
+5 core entities: User, Content, Review, ReviewVote, Tag — with ManyToOne, OneToMany, and ManyToMany relations, Doctrine indexes for performance, and unique constraints.
+
+API — 20+ REST Endpoints
+- Authentication: register, login, /me
+- Reviews: full CRUD, voting (helpful/unhelpful), reviews by content
+- Contents: CRUD (admin), search, trending, personalized recommendations
+- Users: profile, reviews, favorites, follow, profile update
+
+Key Business Features
+- Multi-format Reviews: title, 10–5000 char content, 1–10 rating, spoiler flag, tags, editable
+- Vote System: one vote per user per review (helpful/unhelpful), public counters, sort by usefulness
+- Recommendations: based on user ratings, trending (last 7 days), by tags, by followed users
+- User Profiles: bio, avatar, public review history, followers/following stats, favorites
+- Search & Filtering: title search with pagination, filter by min rating, streaming platform, sort options
+
+Symfony Patterns Used
+- Dependency Injection (constructor autowiring)
+- Doctrine ORM with lifecycle listeners (PrePersist/PostPersist for counter sync)
+- Custom Repositories with QueryBuilder and N+1 prevention via JOINs
+- Security: JwtAuthenticator, UserProvider, IsGranted voters
+- DTOs for clean JSON serialization
+- PHPUnit unit + functional tests
+
+Tech Stack
+Symfony 6.4, Doctrine ORM, PostgreSQL, lexik/jwt-authentication-bundle, Symfony Validator, PHPUnit`,
+          features: [
+            "JWT stateless authentication (register, login, token-based access)",
+            "Full CRUD for reviews with spoiler flag and tags",
+            "1–10 rating system with public helpful/unhelpful vote counters",
+            "Personalized recommendations based on ratings, tags, and followed users",
+            "Trending content based on recent review activity (last 7 days)",
+            "Role-based access control: ROLE_USER, ROLE_ADMIN",
+            "User profiles with followers, favorites, and review history",
+            "Search and filtering: by title, platform, min rating, sort options",
+            "N+1 prevention via QueryBuilder JOINs and Doctrine eager loading",
+            "Doctrine lifecycle listeners for automatic counter synchronization",
+            "DTOs for clean REST responses with pagination support",
+            "PHPUnit unit and functional tests",
+            "Layered architecture: Controller → Service → Repository → Entity",
+          ],
+        },
+        {
           slug: "fleet-tracker",
           title: "FleetTracker",
           description:
@@ -868,6 +937,75 @@ Publié sur Packagist en v2.0.0.`,
             "Suite de tests complète : 55 tests, tous passants",
             "Publié sur Packagist (v2.0.0)",
             "Service provider et facade inclus pour une intégration simplifiée",
+          ],
+        },
+        {
+          slug: "cinerate",
+          title: "CineRate",
+          description:
+            "Plateforme collaborative Symfony où les utilisateurs partagent, découvrent et évaluent des critiques détaillées de films, séries et documentaires issus de services de streaming — avec authentification JWT, Doctrine ORM et une architecture en couches propre.",
+          tech: [
+            "PHP",
+            "Symfony",
+            "Doctrine ORM",
+            "PostgreSQL",
+            "JWT",
+            "PHPUnit",
+          ],
+          github: "https://github.com/AymaneAsserrar/CineRate",
+          fullDescription: `CineRate — Plateforme Collaborative de Critiques Vidéo
+
+CineRate est une API REST Symfony 6.4 où les utilisateurs partagent, découvrent et évaluent des critiques détaillées de contenus vidéo (films, séries, documentaires) issus de services de streaming.
+
+Architecture
+Architecture Symfony en couches :
+- Controllers (Présentation) — gestion des requêtes/réponses HTTP
+- Services (Logique Métier) — orchestration et logique domaine
+- Repositories (Accès Données) — requêtes QueryBuilder personnalisées
+- Entités Doctrine (ORM) — modèle de données avec relations riches
+- Event Listeners — hydratation automatique et synchronisation des compteurs
+- Sécurité — authentification JWT stateless, contrôle d'accès par rôles
+
+Modèle de Données
+5 entités principales : User, Content, Review, ReviewVote, Tag — avec relations ManyToOne, OneToMany et ManyToMany, index Doctrine pour les performances et contraintes d'unicité.
+
+API — 20+ Endpoints REST
+- Authentification : register, login, /me
+- Critiques : CRUD complet, vote (utile/inutile), critiques par contenu
+- Contenus : CRUD (admin), recherche, tendances, recommandations personnalisées
+- Utilisateurs : profil, critiques, favoris, suivre, mise à jour du profil
+
+Fonctionnalités Métier Clés
+- Critiques Multi-Formats : titre, contenu 10–5000 caractères, note 1–10, flag spoilers, tags, éditable
+- Système de Votes : un vote par utilisateur par critique (utile/inutile), compteurs publics, tri par utilité
+- Recommandations : basées sur les notes, tendances (7 derniers jours), par tags, par utilisateurs suivis
+- Profils Utilisateurs : bio, avatar, historique de critiques publiques, stats followers/following, favoris
+- Recherche & Filtrage : recherche par titre avec pagination, filtrage par note min, plateforme, options de tri
+
+Patterns Symfony Utilisés
+- Injection de dépendances (autowiring constructeur)
+- Doctrine ORM avec listeners de cycle de vie (PrePersist/PostPersist pour synchronisation des compteurs)
+- Repositories personnalisés avec QueryBuilder et prévention N+1 via JOINs
+- Sécurité : JwtAuthenticator, UserProvider, voters IsGranted
+- DTOs pour une sérialisation JSON propre
+- Tests unitaires et fonctionnels PHPUnit
+
+Stack Technique
+Symfony 6.4, Doctrine ORM, PostgreSQL, lexik/jwt-authentication-bundle, Symfony Validator, PHPUnit`,
+          features: [
+            "Authentification JWT stateless (inscription, connexion, accès par token)",
+            "CRUD complet pour les critiques avec flag spoilers et tags",
+            "Système de notation 1–10 avec compteurs publics utile/inutile",
+            "Recommandations personnalisées basées sur les notes, tags et utilisateurs suivis",
+            "Contenus tendances basés sur l'activité récente (7 derniers jours)",
+            "Contrôle d'accès par rôles : ROLE_USER, ROLE_ADMIN",
+            "Profils utilisateurs avec followers, favoris et historique de critiques",
+            "Recherche et filtrage : par titre, plateforme, note min, options de tri",
+            "Prévention N+1 via JOINs QueryBuilder et eager loading Doctrine",
+            "Listeners Doctrine pour synchronisation automatique des compteurs",
+            "DTOs pour des réponses REST propres avec pagination",
+            "Tests unitaires et fonctionnels PHPUnit",
+            "Architecture en couches : Controller → Service → Repository → Entity",
           ],
         },
         {
