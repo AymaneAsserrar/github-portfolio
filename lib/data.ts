@@ -309,6 +309,16 @@ Symfony 6.4, Doctrine ORM, PostgreSQL, lexik/jwt-authentication-bundle, Symfony 
             "PHPUnit unit and functional tests",
             "Layered architecture: Controller → Service → Repository → Entity",
           ],
+          gallery: [
+            {
+              src: "/projects/CineRate/cinerate1.png",
+              alt: "CineRate screenshot 1",
+            },
+            {
+              src: "/projects/CineRate/cinerate2.png",
+              alt: "CineRate screenshot 2",
+            },
+          ],
         },
         {
           slug: "fleet-tracker",
@@ -1006,6 +1016,16 @@ Symfony 6.4, Doctrine ORM, PostgreSQL, lexik/jwt-authentication-bundle, Symfony 
             "DTOs pour des réponses REST propres avec pagination",
             "Tests unitaires et fonctionnels PHPUnit",
             "Architecture en couches : Controller → Service → Repository → Entity",
+          ],
+          gallery: [
+            {
+              src: "/projects/CineRate/cinerate1.png",
+              alt: "Capture CineRate 1",
+            },
+            {
+              src: "/projects/CineRate/cinerate2.png",
+              alt: "Capture CineRate 2",
+            },
           ],
         },
         {
