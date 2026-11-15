@@ -50,6 +50,7 @@ const skillsList = {
     "Laravel",
     "Symfony",
     "Flask",
+    "LangChain",
     "Spring Boot",
     "Node.js",
     "REST APIs",
@@ -57,26 +58,36 @@ const skillsList = {
   ],
   dataCloud: [
     "MySQL",
-    "PostgreSQL",
     "MongoDB",
+    "PostgreSQL (pgvector)",
     "GCP (BigQuery)",
     "Azure (IoT Hub)",
+    "Scaleway",
     "Redis",
   ],
   devopsTools: [
     "Docker",
     "Git/GitHub",
+    "GitHub Actions",
     "GitLab CI/CD",
+    "Keycloak (OIDC/SSO)",
+    "Trivy",
     "Linux",
     "Postman",
     "Jira",
   ],
   aiOther: [
+    "LLM integration (Mistral, Claude, Gemini)",
+    "RAG (hybrid search, reranking)",
+    "Agents & tool calling",
+    "Structured outputs",
+    "Vision models",
+    "LLM cost governance",
+    "MCP / Claude plugins",
     "Machine Learning (LSTM)",
-    "Unit Testing",
-    "Agile/Scrum",
     "System Design",
-    "Project Management",
+    "Testing & static analysis",
+    "Agile/Scrum",
   ],
 };
 
@@ -86,7 +97,7 @@ export const content = {
       ...commonInfo,
       name: "Aymane Asserrar",
       profileSummary:
-        "Future IT Engineer from Télécom Saint-Étienne, seeking my first Full Stack or Back-end Developer role. My experience in apprenticeships and internships at Groupe Casino has given me concrete skills in web development, cloud, and project management.",
+        "AI Engineer with a strong software engineering background (Python, Java, PHP). I ship LLM features to production (RAG, agents, structured outputs, vision) and design backend systems and data pipelines, with a focus on system design, testing and CI/CD.",
     },
     nav: {
       home: "Home",
@@ -102,7 +113,7 @@ export const content = {
     about: {
       title: "About Me",
       description:
-        "I am a passionate developer with a strong foundation in both front-end and back-end technologies. Currently pursuing my engineering degree at",
+        "I am an AI engineer with a strong software engineering foundation, building production LLM systems and backend platforms. Completing my engineering degree at",
       school: "Télécom Saint-Étienne",
       descriptionEnd:
         ", I am eager to apply my skills in a challenging environment.",
@@ -136,32 +147,39 @@ export const content = {
       title: "Experience",
       list: [
         {
-          company: "Groupe Casino (Easydis)",
-          role: "Apprentice PHP/Laravel Developer & Project Manager",
-          dates: "Sept 2025 - Present",
+          company: "WorldSkills France",
+          role: "AI Engineer",
+          dates: "Sept 2026 - Present",
           description:
-            "Project management, continuous improvement/maintenance of tools, process automation, and development of a new intranet.",
+            "Lead developer of Podium, the internal competition-preparation platform (PostgreSQL 17 + pgvector, Docker, Keycloak OIDC/PKCE SSO, GitHub Actions CI/CD with 890+ tests and Trivy-scanned images). Built an LLM AI expert (Mistral Large) reviewing needs lists for 60 trades, Robin, an agentic RAG assistant (hybrid search + reranking over 1,150+ chunks), a vision-based site-layout review module, LLM cost governance, and Claude (MCP) plugins for the operations and communication teams.",
         },
         {
-          company: "Groupe Casino (Easydis)",
-          role: "PHP/Laravel Developer Intern",
+          company: "Easydis (Plesio, ex-Groupe Casino)",
+          role: "Software Engineer & Data Project Lead (Apprenticeship)",
+          dates: "Sept 2025 - Aug 2026",
+          description:
+            "Built Maestro, a supply-chain intranet automating mass updates on BigQuery (saving 5-11 h/week), developed Score, an anomaly-management tool with an Excel validation engine, and made BigQuery-to-Excel exports (~400k rows) 51% faster.",
+        },
+        {
+          company: "Easydis (Plesio, ex-Groupe Casino)",
+          role: "Software Engineer Intern",
           dates: "June 2025 - Aug 2025",
           description:
-            "Migrated a legacy PHP tool to a modern Laravel application, focusing on improving maintainability, performance, and user experience.",
+            "Migrated a legacy tool to a modern MVC architecture (Laravel), refactoring the business logic (clean code, PSR).",
         },
         {
-          company: "Perenco",
-          role: "AI/ML Project",
+          company: "Perenco (via Télécom Saint-Étienne)",
+          role: "AI/ML Project - Industrial Sensor Data Analysis",
           dates: "Mar 2025 - June 2025",
           description:
-            "Designed an AI model (LSTM Autoencoder) for analyzing sensor stream data via Azure IoT Hub.",
+            "Designed an LSTM Autoencoder model to analyse turbomachinery sensor streams (Python, IoT time series).",
         },
         {
           company: "AI Wolves",
-          role: "Full Stack Developer Intern",
+          role: "AI Engineer Intern",
           dates: "July 2024 - Sept 2024",
           description:
-            "Created a Flask web application to detect brand copyright violations using the Generative AI (Gemini API).",
+            "Built a Flask web application detecting copyright violations with the Gemini API (NLP).",
         },
       ],
     },
@@ -794,7 +812,7 @@ The application, built in Java, uses Swing for its user interface and FlatLaf fo
       ...commonInfo,
       name: "Aymane Asserrar",
       profileSummary:
-        "Futur Ingénieur IT de Télécom Saint-Étienne, à la recherche de mon premier poste de Développeur Full Stack ou Back-end. Mon expérience en alternance et stages chez Groupe Casino m'a permis d'acquérir des compétences concrètes en développement web, cloud et gestion de projet.",
+        "Ingénieur IA avec un solide bagage en génie logiciel (Python, Java, PHP). Je mets en production des fonctionnalités LLM (RAG, agents, sorties structurées, vision) et conçois des systèmes backend et des pipelines de données, avec un accent sur la conception de systèmes, les tests et le CI/CD.",
     },
     nav: {
       home: "Accueil",
@@ -810,7 +828,7 @@ The application, built in Java, uses Swing for its user interface and FlatLaf fo
     about: {
       title: "À propos de moi",
       description:
-        "Je suis un développeur passionné avec une solide base en technologies front-end et back-end. Actuellement en cursus d'ingénieur à",
+        "Je suis un ingénieur IA avec une solide base en génie logiciel, qui construit des systèmes LLM et des plateformes backend en production. Je termine mon cursus d'ingénieur à",
       school: "Télécom Saint-Étienne",
       descriptionEnd:
         ", je suis impatient d'appliquer mes compétences dans un environnement stimulant.",
@@ -844,32 +862,39 @@ The application, built in Java, uses Swing for its user interface and FlatLaf fo
       title: "Expérience",
       list: [
         {
-          company: "Easydis by Groupe Casino",
-          role: "Apprenti Développeur PHP/Laravel & Chef de Projet",
-          dates: "Sept 2025 - Présent",
+          company: "WorldSkills France",
+          role: "Ingénieur IA",
+          dates: "Sept 2026 - Présent",
           description:
-            "Gestion de projet, amélioration continue/maintenance des outils, automatisation des processus et développement d'un nouvel intranet.",
+            "Développeur principal de Podium, la plateforme interne de préparation des compétitions (PostgreSQL 17 + pgvector, Docker, SSO Keycloak OIDC/PKCE, CI/CD GitHub Actions avec 890+ tests et images scannées Trivy). Conception d'un expert IA (Mistral Large) qui revoit les listes de besoins de 60 métiers, de Robin, assistant RAG agentique (recherche hybride + reranking sur 1 150+ chunks), d'un module de revue de plans par modèle de vision, de la gouvernance des coûts LLM et de plugins Claude (MCP) pour les équipes opérations et communication.",
         },
         {
-          company: "Easydis by Groupe Casino",
-          role: "Stagiaire Développeur PHP/Laravel",
+          company: "Easydis (Plesio, ex-Groupe Casino)",
+          role: "Ingénieur logiciel & Chef de projet Data (Alternance)",
+          dates: "Sept 2025 - Août 2026",
+          description:
+            "Création de Maestro, intranet supply-chain automatisant les mises à jour de masse sur BigQuery (5-11 h/semaine économisées), développement de Score, outil de gestion des anomalies avec moteur de validation Excel, et exports BigQuery vers Excel (~400k lignes) accélérés de 51 %.",
+        },
+        {
+          company: "Easydis (Plesio, ex-Groupe Casino)",
+          role: "Stagiaire Ingénieur logiciel",
           dates: "Juin 2025 - Août 2025",
           description:
-            "Migration d'un outil PHP legacy vers une application Laravel moderne, axée sur l'amélioration de la maintenabilité, de la performance et de l'expérience utilisateur.",
+            "Migration d'un outil legacy vers une architecture MVC moderne (Laravel), refonte de la logique métier (clean code, PSR).",
         },
         {
-          company: "Perenco",
-          role: "Projet IA/ML",
+          company: "Perenco (via Télécom Saint-Étienne)",
+          role: "Projet IA/ML - Analyse de données de capteurs industriels",
           dates: "Mars 2025 - Juin 2025",
           description:
-            "Conception d'un modèle IA (LSTM Autoencoder) pour l'analyse des flux de données de capteurs via Azure IoT Hub.",
+            "Conception d'un modèle LSTM Autoencoder pour analyser les flux de capteurs de turbomachines (Python, séries temporelles IoT).",
         },
         {
           company: "AI Wolves",
-          role: "Stagiaire Développeur Full Stack",
+          role: "Stagiaire Ingénieur IA",
           dates: "Juil 2024 - Sept 2024",
           description:
-            "Création d'une application web Flask pour détecter les violations de droits d'auteur de marque en utilisant l'IA Générative (API Gemini).",
+            "Développement d'une application web Flask détectant les violations de droits d'auteur avec l'API Gemini (NLP).",
         },
       ],
     },
